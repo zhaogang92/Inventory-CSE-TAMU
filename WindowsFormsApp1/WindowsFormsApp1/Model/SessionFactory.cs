@@ -10,7 +10,7 @@ using System.ServiceModel.Channels;
 
 using System.Configuration;
 
-namespace NHibernateDemo
+namespace InventoryApp
 {
     public sealed class SessionFactory
     {

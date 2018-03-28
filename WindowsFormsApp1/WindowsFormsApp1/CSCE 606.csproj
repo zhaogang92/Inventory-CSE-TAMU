@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{0DCED2D4-DC82-4291-A23E-A370FB276AFA}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WindowsFormsApp1</RootNamespace>
-    <AssemblyName>WindowsFormsApp1</AssemblyName>
+    <RootNamespace>InventoryApp</RootNamespace>
+    <AssemblyName>InventoryApp</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -67,27 +67,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Inventory.cs" />
-    <Compile Include="InventoryPage.cs">
+    <Compile Include="Model\Inventory.cs" />
+    <Compile Include="InventoryManager.cs" />
+    <Compile Include="View\InventoryPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InventoryPage.Designer.cs">
+    <Compile Include="View\InventoryPage.Designer.cs">
       <DependentUpon>InventoryPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="SessionFactory.cs" />
-    <Compile Include="Staff.cs" />
-    <Compile Include="Welcome.cs">
+    <Compile Include="Model\SessionFactory.cs" />
+    <Compile Include="Model\Staff.cs" />
+    <Compile Include="View\Welcome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Welcome.Designer.cs">
+    <Compile Include="View\Welcome.Designer.cs">
       <DependentUpon>Welcome.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="InventoryPage.resx">
+    <EmbeddedResource Include="View\InventoryPage.resx">
       <DependentUpon>InventoryPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Welcome.resx">
+    <EmbeddedResource Include="View\Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -115,11 +116,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Business mand and woman - laughing.png" />
+    <None Include="Resources\loginImg.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Inventory.hbm.xml" />
-    <Content Include="Staff.hbm.xml" />
+    <Content Include="Model\Inventory.hbm.xml" />
+    <Content Include="Model\Staff.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="utils\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

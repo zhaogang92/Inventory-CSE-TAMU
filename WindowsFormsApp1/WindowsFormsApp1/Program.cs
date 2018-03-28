@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1
+namespace InventoryApp
 {
     static class Program
     {
@@ -16,7 +16,14 @@ namespace WindowsFormsApp1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new InventoryPage());
+
+            var loginPage = new Welcome();
+            loginPage.ShowDialog();
+            if (DialogResult.OK == loginPage.DialogResult)
+            {
+                var inventoryPage = new InventoryPage(loginPage.DBIndex);
+                Application.Run(inventoryPage);
+            }
         }
     }
 }
