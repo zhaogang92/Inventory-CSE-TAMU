@@ -1,43 +1,91 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Odbc;
+using System.Data.OleDb;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 using NHibernate;
+using LinqToExcel;
 
 namespace InventoryApp
 {
     class InventoryManager
     {
-        public void importData(String fileName)
+        public bool importInventoryData(String fileName)
         {
-
+            return true;
         }
 
-        public bool CreateInventories(IList<Inventory> inventories)
+        public bool importStaffData(String fileName)
         {
-            using (var session = SessionFactory.OpenSession)
+            var excel = new ExcelQueryFactory(fileName);
+            var items = from row in excel.Worksheet()
+                        let item = new Staff
+                        {
+                            lastName = Convert.ToString(row["Name"]).Split(',')[0],
+                            firstName = Convert.ToString(row["Name"]).Split(',')[1],
+                            email = Convert.ToString(row["Email"]),
+                            phone = Convert.ToString(row["Phone"]),
+                            location = Convert.ToString(row["Location"])
+                        }
+                        select item;
+            return CreateStaffs(items.ToList<Staff>());
+        }
+
+        public bool CreateInventories(IList<Item> inventories)
+        {
+            try
             {
-                using (var tx = session.BeginTransaction())
+                using (var session = SessionFactory.OpenSession)
                 {
-                    foreach (var inventory in inventories)
+                    using (var tx = session.BeginTransaction())
                     {
-                        session.Save(inventory);
+                        foreach (var inventory in inventories)
+                        {
+                            session.Save(inventory);
+                        }
+                        tx.Commit();
                     }
-                    tx.Commit();
+                    session.Close();
                 }
-                session.Close();
             }
-            return false;
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine(ex.StackTrace);
+                return false;
+            }
+            return true;
         }
 
         public bool CreateStaffs(IList<Staff> staffs)
         {
-            return false;
+            try
+            {
+                using (var session = SessionFactory.OpenSession)
+                {
+                    using (var tx = session.BeginTransaction())
+                    {
+                        foreach (var staff in staffs)
+                        {
+                            session.Save(staff);
+                        }
+                        tx.Commit();
+                    }
+                    session.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.Out.WriteLine(ex.StackTrace);
+                return false;
+            }
+            return true;
         }
 
-        public IList<Inventory> QueryInventory()
+        public IList<Item> QueryInventory()
         {
             throw new NotImplementedException();
         }

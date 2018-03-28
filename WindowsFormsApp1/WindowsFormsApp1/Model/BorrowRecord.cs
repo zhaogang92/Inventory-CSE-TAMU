@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NHibernateDemo
+namespace InventoryApp
 {
-    public class LendRecord
+    public class BorrowRecord
     {
-        public virtual int lendRecordID { get; set; }
+        public virtual int borrowRecordID { get; set; }
 
         public virtual int staffID { get; set; }
 
         public virtual int itemID { get; set; }
 
-        public virtual DateTime lendRecordDate { get; set; }
+        public virtual DateTime borrowRecordDate { get; set; }
     }
 }

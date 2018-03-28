@@ -36,11 +36,33 @@ namespace InventoryApp
         private void importInventoryDataMenuClick(object sender, EventArgs e)
         {
             var dlg = new OpenFileDialog();
+            dlg.Filter = "Excel(*.xlsx)|*.xlsx|Excel(*.xls)|*.xls";
+            dlg.Multiselect = false;
+            if (DialogResult.OK == dlg.ShowDialog())
+            {
+                var controller = new InventoryManager();
+                if (!controller.importInventoryData(dlg.FileName))
+                {
+                    CCWin.MessageBoxEx.Show("Data import failed, please check your Excel data!", "Error",
+                        MessageBoxButtons.OK);
+                }
+            }
         }
 
         private void importStaffDataMenuClick(object sender, EventArgs e)
         {
-
+            var dlg = new OpenFileDialog();
+            dlg.Filter = "Excel(*.xlsx)|*.xlsx|Excel(*.xls)|*.xls";
+            dlg.Multiselect = false;
+            if (DialogResult.OK == dlg.ShowDialog())
+            {
+                var controller = new InventoryManager();
+                if (!controller.importStaffData(dlg.FileName))
+                {
+                    CCWin.MessageBoxEx.Show("Data import failed, please check your Excel data!", "Error",
+                        MessageBoxButtons.OK);
+                }
+            }
         }
     }
 }

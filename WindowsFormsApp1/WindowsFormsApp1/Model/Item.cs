@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InventoryApp
 {
-    public class Inventory
+    public class Item
     {
         public virtual int asset { get; set; }
 
@@ -27,6 +27,8 @@ namespace InventoryApp
         public virtual string serialNumber { get; set; }
 
         public virtual string groupCode { get; set; }
+
+        public virtual bool isDelete { get; set; }
 
         public virtual byte[] picture { get; set; }
     }
