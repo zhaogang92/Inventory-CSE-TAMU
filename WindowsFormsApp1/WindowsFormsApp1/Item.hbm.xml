@@ -2,7 +2,7 @@
 
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" auto-import="true">
 
-  <class name="NHibernateDemo.Inventory, NHibernateDemo" lazy="true">
+  <class name="NHibernateDemo.Item, NHibernateDemo" lazy="true">
 
     <id name="asset">
 
@@ -27,6 +27,8 @@
     <property name="serialNumber" column="serialNumber"/>
 
     <property name="groupCode" column="groupCode"/>
+
+    <property name="isDelete" column="isDelete"/>
 
     <property name="picture" column="picture"/>
 
