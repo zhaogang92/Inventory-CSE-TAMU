@@ -68,7 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Inventory.cs" />
-    <Compile Include="InventoryManager.cs" />
+    <Compile Include="Controller\InventoryManager.cs" />
     <Compile Include="View\InventoryPage.cs">
       <SubType>Form</SubType>
     </Compile>
