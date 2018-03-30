@@ -103,11 +103,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\BorrowRecord.cs" />
     <Compile Include="Model\Item.cs" />
-    <Compile Include="Model\LendRecord.cs" />
     <Compile Include="Controller\InventoryManager.cs" />
-    <Compile Include="Model\Record.cs" />
     <Compile Include="View\InventoryPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,11 +155,8 @@
     <None Include="Resources\loginImg.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model\BorrowRecord.hbm.xml" />
     <Content Include="Model\Item.hbm.xml" />
-    <Content Include="Model\LendRecord.hbm.xml" />
     <Content Include="Model\Staff.hbm.xml" />
-    <Content Include="Model\Record.hbm.xml" />
     <Content Include="utils\item.sql" />
     <Content Include="utils\record.sql" />
     <Content Include="utils\staff.sql" />

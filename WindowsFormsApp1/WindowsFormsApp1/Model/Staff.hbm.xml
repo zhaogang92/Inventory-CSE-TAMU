@@ -10,6 +10,8 @@
 
     </id>
 
+    <property name="groupCode" column ="groupCode"/>
+
     <property name="lastName" column ="lastName"/>
 
     <property name="firstName" column ="firstName"/>

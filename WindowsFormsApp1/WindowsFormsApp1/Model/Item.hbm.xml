@@ -10,6 +10,8 @@
 
     </id>
 
+    <property name="campusCode " column ="campusCode "/>
+
     <property name="description" column ="description"/>
 
     <property name="bldg" column ="bldg"/>
@@ -28,7 +30,13 @@
 
     <property name="groupCode" column="groupCode"/>
 
+    <property name="lastName" column="lastName"/>
+
+    <property name="firstName" column="firstName"/>
+
     <property name="isDelete" column="isDelete"/>
+
+    <property name="comments" column="comments"/>
 
     <property name="picture" column="picture"/>
 

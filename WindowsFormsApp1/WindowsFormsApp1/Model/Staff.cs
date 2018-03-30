@@ -10,6 +10,8 @@ namespace InventoryApp
     {
         public virtual int staffID { get; set; }
 
+        public virtual string groupCode { get; set; }
+
         public virtual string lastName { get; set; }
 
         public virtual string firstName { get; set; }
