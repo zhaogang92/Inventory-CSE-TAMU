@@ -10,6 +10,8 @@ namespace InventoryApp
     {
         public virtual int asset { get; set; }
 
+        public virtual int campusCode { get; set; }
+
         public virtual string description { get; set; }
 
         public virtual string bldg { get; set; }
@@ -28,7 +30,13 @@ namespace InventoryApp
 
         public virtual string groupCode { get; set; }
 
+        public virtual string lastName { get; set; }
+
+        public virtual string firstName { get; set; }
+
         public virtual bool isDelete { get; set; }
+
+        public virtual string comments { get; set; }
 
         public virtual byte[] picture { get; set; }
     }

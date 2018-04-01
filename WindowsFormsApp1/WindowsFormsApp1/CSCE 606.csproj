@@ -64,6 +64,10 @@
     <Reference Include="LinqToExcel, Version=1.11.0.0, Culture=neutral, PublicKeyToken=9c8ea65a58f03f1f, processorArchitecture=MSIL">
       <HintPath>..\packages\LinqToExcel.1.11.0\lib\LinqToExcel.dll</HintPath>
     </Reference>
+    <Reference Include="MySql.Data, Version=6.10.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="NHibernate, Version=5.1.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <HintPath>..\packages\NHibernate.5.1.0\lib\net461\NHibernate.dll</HintPath>
     </Reference>
@@ -99,11 +103,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\BorrowRecord.cs" />
     <Compile Include="Model\Item.cs" />
-    <Compile Include="Model\LendRecord.cs" />
     <Compile Include="Controller\InventoryManager.cs" />
-    <Compile Include="Model\Record.cs" />
     <Compile Include="View\InventoryPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,11 +155,8 @@
     <None Include="Resources\loginImg.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model\BorrowRecord.hbm.xml" />
     <Content Include="Model\Item.hbm.xml" />
-    <Content Include="Model\LendRecord.hbm.xml" />
     <Content Include="Model\Staff.hbm.xml" />
-    <Content Include="Model\Record.hbm.xml" />
     <Content Include="utils\item.sql" />
     <Content Include="utils\record.sql" />
     <Content Include="utils\staff.sql" />

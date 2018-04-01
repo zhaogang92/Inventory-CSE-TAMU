@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 using CCWin;
 
@@ -63,6 +64,11 @@ namespace InventoryApp
                         MessageBoxButtons.OK);
                 }
             }
+        }
+
+        private void InventoryPage_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
