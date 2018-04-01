@@ -41,7 +41,7 @@ namespace InventoryApp
             dlg.Multiselect = false;
             if (DialogResult.OK == dlg.ShowDialog())
             {
-                var controller = new InventoryManager();
+                var controller = new DataImporter();
                 if (!controller.importInventoryData(dlg.FileName))
                 {
                     CCWin.MessageBoxEx.Show("Data import failed, please check your Excel data!", "Error",
@@ -57,7 +57,7 @@ namespace InventoryApp
             dlg.Multiselect = false;
             if (DialogResult.OK == dlg.ShowDialog())
             {
-                var controller = new InventoryManager();
+                var controller = new DataImporter();
                 if (!controller.importStaffData(dlg.FileName))
                 {
                     CCWin.MessageBoxEx.Show("Data import failed, please check your Excel data!", "Error",

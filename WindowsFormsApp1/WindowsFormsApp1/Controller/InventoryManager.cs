@@ -9,10 +9,11 @@ using System.Threading.Tasks;
 
 using NHibernate;
 using LinqToExcel;
+using InventoryApp.Controller;
 
 namespace InventoryApp
 {
-    class InventoryManager
+    class DataImporter
     {
         public bool importInventoryData(String fileName)
         {
@@ -37,52 +38,12 @@ namespace InventoryApp
 
         public bool CreateInventories(IList<Item> inventories)
         {
-            try
-            {
-                using (var session = SessionFactory.OpenSession)
-                {
-                    using (var tx = session.BeginTransaction())
-                    {
-                        foreach (var inventory in inventories)
-                        {
-                            session.Save(inventory);
-                        }
-                        tx.Commit();
-                    }
-                    session.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.Out.WriteLine(ex.StackTrace);
-                return false;
-            }
-            return true;
+            return DBHelper.getDBHelper().CreateRecords<Item>(inventories);
         }
 
         public bool CreateStaffs(IList<Staff> staffs)
         {
-            try
-            {
-                using (var session = SessionFactory.OpenSession)
-                {
-                    using (var tx = session.BeginTransaction())
-                    {
-                        foreach (var staff in staffs)
-                        {
-                            session.Save(staff);
-                        }
-                        tx.Commit();
-                    }
-                    session.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.Out.WriteLine(ex.StackTrace);
-                return false;
-            }
-            return true;
+            return DBHelper.getDBHelper().CreateRecords<Staff>(staffs);
         }
 
         public IList<Item> QueryInventory()
