@@ -112,7 +112,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\NHibernateHelper.cs" />
+    <Compile Include="Common\NHibernateRepository.cs" />
     <Compile Include="Controller\DBHelper.cs" />
+    <Compile Include="Common\IRepository.cs" />
     <Compile Include="Model\Item.cs" />
     <Compile Include="Controller\InventoryManager.cs" />
     <Compile Include="View\InventoryPage.cs">

@@ -38,11 +38,13 @@ namespace InventoryApp
 
         public bool CreateInventories(IList<Item> inventories)
         {
+            //TODO: replace it with NHibernateRepository
             return DBHelper.getDBHelper().CreateRecords<Item>(inventories);
         }
 
         public bool CreateStaffs(IList<Staff> staffs)
         {
+            //TODO: replace it with NHibernateRepository
             return DBHelper.getDBHelper().CreateRecords<Staff>(staffs);
         }
 
