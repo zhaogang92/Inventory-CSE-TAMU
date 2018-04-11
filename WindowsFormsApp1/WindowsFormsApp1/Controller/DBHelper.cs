@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using InventoryApp.Common;
 
 
 namespace InventoryApp.Controller
@@ -30,7 +31,7 @@ namespace InventoryApp.Controller
         {
             try
             {
-                using (var session = SessionFactory.OpenSession)
+                using (var session = NHibernateHelper.GetCurrentSession())
                 {
                     using (var tx = session.BeginTransaction())
                     {

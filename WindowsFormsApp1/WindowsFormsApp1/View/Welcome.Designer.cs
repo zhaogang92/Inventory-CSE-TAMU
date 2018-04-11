@@ -230,7 +230,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Welcome";
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.Welcome_Load);
+            //this.Load += new System.EventHandler(this.Welcome_Load);
             ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

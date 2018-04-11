@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Web;
@@ -24,7 +25,7 @@ namespace InventoryApp.Common
         public static ISession GetCurrentSession()
         {
             ISession session = null;
-            //若第一次调用GetCurrentSession之前未使用ICurrentSessionContext的Bind方法,则会抛出HibernateException异常
+            ////若第一次调用GetCurrentSession之前未使用ICurrentSessionContext的Bind方法,则会抛出HibernateException异常
             try
             {
                 session = sessionFactory.GetCurrentSession();
@@ -49,6 +50,25 @@ namespace InventoryApp.Common
                 backup_session = GetNewSession();
                 return backup_session;
             }
+            //session = sessionFactory.OpenSession();
+            //try
+            //{
+            //    if (NHibernate.Context.CurrentSessionContext.HasBind(sessionFactory))
+            //    {
+            //        session = sessionFactory.GetCurrentSession();
+            //    }
+            //    else
+            //    {
+            //        session = sessionFactory.OpenSession();
+            //        NHibernate.Context.CurrentSessionContext.Bind(session);
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    Debug.Write(ex.Message);
+            //    throw;
+            //}
+
             return session;
         }
 

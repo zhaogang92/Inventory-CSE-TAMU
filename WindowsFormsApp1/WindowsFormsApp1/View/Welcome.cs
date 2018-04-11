@@ -48,30 +48,30 @@ namespace InventoryApp
 
             return;
         }
-        public static MySqlConnection connection;
-        MySql.Data.MySqlClient.MySqlCommand command;
-        private void Welcome_Load(object sender, EventArgs e)
-        {
-            string connString = "server=database-new.cse.tamu.edu;database=shi_wei652327;uid=shi_wei652327;pwd=shi_wei652327";
-            MySqlConnection connection = new MySqlConnection(connString);
+        //public static MySqlConnection connection;
+        //MySql.Data.MySqlClient.MySqlCommand command;
+        //private void Welcome_Load(object sender, EventArgs e)
+        //{
+        //    string connString = "server=database-new.cse.tamu.edu;database=shi_wei652327;uid=shi_wei652327;pwd=shi_wei652327";
+        //    MySqlConnection connection = new MySqlConnection(connString);
    
-            try
-            {
-                connection.Open();
-                MessageBox.Show("successfully connect to database");
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
+        //    try
+        //    {
+        //        connection.Open();
+        //        MessageBox.Show("successfully connect to database");
+        //    }
+        //    catch (MySqlException ex)
+        //    {
+        //        MessageBox.Show(ex.Message);
+        //    }
+        //    finally
+        //    {
+        //        connection.Close();
+        //    }
            
                
                
            
-        }
+        //}
     }
 }

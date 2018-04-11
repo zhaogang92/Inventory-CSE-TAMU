@@ -2,7 +2,7 @@
 
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" auto-import="true">
 
-  <class name="NHibernateDemo.Staff, NHibernateDemo" lazy="true">
+  <class name="InventoryApp.Model.Staff, InventoryApp.Model" lazy="true">
 
     <id name="staffID">
 

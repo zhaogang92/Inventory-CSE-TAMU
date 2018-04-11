@@ -10,7 +10,7 @@ using System.ServiceModel.Channels;
 
 using System.Configuration;
 
-namespace InventoryApp
+namespace InventoryApp.Model
 {
     public sealed class SessionFactory
     {
