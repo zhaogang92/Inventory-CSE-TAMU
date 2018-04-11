@@ -21,5 +21,7 @@ namespace InventoryApp
         public virtual string phone { get; set; }
 
         public virtual string location { get; set; }
+
+        public virtual ISet<Item> Items { get; set; }
     }
 }

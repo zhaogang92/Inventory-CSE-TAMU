@@ -39,5 +39,7 @@ namespace InventoryApp
         public virtual string comments { get; set; }
 
         public virtual byte[] picture { get; set; }
+        
+        public virtual Staff Staff { get; set; }
     }
 }

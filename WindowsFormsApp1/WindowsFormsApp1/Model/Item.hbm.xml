@@ -39,6 +39,8 @@
     <property name="comments" column="comments"/>
 
     <property name="picture" column="picture"/>
+    
+    <many-to-one name="Staff" column ="staffID " not-null =" true" cascade="save-update" class =" InventoryApp.Model.Staff, InventoryApp.Model"/>
 
   </class>
 

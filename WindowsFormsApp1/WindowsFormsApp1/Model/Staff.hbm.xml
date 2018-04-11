@@ -21,6 +21,11 @@
     <property name="phone" column="phone"/>
 
     <property name="location" column="location"/>
+    
+    <set name ="Items" table ="item " cascade="save-update" inverse =" true">
+          <key column=" staffID"/>
+          <one-to-many class =" NHibernateDemo.Item, NHibernateDemo"/>
+    </set>
 
   </class>
 
