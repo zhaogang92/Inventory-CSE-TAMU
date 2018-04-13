@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using NHibernate;
 using LinqToExcel;
 using InventoryApp.Controller;
+using InventoryApp.Common;
+using InventoryApp.Model;
 
 namespace InventoryApp
 {

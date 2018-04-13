@@ -1,16 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
-<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" auto-import="true">
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="InventoryApp"
+                    namespace="InventoryApp.Model"
+                   auto-import="true">
 
-  <class name="NHibernateDemo.Item, NHibernateDemo" lazy="true">
+  <class name="Item" table="item" lazy="true">
 
-    <id name="asset">
+    <id name="asset" type="int" column="asset">
 
       <generator class="native"/>
 
     </id>
 
-    <property name="campusCode " column ="campusCode "/>
+    <property name="campusCode" column ="campusCode"/>
 
     <property name="description" column ="description"/>
 
@@ -40,7 +43,7 @@
 
     <property name="picture" column="picture"/>
     
-    <many-to-one name="Staff" column ="staffID " not-null =" true" cascade="save-update" class =" InventoryApp.Model.Staff, InventoryApp.Model"/>
+    <many-to-one name="Staff" column ="staffID " not-null ="true" cascade="save-update" class ="Staff" lazy="proxy"/>
 
   </class>
 
