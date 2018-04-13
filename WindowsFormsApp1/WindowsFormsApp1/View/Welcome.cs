@@ -9,11 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
-using CCWin;
+using MetroFramework;
+
 
 namespace InventoryApp
 {
-    public partial class Welcome : Form
+    public partial class Welcome : MaterialSkin.Controls.MaterialForm
     {
         public int DBIndex { get; set; }
 
@@ -48,13 +49,19 @@ namespace InventoryApp
 
             return;
         }
+
+        private void materialLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         //public static MySqlConnection connection;
         //MySql.Data.MySqlClient.MySqlCommand command;
         //private void Welcome_Load(object sender, EventArgs e)
         //{
         //    string connString = "server=database-new.cse.tamu.edu;database=shi_wei652327;uid=shi_wei652327;pwd=shi_wei652327";
         //    MySqlConnection connection = new MySqlConnection(connString);
-   
+
         //    try
         //    {
         //        connection.Open();
@@ -68,10 +75,10 @@ namespace InventoryApp
         //    {
         //        connection.Close();
         //    }
-           
-               
-               
-           
+
+
+
+
         //}
     }
 }
