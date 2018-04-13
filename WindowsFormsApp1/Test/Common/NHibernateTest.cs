@@ -87,7 +87,7 @@ namespace Test
             };
 
             NHibernateRepository repo = new NHibernateRepository();
-            //repo.DeleteByQuery("select * from Item;");
+            repo.DeleteByQuery("from Staff s");
             repo.SaveOrUpdate(staff);
             Assert.AreEqual(repo.Query<Staff>().Count, 1);
         }
