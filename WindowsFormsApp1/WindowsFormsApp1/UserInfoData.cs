@@ -19,7 +19,7 @@ namespace InventoryApp
         /// <param name="userInfo"></param>
         /// <returns></returns>
         public bool AddUserInfo(UserInfo userInfo)
-        {
+        {/*
             ISession session = NHibernateHelper.GetCurrentSession();
             //ISession session = NHibernateHelper.GetOcextSession();
             using (ITransaction trans = session.BeginTransaction())
@@ -37,7 +37,8 @@ namespace InventoryApp
                     return false;
                     throw;
                 }
-            }
+            }*/
+            return true;
         }
     }
 }
