@@ -43,7 +43,7 @@
 
     <property name="picture" column="picture"/>
     
-    <many-to-one name="Staff" column ="staffID " not-null ="true" cascade="save-update" class ="Staff" lazy="proxy"/>
+    <many-to-one name="Staffs" column ="staffID " cascade ="save-update" not-null ="true" class ="Staff" lazy="proxy"/>
 
   </class>
 

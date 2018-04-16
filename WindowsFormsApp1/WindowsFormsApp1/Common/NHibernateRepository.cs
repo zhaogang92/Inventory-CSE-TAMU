@@ -129,6 +129,7 @@ namespace InventoryApp.Common
                 }
             }
         }
+        
 
         public void Update(object model)
         {
@@ -137,6 +138,23 @@ namespace InventoryApp.Common
                 try
                 {
                     session.Update(model);
+                    transaction.Commit();
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    throw ex;
+                }
+            }
+        }
+
+        public void Save(object model)
+        {
+            using (ITransaction transaction = session.BeginTransaction())
+            {
+                try
+                {
+                    session.Save(model);
                     transaction.Commit();
                 }
                 catch (Exception ex)
@@ -179,6 +197,24 @@ namespace InventoryApp.Common
                 try
                 {
                     session.SaveOrUpdate(model);
+                    transaction.Commit();
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    throw ex;
+                }
+            }
+        }
+
+        public void SaveOrUpdate(object model1,object model2)
+        {
+            using (ITransaction transaction = session.BeginTransaction())
+            {
+                try
+                {
+                    session.SaveOrUpdate(model1);
+                    session.SaveOrUpdate(model2);
                     transaction.Commit();
                 }
                 catch (Exception ex)

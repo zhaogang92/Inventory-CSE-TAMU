@@ -55,6 +55,11 @@ namespace InventoryApp
 
         }
 
+        private void Welcome_Load(object sender, EventArgs e)
+        {
+
+        }
+
         //public static MySqlConnection connection;
         //MySql.Data.MySqlClient.MySqlCommand command;
         //private void Welcome_Load(object sender, EventArgs e)

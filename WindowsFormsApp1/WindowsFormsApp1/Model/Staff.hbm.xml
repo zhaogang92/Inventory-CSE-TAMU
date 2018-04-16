@@ -25,10 +25,12 @@
 
     <property name="location" column="location"/>
     
-    <set name ="Items" table ="item" cascade="save-update" inverse ="true" lazy="true">
+    <set name ="Items" table ="item" cascade ="save-update" inverse ="true">
           <key column="staffID" not-null="true"/>
           <one-to-many class ="Item"/>
     </set>
+    
+    
 
   </class>
 

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 
+
 using InventoryApp.Common;
 using InventoryApp.Model;
 using System.Data.SQLite;
@@ -66,9 +67,11 @@ namespace Test
         [TestMethod]
         public void TestSqlite3()
         {
-            SQLiteConnection m_dbConnection = new SQLiteConnection(@"Data Source=C:\Users\q_122\Dropbox\phd\Courses\SoftwareEngineering\Project\Inventory-CSE-TAMU\WindowsFormsApp1\WindowsFormsApp1\Data\database.db;Version=3;");
+            SQLiteConnection m_dbConnection = new SQLiteConnection(@"Data Source=C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\WindowsFormsApp1\Data\database.db;Version=3;");
             m_dbConnection.Open();
-            string sql = "create table highscores (name varchar(20), score int)";
+            string sql2 = "create table lowscores (name varchar(20), score int)";
+            string sql = "select * from staff";
+            string sql1 = "create table staff(staffID int auto_increment primary key,groupCode char(8),lastName char(30),firstName char(30),email char(40),phone char(15),location char(50))";
             SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
             command.ExecuteNonQuery();
         }
@@ -79,17 +82,92 @@ namespace Test
             var staff = new Staff()
             {
                 groupCode = "TestGroupCode",
-                lastName = "Hello",
+                lastName = "Hello123",
                 firstName = "World",
                 email = "Hello_world@gmail.com",
                 phone = "979979979",
                 location = "HRBB"
             };
-
+            
             NHibernateRepository repo = new NHibernateRepository();
+            
             repo.DeleteByQuery("from Staff s");
             repo.SaveOrUpdate(staff);
             Assert.AreEqual(repo.Query<Staff>().Count, 1);
         }
+
+        [TestMethod]
+        public void InsertNewItem()
+        {
+            var staff1 = new Staff()
+            {
+                groupCode = "221Codde",
+                lastName = "11shi",
+                firstName = "11wei",
+                email = "11sw@gmail.com",
+                phone = "119798989987",
+                location = "1HRBB"
+            };
+            byte[] bytes = { 201, 209 };
+            var item1 = new Item()
+            {
+                asset = 134410,
+                campusCode = 28,
+                description = "This is a good one",
+                bldg = "02-00445",
+                room = "312B",
+                otherLocation = "otherlocation",
+                acqDate = new DateTime(2008, 8, 29),
+                totalCost = Convert.ToDecimal(330044.04),
+                Model = "Model",
+                serialNumber = "FFF00000422",             
+                groupCode = staff1.groupCode,
+                lastName = staff1.lastName,
+                firstName = staff1.firstName,
+                isDelete = false,
+                comments = "comments",
+                picture = bytes,
+             
+
+            };
+            var item2 = new Item()
+            {
+                asset = 3143,
+                campusCode = 38,
+                description = "This is a good one",
+                bldg = "02-00445",
+                room = "312B",
+                otherLocation = "otherlocation",
+                acqDate = new DateTime(2008, 8, 29),
+                totalCost = Convert.ToDecimal(330044.04),
+                Model = "Model",
+                serialNumber = "FFF00000422",
+                groupCode = staff1.groupCode,
+                lastName = staff1.lastName,
+                firstName = staff1.firstName,
+                isDelete = false,
+                comments = "comments",
+                picture = bytes,
+
+
+            };
+
+
+            //staff1.Items = new HashSet<Item> { item1 };
+            item1.Staffs = staff1;
+            item2.Staffs = staff1;
+            NHibernateRepository repo = new NHibernateRepository();
+
+            //repo.DeleteByQuery("from Item a");
+            //object id = repo.Insert(staff1);
+            //repo.SaveOrUpdate(staff1);
+            repo.SaveOrUpdate(item2);
+            //Assert.AreEqual(repo.Query<Item>().Count, 1);
+        }
+
     }
 }
+
+      
+       
+    
