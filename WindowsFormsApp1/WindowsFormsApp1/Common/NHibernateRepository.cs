@@ -43,6 +43,8 @@ namespace InventoryApp.Common
             return Query<T>(new ICriterion[] { expression }, action);
         }
 
+
+
         public IList<T> Query<T>(ICriterion[] expressions, Action<ICriteria> action) where T : class
         {
             ICriteria criteria = session.CreateCriteria<T>();

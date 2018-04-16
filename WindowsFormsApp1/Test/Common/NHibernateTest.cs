@@ -3,8 +3,6 @@ using System.Text;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-
-
 using InventoryApp.Common;
 using InventoryApp.Model;
 using System.Data.SQLite;
@@ -97,12 +95,12 @@ namespace Test
         }
 
         [TestMethod]
-        public void InsertNewItem()
+        public void InsertStaffAndItem()
         {
             var staff1 = new Staff()
             {
-                groupCode = "221Codde",
-                lastName = "11shi",
+                groupCode = "Codde",
+                lastName = "22shi",
                 firstName = "11wei",
                 email = "11sw@gmail.com",
                 phone = "119798989987",
@@ -112,7 +110,7 @@ namespace Test
             var item1 = new Item()
             {
                 asset = 134410,
-                campusCode = 28,
+                campusCode = 78,
                 description = "This is a good one",
                 bldg = "02-00445",
                 room = "312B",
@@ -120,22 +118,22 @@ namespace Test
                 acqDate = new DateTime(2008, 8, 29),
                 totalCost = Convert.ToDecimal(330044.04),
                 Model = "Model",
-                serialNumber = "FFF00000422",             
+                serialNumber = "FFF00000422",
                 groupCode = staff1.groupCode,
                 lastName = staff1.lastName,
                 firstName = staff1.firstName,
                 isDelete = false,
                 comments = "comments",
                 picture = bytes,
-             
+
 
             };
             var item2 = new Item()
             {
                 asset = 3143,
-                campusCode = 38,
+                campusCode = 18,
                 description = "This is a good one",
-                bldg = "02-00445",
+                bldg = "332-00445",
                 room = "312B",
                 otherLocation = "otherlocation",
                 acqDate = new DateTime(2008, 8, 29),
@@ -160,9 +158,62 @@ namespace Test
 
             //repo.DeleteByQuery("from Item a");
             //object id = repo.Insert(staff1);
-            //repo.SaveOrUpdate(staff1);
-            repo.SaveOrUpdate(item2);
-            //Assert.AreEqual(repo.Query<Item>().Count, 1);
+
+
+            //repo.DeleteByQuery("from Staff s");
+            //repo.DeleteByQuery("from Item t");
+            repo.SaveOrUpdate(staff1);
+            //IList<Staff> st = repo.Query<Staff>();
+            //var tt  = st[0];
+            repo.Save(item2);
+
+            //Restrictions.Like("Firstname", "YJing%")
+            //InventoryApp.Common.NHibernateRepository.ICriterion criterion = new ICriterion();
+            //NHibernate.Criterion.ICriterion expr
+            //System.Collections.IList it = repo.QueryBySQL("select * from item,staff where staff.groupCode = item.groupCode ");
+             IList<Staff> st = repo.Query<Staff>("from staff a where a.groupCode = '11Codde' ");
+            Assert.AreEqual(repo.Query<Item>().Count, 1);
+        }
+
+        [TestMethod]
+        public void InsertNewItem()
+        {
+            var item2 = new Item()
+            {
+                asset = 3143,
+                campusCode = 8,
+                description = "This is a good one",
+                bldg = "332-00445",
+                room = "312B",
+                otherLocation = "otherlocation",
+                acqDate = new DateTime(2008, 8, 29),
+                totalCost = Convert.ToDecimal(330044.04),
+                Model = "Model",
+                serialNumber = "FFF00000422",
+                isDelete = false,
+                comments = "comments",
+      
+            };
+            NHibernateRepository repo = new NHibernateRepository();
+            IList<Staff> st = repo.Query<Staff>();
+            item2.Staffs = st[0];
+            repo.Save(item2);
+           
+            Assert.AreEqual(repo.Query<Item>().Count, 2);
+        }
+
+        [TestMethod]
+        public void Update()
+        {
+            NHibernateRepository repo = new NHibernateRepository();
+            IList<Staff> st = repo.Query<Staff>();
+            st[0].groupCode = "13456";
+            repo.Update(st[0]);
+            int id = st[0].staffID;
+            
+            
+            Assert.AreEqual(repo.Query<Item>()[0].groupCode, "3456");
+
         }
 
     }
