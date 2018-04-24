@@ -32,8 +32,6 @@ C:\Users\q_122\Dropbox\phd\Courses\SoftwareEngineering\Project\Inventory-CSE-TAM
 C:\Users\q_122\Dropbox\phd\Courses\SoftwareEngineering\Project\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\InventoryApp.dll.config
 C:\Users\q_122\Dropbox\phd\Courses\SoftwareEngineering\Project\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\InventoryApp.exe
 C:\Users\q_122\Dropbox\phd\Courses\SoftwareEngineering\Project\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\InventoryApp.exe.config
-C:\Users\q_122\Dropbox\phd\Courses\SoftwareEngineering\Project\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\Test.dll
-C:\Users\q_122\Dropbox\phd\Courses\SoftwareEngineering\Project\Inventory-CSE-TAMU\WindowsFormsApp1\Test\obj\Debug\Test.dll
 C:\Users\q_122\Dropbox\phd\Courses\SoftwareEngineering\Project\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\System.Data.SQLite.dll
 C:\Users\q_122\Dropbox\phd\Courses\SoftwareEngineering\Project\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\System.Data.SQLite.xml
 C:\Users\q_122\Dropbox\phd\Courses\SoftwareEngineering\Project\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\System.Data.SQLite.dll.config
@@ -78,3 +76,5 @@ C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\obj\D
 C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\obj\Debug\Test.csproj.CopyComplete
 C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\obj\Debug\Test.dll
 C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\obj\Debug\Test.pdb
+C:\Users\q_122\Dropbox\phd\Courses\SoftwareEngineering\Project\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\Test.dll
+C:\Users\q_122\Dropbox\phd\Courses\SoftwareEngineering\Project\Inventory-CSE-TAMU\WindowsFormsApp1\Test\obj\Debug\Test.dll

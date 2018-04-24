@@ -14,6 +14,9 @@ namespace Test
         [STAThread]
         static void Main()
         {
+            Console.WriteLine("The path is: ");
+            Console.WriteLine(System.IO.Path.GetFullPath(@"../../../WindowsFormsApp1/Data/database.db"));
+
             var staff = new Staff()
             {
                 groupCode = "TestGroupCode",

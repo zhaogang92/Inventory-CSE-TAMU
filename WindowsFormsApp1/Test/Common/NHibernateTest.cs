@@ -65,7 +65,8 @@ namespace Test
         [TestMethod]
         public void TestSqlite3()
         {
-            SQLiteConnection m_dbConnection = new SQLiteConnection(@"Data Source=C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\WindowsFormsApp1\Data\database.db;Version=3;");
+            Console.WriteLine(System.IO.Path.GetFullPath(@"../../../WindowsFormsApp1/Data/database.db"));
+            SQLiteConnection m_dbConnection = new SQLiteConnection(@"Data Source=../../../WindowsFormsApp1/Data/database.db;Version=3;");
             m_dbConnection.Open();
             string sql2 = "create table lowscores (name varchar(20), score int)";
             string sql = "select * from staff";
@@ -171,13 +172,15 @@ namespace Test
             //InventoryApp.Common.NHibernateRepository.ICriterion criterion = new ICriterion();
             //NHibernate.Criterion.ICriterion expr
             //System.Collections.IList it = repo.QueryBySQL("select * from item,staff where staff.groupCode = item.groupCode ");
-             IList<Staff> st = repo.Query<Staff>("from staff a where a.groupCode = '11Codde' ");
+             IList<Staff> st = repo.Query<Staff>("from Staff a where a.groupCode = '11Codde' ");
             Assert.AreEqual(repo.Query<Item>().Count, 1);
         }
 
         [TestMethod]
         public void InsertNewItem()
         {
+            NHibernateRepository repo = new NHibernateRepository();
+            int oldCount = repo.Query<Item>().Count;
             var item2 = new Item()
             {
                 asset = 3143,
@@ -194,12 +197,11 @@ namespace Test
                 comments = "comments",
       
             };
-            NHibernateRepository repo = new NHibernateRepository();
             IList<Staff> st = repo.Query<Staff>();
             item2.Staffs = st[0];
             repo.Save(item2);
            
-            Assert.AreEqual(repo.Query<Item>().Count, 2);
+            Assert.AreEqual(repo.Query<Item>().Count, oldCount+1);
         }
 
         [TestMethod]
@@ -212,7 +214,7 @@ namespace Test
             int id = st[0].staffID;
             
             
-            Assert.AreEqual(repo.Query<Item>()[0].groupCode, "3456");
+            Assert.AreEqual("13456", repo.Query<Staff>()[0].groupCode);
 
         }
 
