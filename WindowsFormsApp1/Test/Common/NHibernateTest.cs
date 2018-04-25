@@ -3,7 +3,6 @@ using System.Text;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-
 using InventoryApp.Common;
 using InventoryApp.Model;
 using System.Data.SQLite;
@@ -66,9 +65,11 @@ namespace Test
         [TestMethod]
         public void TestSqlite3()
         {
-            SQLiteConnection m_dbConnection = new SQLiteConnection(@"Data Source=C:\Users\q_122\Dropbox\phd\Courses\SoftwareEngineering\Project\Inventory-CSE-TAMU\WindowsFormsApp1\WindowsFormsApp1\Data\database.db;Version=3;");
+            SQLiteConnection m_dbConnection = new SQLiteConnection(@"Data Source=C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\WindowsFormsApp1\Data\database.db;Version=3;");
             m_dbConnection.Open();
-            string sql = "create table highscores (name varchar(20), score int)";
+            string sql2 = "create table lowscores (name varchar(20), score int)";
+            string sql = "select * from staff";
+            string sql1 = "create table staff(staffID int auto_increment primary key,groupCode char(8),lastName char(30),firstName char(30),email char(40),phone char(15),location char(50))";
             SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
             command.ExecuteNonQuery();
         }
@@ -79,17 +80,145 @@ namespace Test
             var staff = new Staff()
             {
                 groupCode = "TestGroupCode",
-                lastName = "Hello",
+                lastName = "Hello123",
                 firstName = "World",
                 email = "Hello_world@gmail.com",
                 phone = "979979979",
                 location = "HRBB"
             };
-
+            
             NHibernateRepository repo = new NHibernateRepository();
+            
             repo.DeleteByQuery("from Staff s");
             repo.SaveOrUpdate(staff);
             Assert.AreEqual(repo.Query<Staff>().Count, 1);
         }
+
+        [TestMethod]
+        public void InsertStaffAndItem()
+        {
+            var staff1 = new Staff()
+            {
+                groupCode = "Codde",
+                lastName = "22shi",
+                firstName = "11wei",
+                email = "11sw@gmail.com",
+                phone = "119798989987",
+                location = "1HRBB"
+            };
+            byte[] bytes = { 201, 209 };
+            var item1 = new Item()
+            {
+                asset = 134410,
+                campusCode = 78,
+                description = "This is a good one",
+                bldg = "02-00445",
+                room = "312B",
+                otherLocation = "otherlocation",
+                acqDate = new DateTime(2008, 8, 29),
+                totalCost = Convert.ToDecimal(330044.04),
+                Model = "Model",
+                serialNumber = "FFF00000422",
+                groupCode = staff1.groupCode,
+                lastName = staff1.lastName,
+                firstName = staff1.firstName,
+                isDelete = false,
+                comments = "comments",
+                picture = bytes,
+
+
+            };
+            var item2 = new Item()
+            {
+                asset = 3143,
+                campusCode = 18,
+                description = "This is a good one",
+                bldg = "332-00445",
+                room = "312B",
+                otherLocation = "otherlocation",
+                acqDate = new DateTime(2008, 8, 29),
+                totalCost = Convert.ToDecimal(330044.04),
+                Model = "Model",
+                serialNumber = "FFF00000422",
+                groupCode = staff1.groupCode,
+                lastName = staff1.lastName,
+                firstName = staff1.firstName,
+                isDelete = false,
+                comments = "comments",
+                picture = bytes,
+
+
+            };
+
+
+            //staff1.Items = new HashSet<Item> { item1 };
+            item1.Staffs = staff1;
+            item2.Staffs = staff1;
+            NHibernateRepository repo = new NHibernateRepository();
+
+            //repo.DeleteByQuery("from Item a");
+            //object id = repo.Insert(staff1);
+
+
+            //repo.DeleteByQuery("from Staff s");
+            //repo.DeleteByQuery("from Item t");
+            repo.SaveOrUpdate(staff1);
+            //IList<Staff> st = repo.Query<Staff>();
+            //var tt  = st[0];
+            repo.Save(item2);
+
+            //Restrictions.Like("Firstname", "YJing%")
+            //InventoryApp.Common.NHibernateRepository.ICriterion criterion = new ICriterion();
+            //NHibernate.Criterion.ICriterion expr
+            //System.Collections.IList it = repo.QueryBySQL("select * from item,staff where staff.groupCode = item.groupCode ");
+             IList<Staff> st = repo.Query<Staff>("from staff a where a.groupCode = '11Codde' ");
+            Assert.AreEqual(repo.Query<Item>().Count, 1);
+        }
+
+        [TestMethod]
+        public void InsertNewItem()
+        {
+            var item2 = new Item()
+            {
+                asset = 3143,
+                campusCode = 8,
+                description = "This is a good one",
+                bldg = "332-00445",
+                room = "312B",
+                otherLocation = "otherlocation",
+                acqDate = new DateTime(2008, 8, 29),
+                totalCost = Convert.ToDecimal(330044.04),
+                Model = "Model",
+                serialNumber = "FFF00000422",
+                isDelete = false,
+                comments = "comments",
+      
+            };
+            NHibernateRepository repo = new NHibernateRepository();
+            IList<Staff> st = repo.Query<Staff>();
+            item2.Staffs = st[0];
+            repo.Save(item2);
+           
+            Assert.AreEqual(repo.Query<Item>().Count, 2);
+        }
+
+        [TestMethod]
+        public void Update()
+        {
+            NHibernateRepository repo = new NHibernateRepository();
+            IList<Staff> st = repo.Query<Staff>();
+            st[0].groupCode = "13456";
+            repo.Update(st[0]);
+            int id = st[0].staffID;
+            
+            
+            Assert.AreEqual(repo.Query<Item>()[0].groupCode, "3456");
+
+        }
+
     }
 }
+
+      
+       
+    

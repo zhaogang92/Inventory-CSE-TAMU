@@ -11,7 +11,7 @@ namespace InventoryApp.Model
         public virtual int asset { get; set; }
 
         public virtual int campusCode { get; set; }
-
+        
         public virtual string description { get; set; }
 
         public virtual string bldg { get; set; }
@@ -40,6 +40,6 @@ namespace InventoryApp.Model
 
         public virtual byte[] picture { get; set; }
         
-        public virtual Staff Staff { get; set; }
+        public virtual Staff Staffs { get; set; }
     }
 }

@@ -40,3 +40,41 @@ C:\Users\q_122\Dropbox\phd\Courses\SoftwareEngineering\Project\Inventory-CSE-TAM
 C:\Users\q_122\Dropbox\phd\Courses\SoftwareEngineering\Project\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\hibernate.cfg.xml
 C:\Users\q_122\Dropbox\phd\Courses\SoftwareEngineering\Project\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\Common\hibernate.cfg.xml
 C:\Users\q_122\Dropbox\phd\Courses\SoftwareEngineering\Project\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\MaterialSkin.dll
+C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\Common\hibernate.cfg.xml
+C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\hibernate.cfg.xml
+C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\Test.dll
+C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\Test.pdb
+C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\InventoryApp.exe
+C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\System.Data.SQLite.dll
+C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\LinqToExcel.dll
+C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\CSkin.dll
+C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\MaterialSkin.dll
+C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\NHibernate.dll
+C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\Remotion.Data.Linq.dll
+C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\Remotion.Linq.dll
+C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\Remotion.Linq.EagerFetching.dll
+C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\Antlr3.Runtime.dll
+C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\Iesi.Collections.dll
+C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\InventoryApp.pdb
+C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\InventoryApp.exe.config
+C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\System.Data.SQLite.xml
+C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\LinqToExcel.xml
+C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\CSkin.xml
+C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\NHibernate.xml
+C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\Remotion.Linq.xml
+C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\Remotion.Linq.EagerFetching.xml
+C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\Antlr3.Runtime.xml
+C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\Iesi.Collections.xml
+C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\obj\Debug\Test.csproj.CopyComplete
+C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\obj\Debug\Test.dll
+C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\obj\Debug\Test.pdb

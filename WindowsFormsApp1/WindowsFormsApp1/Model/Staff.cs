@@ -23,5 +23,7 @@ namespace InventoryApp.Model
         public virtual string location { get; set; }
 
         public virtual ISet<Item> Items { get; set; }
+
+        
     }
 }
