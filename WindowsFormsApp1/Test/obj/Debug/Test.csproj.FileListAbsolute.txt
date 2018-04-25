@@ -36,7 +36,6 @@ C:\Users\q_122\Dropbox\phd\Courses\SoftwareEngineering\Project\Inventory-CSE-TAM
 C:\Users\q_122\Dropbox\phd\Courses\SoftwareEngineering\Project\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\System.Data.SQLite.xml
 C:\Users\q_122\Dropbox\phd\Courses\SoftwareEngineering\Project\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\System.Data.SQLite.dll.config
 C:\Users\q_122\Dropbox\phd\Courses\SoftwareEngineering\Project\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\hibernate.cfg.xml
-C:\Users\q_122\Dropbox\phd\Courses\SoftwareEngineering\Project\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\Common\hibernate.cfg.xml
 C:\Users\q_122\Dropbox\phd\Courses\SoftwareEngineering\Project\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\MaterialSkin.dll
 C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 C:\Users\wei shi\Documents\GitHub\Inventory-CSE-TAMU\WindowsFormsApp1\Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll

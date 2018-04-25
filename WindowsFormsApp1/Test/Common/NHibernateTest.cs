@@ -6,6 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using InventoryApp.Common;
 using InventoryApp.Model;
 using System.Data.SQLite;
+using NHibernate.Criterion;
 
 namespace Test
 {
@@ -110,7 +111,7 @@ namespace Test
             byte[] bytes = { 201, 209 };
             var item1 = new Item()
             {
-                asset = 134410,
+                asset = "134410",
                 campusCode = 78,
                 description = "This is a good one",
                 bldg = "02-00445",
@@ -131,7 +132,7 @@ namespace Test
             };
             var item2 = new Item()
             {
-                asset = 3143,
+                asset = "3143",
                 campusCode = 18,
                 description = "This is a good one",
                 bldg = "332-00445",
@@ -166,14 +167,14 @@ namespace Test
             repo.SaveOrUpdate(staff1);
             //IList<Staff> st = repo.Query<Staff>();
             //var tt  = st[0];
-            repo.Save(item2);
+            repo.SaveOrUpdate(item2);
 
             //Restrictions.Like("Firstname", "YJing%")
             //InventoryApp.Common.NHibernateRepository.ICriterion criterion = new ICriterion();
             //NHibernate.Criterion.ICriterion expr
             //System.Collections.IList it = repo.QueryBySQL("select * from item,staff where staff.groupCode = item.groupCode ");
-             IList<Staff> st = repo.Query<Staff>("from Staff a where a.groupCode = '11Codde' ");
-            Assert.AreEqual(repo.Query<Item>().Count, 1);
+             IList<Staff> st = repo.Query<Staff>("from Staff a where a.groupCode = 'Codde' ");
+            Assert.AreEqual(repo.Query<Staff>().Count, 1);
         }
 
         [TestMethod]
@@ -183,7 +184,7 @@ namespace Test
             int oldCount = repo.Query<Item>().Count;
             var item2 = new Item()
             {
-                asset = 3143,
+                asset = "3143",
                 campusCode = 8,
                 description = "This is a good one",
                 bldg = "332-00445",
@@ -199,7 +200,7 @@ namespace Test
             };
             IList<Staff> st = repo.Query<Staff>();
             item2.Staffs = st[0];
-            repo.Save(item2);
+            repo.SaveOrUpdate(item2);
            
             Assert.AreEqual(repo.Query<Item>().Count, oldCount+1);
         }
@@ -216,6 +217,14 @@ namespace Test
             
             Assert.AreEqual("13456", repo.Query<Staff>()[0].groupCode);
 
+        }
+
+        [TestMethod]
+        public void QueryByCriteria()
+        {
+            NHibernateRepository repo = new NHibernateRepository();
+            var staffs = repo.Query<Staff>(Expression.Eq("staffID", 54));
+            Assert.AreEqual(1, staffs.Count);
         }
 
     }

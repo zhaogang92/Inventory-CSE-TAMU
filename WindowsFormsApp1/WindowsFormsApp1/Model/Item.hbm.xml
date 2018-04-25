@@ -5,13 +5,15 @@
                     namespace="InventoryApp.Model"
                    auto-import="true">
 
-  <class name="Item" table="item" lazy="true">
+  <class name="Item" table="item">
 
-    <id name="asset" type="int" column="asset">
+    <id name="itemID" type="int">
 
       <generator class="native"/>
 
     </id>
+
+    <property name="asset" column="asset" />
 
     <property name="campusCode" column ="campusCode"/>
 
@@ -42,8 +44,8 @@
     <property name="comments" column="comments"/>
 
     <property name="picture" column="picture"/>
-    
-    <many-to-one name="Staffs" column ="staffID " not-null ="true" class ="Staff" lazy="proxy"/>
+
+    <many-to-one name="Staffs" column ="staffID" class ="Staff" lazy="proxy" foreign-key="FK_Staff" />
 
   </class>
 

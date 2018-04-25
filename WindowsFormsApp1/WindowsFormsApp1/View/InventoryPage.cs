@@ -11,9 +11,15 @@ using MySql.Data.MySqlClient;
 
 using CCWin;
 
+
+using InventoryApp.Common;
+using InventoryApp.Model;
+using System.Data.SQLite;
+using NHibernate.Criterion;
+
 namespace InventoryApp
 {
-    public partial class InventoryPage : Form
+    public partial class InventoryPage : System.Windows.Forms.Form
     {
         private int dbIndex = 0;
 
@@ -68,7 +74,23 @@ namespace InventoryApp
 
         private void InventoryPage_Load(object sender, EventArgs e)
         {
-
+            NHibernateRepository repo = new NHibernateRepository();
+            var items = repo.Query<Item>();
+            var showedItems = from item in items
+                              let showedItem = new
+                              {
+                                  Asset=item.asset,
+                                  Building=item.bldg,
+                                  Room=item.room,
+                                  SerialNumber=item.serialNumber,
+                                  CampusCode=item.campusCode,
+                                  Description=item.description,
+                                  TotalCost=item.totalCost,
+                                  OtherLocation=item.otherLocation,
+                                  Model=item.Model
+                              }
+                              select showedItem;
+            itemsDataGridView.DataSource = showedItems.ToList();
         }
     }
 }

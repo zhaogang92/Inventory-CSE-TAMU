@@ -25,10 +25,10 @@
 
     <property name="location" column="location"/>
     
-    <set name ="Items" table ="item" cascade ="all-delete-orphan" inverse ="true">
+    <bag name ="Items" table ="item" cascade ="all-delete-orphan" inverse ="true" generic="true">
           <key column="staffID" not-null="true"/>
           <one-to-many class ="Item"/>
-    </set>
+    </bag>
     
     
 

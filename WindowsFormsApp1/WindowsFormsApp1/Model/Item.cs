@@ -8,7 +8,9 @@ namespace InventoryApp.Model
 {
     public class Item
     {
-        public virtual int asset { get; set; }
+        public virtual int itemID { get; set; }
+
+        public virtual string asset { get; set; }
 
         public virtual int campusCode { get; set; }
         

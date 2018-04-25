@@ -14,22 +14,27 @@ namespace Test
         [STAThread]
         static void Main()
         {
-            Console.WriteLine("The path is: ");
-            Console.WriteLine(System.IO.Path.GetFullPath(@"../../../WindowsFormsApp1/Data/database.db"));
-
-            var staff = new Staff()
-            {
-                groupCode = "TestGroupCode",
-                lastName = "Hello",
-                firstName = "World",
-                email = "Hello_world@gmail.com",
-                phone = "979979979",
-                location = "HRBB"
-            };
-
             NHibernateRepository repo = new NHibernateRepository();
-            repo.DeleteByQuery("select * from Item;");
-            repo.SaveOrUpdate(staff);
+            int oldCount = repo.Query<Item>().Count;
+            var item2 = new Item()
+            {
+                asset = "3143",
+                campusCode = 8,
+                description = "This is a good one",
+                bldg = "332-00445",
+                room = "312B",
+                otherLocation = "otherlocation",
+                acqDate = new DateTime(2008, 8, 29),
+                totalCost = Convert.ToDecimal(330044.04),
+                Model = "Model",
+                serialNumber = "FFF00000422",
+                isDelete = false,
+                comments = "comments",
+
+            };
+            IList<Staff> st = repo.Query<Staff>();
+            item2.Staffs = st[0];
+            repo.SaveOrUpdate(item2);
         }
     }
 }

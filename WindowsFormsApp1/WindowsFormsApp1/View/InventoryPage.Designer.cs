@@ -28,577 +28,283 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.AddSearchTab = new System.Windows.Forms.TabControl();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.inventoryDBGridView = new CCWin.SkinControl.SkinDataGridView();
-            this.SearchBtn = new CCWin.SkinControl.SkinButton();
-            this.AssertNumberTxt = new CCWin.SkinControl.RtfRichTextBox();
-            this.skinLabel1 = new CCWin.SkinControl.SkinLabel();
-            this.Properties = new CCWin.SkinControl.SkinComboBox();
+            this.itemsDataGridView = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.skinButton1 = new CCWin.SkinControl.SkinButton();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.skinLabel4 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel10 = new CCWin.SkinControl.SkinLabel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.addBtn = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.skinLabel2 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel3 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel5 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel6 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel7 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel8 = new CCWin.SkinControl.SkinLabel();
-            this.skinLabel9 = new CCWin.SkinControl.SkinLabel();
-            this.DeleteBtn = new CCWin.SkinControl.SkinButton();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.dataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.importDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.staffInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.manageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.AddSearchTab.SuspendLayout();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.searchBtn = new System.Windows.Forms.Button();
+            this.deleteBtn = new System.Windows.Forms.Button();
+            this.editBtn = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryDBGridView)).BeginInit();
-            this.tabPage2.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.itemsDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // AddSearchTab
+            // splitContainer1
             // 
-            this.AddSearchTab.Controls.Add(this.tabPage1);
-            this.AddSearchTab.Controls.Add(this.tabPage2);
-            this.AddSearchTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddSearchTab.Location = new System.Drawing.Point(16, 54);
-            this.AddSearchTab.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.AddSearchTab.Name = "AddSearchTab";
-            this.AddSearchTab.Padding = new System.Drawing.Point(100, 10);
-            this.AddSearchTab.SelectedIndex = 0;
-            this.AddSearchTab.Size = new System.Drawing.Size(1674, 754);
-            this.AddSearchTab.TabIndex = 0;
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.tabControl1);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.addBtn);
+            this.splitContainer1.Panel2.Controls.Add(this.label5);
+            this.splitContainer1.Panel2.Controls.Add(this.dateTimePicker2);
+            this.splitContainer1.Panel2.Controls.Add(this.dateTimePicker1);
+            this.splitContainer1.Panel2.Controls.Add(this.label4);
+            this.splitContainer1.Panel2.Controls.Add(this.textBox4);
+            this.splitContainer1.Panel2.Controls.Add(this.label3);
+            this.splitContainer1.Panel2.Controls.Add(this.label2);
+            this.splitContainer1.Panel2.Controls.Add(this.label1);
+            this.splitContainer1.Panel2.Controls.Add(this.textBox2);
+            this.splitContainer1.Panel2.Controls.Add(this.textBox1);
+            this.splitContainer1.Panel2.Controls.Add(this.searchBtn);
+            this.splitContainer1.Panel2.Controls.Add(this.deleteBtn);
+            this.splitContainer1.Panel2.Controls.Add(this.editBtn);
+            this.splitContainer1.Panel2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.splitContainer1.Size = new System.Drawing.Size(1234, 488);
+            this.splitContainer1.SplitterDistance = 421;
+            this.splitContainer1.TabIndex = 0;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1234, 421);
+            this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.inventoryDBGridView);
-            this.tabPage1.Controls.Add(this.SearchBtn);
-            this.tabPage1.Controls.Add(this.AssertNumberTxt);
-            this.tabPage1.Controls.Add(this.skinLabel1);
-            this.tabPage1.Controls.Add(this.Properties);
-            this.tabPage1.Location = new System.Drawing.Point(8, 72);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Controls.Add(this.itemsDataGridView);
+            this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage1.Size = new System.Drawing.Size(1658, 674);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1226, 385);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Search/Edit/Delete";
+            this.tabPage1.Text = "Items";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // inventoryDBGridView
+            // itemsDataGridView
             // 
-            this.inventoryDBGridView.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.inventoryDBGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.inventoryDBGridView.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.inventoryDBGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.inventoryDBGridView.ColumnFont = null;
-            this.inventoryDBGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.inventoryDBGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.inventoryDBGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.inventoryDBGridView.ColumnSelectForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(188)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.inventoryDBGridView.DefaultCellStyle = dataGridViewCellStyle3;
-            this.inventoryDBGridView.EnableHeadersVisualStyles = false;
-            this.inventoryDBGridView.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.inventoryDBGridView.HeadFont = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inventoryDBGridView.HeadSelectForeColor = System.Drawing.SystemColors.HighlightText;
-            this.inventoryDBGridView.Location = new System.Drawing.Point(6, 79);
-            this.inventoryDBGridView.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.inventoryDBGridView.Name = "inventoryDBGridView";
-            this.inventoryDBGridView.ReadOnly = true;
-            this.inventoryDBGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.inventoryDBGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.inventoryDBGridView.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.inventoryDBGridView.RowTemplate.Height = 23;
-            this.inventoryDBGridView.Size = new System.Drawing.Size(1642, 596);
-            this.inventoryDBGridView.TabIndex = 4;
-            this.inventoryDBGridView.TitleBack = null;
-            this.inventoryDBGridView.TitleBackColorBegin = System.Drawing.Color.White;
-            this.inventoryDBGridView.TitleBackColorEnd = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(196)))), ((int)(((byte)(242)))));
-            
-            // 
-            // SearchBtn
-            // 
-            this.SearchBtn.BackColor = System.Drawing.Color.Transparent;
-            this.SearchBtn.BaseColor = System.Drawing.Color.White;
-            this.SearchBtn.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.SearchBtn.DownBack = null;
-            this.SearchBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchBtn.Location = new System.Drawing.Point(1434, 8);
-            this.SearchBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.SearchBtn.MouseBack = null;
-            this.SearchBtn.Name = "SearchBtn";
-            this.SearchBtn.NormlBack = null;
-            this.SearchBtn.Size = new System.Drawing.Size(200, 52);
-            this.SearchBtn.TabIndex = 3;
-            this.SearchBtn.Text = "Search";
-            this.SearchBtn.UseVisualStyleBackColor = false;
-            // 
-            // AssertNumberTxt
-            // 
-            this.AssertNumberTxt.HiglightColor = CCWin.SkinControl.RtfRichTextBox.RtfColor.White;
-            this.AssertNumberTxt.Location = new System.Drawing.Point(890, 8);
-            this.AssertNumberTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.AssertNumberTxt.Name = "AssertNumberTxt";
-            this.AssertNumberTxt.Size = new System.Drawing.Size(328, 50);
-            this.AssertNumberTxt.TabIndex = 2;
-            this.AssertNumberTxt.Text = "";
-            this.AssertNumberTxt.TextColor = CCWin.SkinControl.RtfRichTextBox.RtfColor.Black;
-            // 
-            // skinLabel1
-            // 
-            this.skinLabel1.AutoSize = true;
-            this.skinLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel1.BorderColor = System.Drawing.Color.White;
-            this.skinLabel1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel1.Location = new System.Drawing.Point(562, 12);
-            this.skinLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.skinLabel1.Name = "skinLabel1";
-            this.skinLabel1.Size = new System.Drawing.Size(159, 41);
-            this.skinLabel1.TabIndex = 1;
-            this.skinLabel1.Text = "equals to";
-            // 
-            // Properties
-            // 
-            this.Properties.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.Properties.FormattingEnabled = true;
-            this.Properties.Location = new System.Drawing.Point(8, 4);
-            this.Properties.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Properties.Name = "Properties";
-            this.Properties.Size = new System.Drawing.Size(426, 54);
-            this.Properties.TabIndex = 0;
-            this.Properties.Text = "Asset Number";
-            this.Properties.WaterText = "";
+            this.itemsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.itemsDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.itemsDataGridView.Location = new System.Drawing.Point(3, 3);
+            this.itemsDataGridView.Name = "itemsDataGridView";
+            this.itemsDataGridView.Size = new System.Drawing.Size(1220, 379);
+            this.itemsDataGridView.TabIndex = 0;
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.skinButton1);
-            this.tabPage2.Controls.Add(this.tableLayoutPanel1);
-            this.tabPage2.Location = new System.Drawing.Point(8, 72);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Location = new System.Drawing.Point(4, 32);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage2.Size = new System.Drawing.Size(1658, 674);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1226, 385);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Add New Record";
+            this.tabPage2.Text = "Staffs";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // skinButton1
+            // addBtn
             // 
-            this.skinButton1.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton1.BaseColor = System.Drawing.Color.White;
-            this.skinButton1.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton1.DownBack = null;
-            this.skinButton1.Location = new System.Drawing.Point(1342, 590);
-            this.skinButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.skinButton1.MouseBack = null;
-            this.skinButton1.Name = "skinButton1";
-            this.skinButton1.NormlBack = null;
-            this.skinButton1.Size = new System.Drawing.Size(316, 73);
-            this.skinButton1.TabIndex = 1;
-            this.skinButton1.Text = "Add Record";
-            this.skinButton1.UseVisualStyleBackColor = false;
+            this.addBtn.Location = new System.Drawing.Point(1143, 14);
+            this.addBtn.Name = "addBtn";
+            this.addBtn.Size = new System.Drawing.Size(75, 35);
+            this.addBtn.TabIndex = 14;
+            this.addBtn.Text = "Add";
+            this.addBtn.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel1
+            // label5
             // 
-            this.tableLayoutPanel1.AllowDrop = true;
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.ColumnCount = 6;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.75042F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.75042F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.75042F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.58291F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.58291F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.58291F));
-            this.tableLayoutPanel1.Controls.Add(this.skinLabel4, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.skinLabel10, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.textBox2, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBox3, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.textBox4, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.textBox5, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBox6, 3, 2);
-            this.tableLayoutPanel1.Controls.Add(this.textBox7, 5, 0);
-            this.tableLayoutPanel1.Controls.Add(this.textBox9, 5, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBox8, 5, 2);
-            this.tableLayoutPanel1.Controls.Add(this.skinLabel2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.skinLabel3, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.skinLabel5, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.skinLabel6, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.skinLabel7, 4, 1);
-            this.tableLayoutPanel1.Controls.Add(this.skinLabel8, 4, 2);
-            this.tableLayoutPanel1.Controls.Add(this.skinLabel9, 2, 2);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 127);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1646, 454);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(518, 20);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(25, 23);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "to";
             // 
-            // skinLabel4
+            // dateTimePicker2
             // 
-            this.skinLabel4.AutoSize = true;
-            this.skinLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel4.BorderColor = System.Drawing.Color.White;
-            this.skinLabel4.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel4.Location = new System.Drawing.Point(1101, 0);
-            this.skinLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.skinLabel4.Name = "skinLabel4";
-            this.skinLabel4.Size = new System.Drawing.Size(246, 41);
-            this.skinLabel4.TabIndex = 13;
-            this.skinLabel4.Text = "Other Location";
+            this.dateTimePicker2.CalendarFont = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker2.CustomFormat = "";
+            this.dateTimePicker2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker2.Location = new System.Drawing.Point(548, 16);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(117, 30);
+            this.dateTimePicker2.TabIndex = 12;
             // 
-            // skinLabel10
+            // dateTimePicker1
             // 
-            this.skinLabel10.AutoSize = true;
-            this.skinLabel10.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel10.BorderColor = System.Drawing.Color.White;
-            this.skinLabel10.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel10.Location = new System.Drawing.Point(4, 302);
-            this.skinLabel10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.skinLabel10.Name = "skinLabel10";
-            this.skinLabel10.Size = new System.Drawing.Size(237, 41);
-            this.skinLabel10.TabIndex = 17;
-            this.skinLabel10.Text = "Serial Number";
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.CustomFormat = "";
+            this.dateTimePicker1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(397, 16);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(119, 30);
+            this.dateTimePicker1.TabIndex = 11;
             // 
-            // textBox1
+            // label4
             // 
-            this.textBox1.Location = new System.Drawing.Point(279, 4);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(262, 53);
-            this.textBox1.TabIndex = 0;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(279, 155);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(262, 53);
-            this.textBox2.TabIndex = 1;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(279, 306);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(262, 53);
-            this.textBox3.TabIndex = 2;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(672, 20);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(57, 23);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Staff:";
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(829, 4);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(733, 16);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(260, 53);
-            this.textBox4.TabIndex = 3;
+            this.textBox4.Size = new System.Drawing.Size(100, 30);
+            this.textBox4.TabIndex = 9;
             // 
-            // textBox5
+            // label3
             // 
-            this.textBox5.Location = new System.Drawing.Point(829, 155);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(260, 53);
-            this.textBox5.TabIndex = 4;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(348, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(50, 23);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Date:";
             // 
-            // textBox6
+            // label2
             // 
-            this.textBox6.Location = new System.Drawing.Point(829, 306);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(260, 53);
-            this.textBox6.TabIndex = 5;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(186, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 23);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Room:";
             // 
-            // textBox7
+            // label1
             // 
-            this.textBox7.Location = new System.Drawing.Point(1373, 4);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(262, 53);
-            this.textBox7.TabIndex = 6;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 23);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Building:";
             // 
-            // textBox9
+            // textBox2
             // 
-            this.textBox9.Location = new System.Drawing.Point(1373, 155);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(262, 53);
-            this.textBox9.TabIndex = 8;
+            this.textBox2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(241, 16);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 30);
+            this.textBox2.TabIndex = 4;
             // 
-            // textBox8
+            // textBox1
             // 
-            this.textBox8.Location = new System.Drawing.Point(1373, 306);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(262, 53);
-            this.textBox8.TabIndex = 7;
+            this.textBox1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(79, 16);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 30);
+            this.textBox1.TabIndex = 3;
             // 
-            // skinLabel2
+            // searchBtn
             // 
-            this.skinLabel2.AutoSize = true;
-            this.skinLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel2.BorderColor = System.Drawing.Color.White;
-            this.skinLabel2.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel2.Location = new System.Drawing.Point(4, 0);
-            this.skinLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.skinLabel2.Name = "skinLabel2";
-            this.skinLabel2.Size = new System.Drawing.Size(248, 41);
-            this.skinLabel2.TabIndex = 9;
-            this.skinLabel2.Text = "Assert Number";
+            this.searchBtn.Location = new System.Drawing.Point(849, 14);
+            this.searchBtn.Name = "searchBtn";
+            this.searchBtn.Size = new System.Drawing.Size(75, 35);
+            this.searchBtn.TabIndex = 2;
+            this.searchBtn.Text = "Search";
+            this.searchBtn.UseVisualStyleBackColor = true;
             // 
-            // skinLabel3
+            // deleteBtn
             // 
-            this.skinLabel3.AutoSize = true;
-            this.skinLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel3.BorderColor = System.Drawing.Color.White;
-            this.skinLabel3.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel3.Location = new System.Drawing.Point(4, 151);
-            this.skinLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.skinLabel3.Name = "skinLabel3";
-            this.skinLabel3.Size = new System.Drawing.Size(193, 41);
-            this.skinLabel3.TabIndex = 10;
-            this.skinLabel3.Text = "Description";
+            this.deleteBtn.Location = new System.Drawing.Point(1041, 14);
+            this.deleteBtn.Name = "deleteBtn";
+            this.deleteBtn.Size = new System.Drawing.Size(75, 35);
+            this.deleteBtn.TabIndex = 1;
+            this.deleteBtn.Text = "Delete";
+            this.deleteBtn.UseVisualStyleBackColor = true;
             // 
-            // skinLabel5
+            // editBtn
             // 
-            this.skinLabel5.AutoSize = true;
-            this.skinLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel5.BorderColor = System.Drawing.Color.White;
-            this.skinLabel5.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel5.Location = new System.Drawing.Point(554, 0);
-            this.skinLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.skinLabel5.Name = "skinLabel5";
-            this.skinLabel5.Size = new System.Drawing.Size(244, 41);
-            this.skinLabel5.TabIndex = 12;
-            this.skinLabel5.Text = "Room Number";
-            // 
-            // skinLabel6
-            // 
-            this.skinLabel6.AutoSize = true;
-            this.skinLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel6.BorderColor = System.Drawing.Color.White;
-            this.skinLabel6.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel6.Location = new System.Drawing.Point(554, 151);
-            this.skinLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.skinLabel6.Name = "skinLabel6";
-            this.skinLabel6.Size = new System.Drawing.Size(188, 41);
-            this.skinLabel6.TabIndex = 13;
-            this.skinLabel6.Text = "User Name";
-            // 
-            // skinLabel7
-            // 
-            this.skinLabel7.AutoSize = true;
-            this.skinLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel7.BorderColor = System.Drawing.Color.White;
-            this.skinLabel7.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel7.Location = new System.Drawing.Point(1101, 151);
-            this.skinLabel7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.skinLabel7.Name = "skinLabel7";
-            this.skinLabel7.Size = new System.Drawing.Size(145, 41);
-            this.skinLabel7.TabIndex = 14;
-            this.skinLabel7.Text = "Building";
-            // 
-            // skinLabel8
-            // 
-            this.skinLabel8.AutoSize = true;
-            this.skinLabel8.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel8.BorderColor = System.Drawing.Color.White;
-            this.skinLabel8.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel8.Location = new System.Drawing.Point(1101, 302);
-            this.skinLabel8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.skinLabel8.Name = "skinLabel8";
-            this.skinLabel8.Size = new System.Drawing.Size(172, 41);
-            this.skinLabel8.TabIndex = 15;
-            this.skinLabel8.Text = "Total Cost";
-            this.skinLabel8.Click += new System.EventHandler(this.skinLabel8_Click);
-            // 
-            // skinLabel9
-            // 
-            this.skinLabel9.AutoSize = true;
-            this.skinLabel9.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel9.BorderColor = System.Drawing.Color.White;
-            this.skinLabel9.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinLabel9.Location = new System.Drawing.Point(554, 302);
-            this.skinLabel9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.skinLabel9.Name = "skinLabel9";
-            this.skinLabel9.Size = new System.Drawing.Size(158, 41);
-            this.skinLabel9.TabIndex = 16;
-            this.skinLabel9.Text = "Acq Date";
-            // 
-            // DeleteBtn
-            // 
-            this.DeleteBtn.BackColor = System.Drawing.Color.Transparent;
-            this.DeleteBtn.BaseColor = System.Drawing.Color.White;
-            this.DeleteBtn.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.DeleteBtn.DownBack = null;
-            this.DeleteBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteBtn.Location = new System.Drawing.Point(1222, 817);
-            this.DeleteBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.DeleteBtn.MouseBack = null;
-            this.DeleteBtn.Name = "DeleteBtn";
-            this.DeleteBtn.NormlBack = null;
-            this.DeleteBtn.Size = new System.Drawing.Size(468, 52);
-            this.DeleteBtn.TabIndex = 4;
-            this.DeleteBtn.Text = "Delete Selected Record";
-            this.DeleteBtn.UseVisualStyleBackColor = false;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dataToolStripMenuItem,
-            this.manageToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(12, 4, 0, 4);
-            this.menuStrip1.Size = new System.Drawing.Size(1706, 44);
-            this.menuStrip1.TabIndex = 5;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // dataToolStripMenuItem
-            // 
-            this.dataToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.importDataToolStripMenuItem,
-            this.staffInformationToolStripMenuItem});
-            this.dataToolStripMenuItem.Name = "dataToolStripMenuItem";
-            this.dataToolStripMenuItem.Size = new System.Drawing.Size(98, 36);
-            this.dataToolStripMenuItem.Text = "Import";
-            // 
-            // importDataToolStripMenuItem
-            // 
-            this.importDataToolStripMenuItem.Name = "importDataToolStripMenuItem";
-            this.importDataToolStripMenuItem.Size = new System.Drawing.Size(294, 38);
-            this.importDataToolStripMenuItem.Text = "Inventory List";
-            this.importDataToolStripMenuItem.Click += new System.EventHandler(this.importInventoryDataMenuClick);
-            // 
-            // staffInformationToolStripMenuItem
-            // 
-            this.staffInformationToolStripMenuItem.Name = "staffInformationToolStripMenuItem";
-            this.staffInformationToolStripMenuItem.Size = new System.Drawing.Size(294, 38);
-            this.staffInformationToolStripMenuItem.Text = "Staff Information";
-            this.staffInformationToolStripMenuItem.Click += new System.EventHandler(this.importStaffDataMenuClick);
-            // 
-            // manageToolStripMenuItem
-            // 
-            this.manageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addUserToolStripMenuItem});
-            this.manageToolStripMenuItem.Name = "manageToolStripMenuItem";
-            this.manageToolStripMenuItem.Size = new System.Drawing.Size(114, 36);
-            this.manageToolStripMenuItem.Text = "Manage";
-            // 
-            // addUserToolStripMenuItem
-            // 
-            this.addUserToolStripMenuItem.Name = "addUserToolStripMenuItem";
-            this.addUserToolStripMenuItem.Size = new System.Drawing.Size(211, 38);
-            this.addUserToolStripMenuItem.Text = "Add User";
+            this.editBtn.Location = new System.Drawing.Point(945, 14);
+            this.editBtn.Name = "editBtn";
+            this.editBtn.Size = new System.Drawing.Size(75, 35);
+            this.editBtn.TabIndex = 0;
+            this.editBtn.Text = "Edit";
+            this.editBtn.UseVisualStyleBackColor = true;
             // 
             // InventoryPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1706, 879);
-            this.Controls.Add(this.DeleteBtn);
-            this.Controls.Add(this.AddSearchTab);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ClientSize = new System.Drawing.Size(1234, 488);
+            this.Controls.Add(this.splitContainer1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "InventoryPage";
             this.Text = "Inventory";
             this.Load += new System.EventHandler(this.InventoryPage_Load);
-            this.AddSearchTab.ResumeLayout(false);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            this.splitContainer1.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryDBGridView)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.itemsDataGridView)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl AddSearchTab;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private CCWin.SkinControl.RtfRichTextBox AssertNumberTxt;
-        private CCWin.SkinControl.SkinLabel skinLabel1;
-        private CCWin.SkinControl.SkinComboBox Properties;
-        private CCWin.SkinControl.SkinButton SearchBtn;
-        private CCWin.SkinControl.SkinButton DeleteBtn;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TextBox textBox1;
-        private CCWin.SkinControl.SkinLabel skinLabel2;
+        private System.Windows.Forms.DataGridView itemsDataGridView;
+        private System.Windows.Forms.Button editBtn;
+        private System.Windows.Forms.Button deleteBtn;
+        private System.Windows.Forms.Button searchBtn;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private CCWin.SkinControl.SkinLabel skinLabel4;
-        private CCWin.SkinControl.SkinLabel skinLabel10;
-        private CCWin.SkinControl.SkinLabel skinLabel3;
-        private CCWin.SkinControl.SkinLabel skinLabel5;
-        private CCWin.SkinControl.SkinLabel skinLabel6;
-        private CCWin.SkinControl.SkinLabel skinLabel7;
-        private CCWin.SkinControl.SkinLabel skinLabel8;
-        private CCWin.SkinControl.SkinLabel skinLabel9;
-        private CCWin.SkinControl.SkinButton skinButton1;
-        private CCWin.SkinControl.SkinDataGridView inventoryDBGridView;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem dataToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem importDataToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem manageToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addUserToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem staffInformationToolStripMenuItem;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Button addBtn;
     }
 }

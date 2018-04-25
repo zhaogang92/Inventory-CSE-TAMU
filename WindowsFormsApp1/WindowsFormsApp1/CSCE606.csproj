@@ -188,7 +188,7 @@
     <None Include="Resources\loginImg.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Common\hibernate.cfg.xml">
+    <Content Include="hibernate.cfg.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\themes\base\accordion.css" />

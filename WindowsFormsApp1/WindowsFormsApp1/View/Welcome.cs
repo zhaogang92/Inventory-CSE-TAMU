@@ -37,12 +37,12 @@ namespace InventoryApp
                 return;
             }
 
-            DBIndex = this.ChoosedbCb.SelectedIndex;
-            if (DBIndex == -1)
-            {
-                CCWin.MessageBoxEx.Show("Please select one database!", "Error", MessageBoxButtons.OK);
-                return;
-            }
+            //DBIndex = this.ChoosedbCb.SelectedIndex;
+            //if (DBIndex == -1)
+            //{
+            //    CCWin.MessageBoxEx.Show("Please select one database!", "Error", MessageBoxButtons.OK);
+            //    return;
+            //}
 
             this.DialogResult = DialogResult.OK;
             this.Close();
