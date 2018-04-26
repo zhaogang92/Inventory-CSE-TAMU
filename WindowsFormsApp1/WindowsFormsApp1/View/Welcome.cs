@@ -25,7 +25,10 @@ namespace InventoryApp
 
         private bool validateUser(String userName, String password)
         {
-            return true;
+            if (userName == "admin" && password =="admin")
+                return true;
+            else
+                return false;
         }
 
         private void loginBtnClick(object sender, EventArgs e)
@@ -45,7 +48,10 @@ namespace InventoryApp
             //}
 
             this.DialogResult = DialogResult.OK;
+
             this.Close();
+            //InventoryPage inventoryPage = new InventoryPage();
+            //inventoryPage.Show();
 
             return;
         }

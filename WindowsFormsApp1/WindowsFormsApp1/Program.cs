@@ -20,19 +20,14 @@ namespace InventoryApp
             Application.SetCompatibleTextRenderingDefault(false);
 
             UserInfoData userInfoData = new UserInfoData();
-            bool result = userInfoData.AddUserInfo(new UserInfo()
-            {
-                Address = "北京",
-                Age = 25,
-                Gender = true,
-                UserName = "wolfy"
-            });
+            
 
             var loginPage = new Welcome();
             loginPage.ShowDialog();
             if (DialogResult.OK == loginPage.DialogResult)
             {
-                var inventoryPage = new InventoryPage(loginPage.DBIndex);
+                var inventoryPage = new InventoryPage();
+                inventoryPage.Size = new System.Drawing.Size(1200, 600);
                 Application.Run(inventoryPage);
             }
         }

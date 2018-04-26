@@ -81,17 +81,17 @@ namespace Test
         {
             var staff = new Staff()
             {
-                groupCode = "TestGroupCode",
-                lastName = "Hello123",
-                firstName = "World",
-                email = "Hello_world@gmail.com",
+                groupCode = "GroupCode",
+                lastName = "11Hello",
+                firstName = "22World",
+                email = "33Hello_world@tamu.com",
                 phone = "979979979",
-                location = "HRBB"
+                location = "HRBBf"
             };
             
             NHibernateRepository repo = new NHibernateRepository();
             
-            repo.DeleteByQuery("from Staff s");
+            //repo.DeleteByQuery("from Staff s");
             repo.SaveOrUpdate(staff);
             Assert.AreEqual(repo.Query<Staff>().Count, 1);
         }
@@ -210,7 +210,7 @@ namespace Test
         {
             NHibernateRepository repo = new NHibernateRepository();
             IList<Staff> st = repo.Query<Staff>();
-            st[0].groupCode = "13456";
+            st[0].groupCode = "1345655";
             repo.Update(st[0]);
             int id = st[0].staffID;
             

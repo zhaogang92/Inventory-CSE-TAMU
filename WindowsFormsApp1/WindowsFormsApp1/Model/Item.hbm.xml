@@ -13,7 +13,7 @@
 
     </id>
 
-    <property name="asset" column="asset" />
+    <property name="asset" column="asset" unique ="true" />
 
     <property name="campusCode" column ="campusCode"/>
 
