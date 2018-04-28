@@ -79,6 +79,7 @@ namespace InventoryApp
                               let showedItem = new
                               {
                                   Asset = item.asset,
+                                  StaffName = item.Staffs.lastName + "," + item.Staffs.firstName,
                                   Building = item.bldg,
                                   Room = item.room,
                                   SerialNumber = item.serialNumber,
@@ -86,7 +87,8 @@ namespace InventoryApp
                                   Description = item.description,
                                   TotalCost = item.totalCost,
                                   OtherLocation = item.otherLocation,
-                                  Model = item.Model
+                                  Model = item.Model,
+                                  Picture = item.picture
                               }
                               select showedItem;
             itemsDataGridView.DataSource = showedItems.ToList();
@@ -201,7 +203,9 @@ namespace InventoryApp
                                           Description = item.description,
                                           TotalCost = item.totalCost,
                                           OtherLocation = item.otherLocation,
-                                          Model = item.Model
+                                          Model = item.Model,
+                                          Picture = item.picture
+
                                       }
                                       select showedItem;
                     itemsDataGridView.DataSource = showedItems.ToList();
@@ -311,8 +315,7 @@ namespace InventoryApp
         }
 
         private void editBtn_Click_1(object sender, EventArgs e)
-        {
-            
+        {   
             if (tabControl.SelectedTab == tabControl.TabPages[0])
             {
                // NHibernateRepository repo = new NHibernateRepository();
@@ -335,6 +338,15 @@ namespace InventoryApp
                 showAllStaffs(repo);
 
             }
+        }
+
+        private void itemsDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            rowindex = e.RowIndex;
+            //if(itemsDataGridView.SelectedColumns[])
+            //bytes[] pic =itemsDataGridView.Rows[rowindex].Cells[10].Value;
+
         }
     }
 }

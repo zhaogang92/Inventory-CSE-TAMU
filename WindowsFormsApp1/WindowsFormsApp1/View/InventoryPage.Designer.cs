@@ -90,7 +90,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.editBtn);
             this.splitContainer1.Panel2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.splitContainer1.Size = new System.Drawing.Size(1921, 888);
-            this.splitContainer1.SplitterDistance = 829;
+            this.splitContainer1.SplitterDistance = 825;
             this.splitContainer1.SplitterWidth = 8;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -104,7 +104,7 @@
             this.tabControl.Margin = new System.Windows.Forms.Padding(6);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(1921, 829);
+            this.tabControl.Size = new System.Drawing.Size(1921, 825);
             this.tabControl.TabIndex = 0;
             this.tabControl.Click += new System.EventHandler(this.tabPage2_Click);
             // 
@@ -115,7 +115,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(6);
-            this.tabPage1.Size = new System.Drawing.Size(1905, 762);
+            this.tabPage1.Size = new System.Drawing.Size(1905, 758);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Items";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -127,10 +127,11 @@
             this.itemsDataGridView.Location = new System.Drawing.Point(6, 6);
             this.itemsDataGridView.Margin = new System.Windows.Forms.Padding(6);
             this.itemsDataGridView.Name = "itemsDataGridView";
-            this.itemsDataGridView.Size = new System.Drawing.Size(1893, 750);
+            this.itemsDataGridView.Size = new System.Drawing.Size(1893, 746);
             this.itemsDataGridView.TabIndex = 0;
             this.itemsDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemsDataGridView_CellClick);
             this.itemsDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemsDataGridView_CellContentClick);
+            this.itemsDataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemsDataGridView_CellDoubleClick);
             // 
             // tabPage2
             // 
@@ -139,7 +140,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(6);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(6);
-            this.tabPage2.Size = new System.Drawing.Size(1558, 766);
+            this.tabPage2.Size = new System.Drawing.Size(1905, 762);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Staffs";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -152,7 +153,7 @@
             this.staffDataGridView.Location = new System.Drawing.Point(6, 6);
             this.staffDataGridView.Margin = new System.Windows.Forms.Padding(6);
             this.staffDataGridView.Name = "staffDataGridView";
-            this.staffDataGridView.Size = new System.Drawing.Size(1546, 754);
+            this.staffDataGridView.Size = new System.Drawing.Size(1893, 750);
             this.staffDataGridView.TabIndex = 1;
             this.staffDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.staffDataGridView_CellClick);
             // 

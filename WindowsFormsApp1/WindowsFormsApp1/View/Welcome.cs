@@ -66,6 +66,24 @@ namespace InventoryApp
 
         }
 
+        private void LoginBtn_Click(object sender, EventArgs e)
+        {
+            if (!validateUser(this.userNameTextbox.Text, this.pwdTextbox.Text))
+            {
+                CCWin.MessageBoxEx.Show("Username/password is incorrect!", "Error", MessageBoxButtons.OK);
+                return;
+            }
+
+           
+            this.DialogResult = DialogResult.OK;
+
+            this.Close();
+            //InventoryPage inventoryPage = new InventoryPage();
+            //inventoryPage.Show();
+
+            return;
+        }
+
         //public static MySqlConnection connection;
         //MySql.Data.MySqlClient.MySqlCommand command;
         //private void Welcome_Load(object sender, EventArgs e)
