@@ -120,35 +120,35 @@
   <metadata name="skinAnimator1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="animation8.BlindCoeff" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="animation2.BlindCoeff" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
         dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJh
         d2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAAAAAAAAAAAL
 </value>
   </data>
-  <data name="animation8.MosaicCoeff" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="animation2.MosaicCoeff" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
         dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJh
         d2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAAAAAAAAAAAL
 </value>
   </data>
-  <data name="animation8.MosaicShift" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="animation2.MosaicShift" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
         dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJh
         d2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAAAAAAAAAAAL
 </value>
   </data>
-  <data name="animation8.ScaleCoeff" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="animation2.ScaleCoeff" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
         dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJh
         d2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAAAAAAAAAAAL
 </value>
   </data>
-  <data name="animation8.SlideCoeff" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="animation2.SlideCoeff" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
         dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABVTeXN0ZW0uRHJh
@@ -232,6 +232,33 @@
         wf/rrffme/ttoCFsfYAZ3TFsDeHjJ2BW53k2hFdDuJ9gTm1ACExPCBBCgBAChBAghAAhBAghQAgBQggQ
         QoAQAoQQIIQAIQQIIUAIAUIIEEKAEAKEECCEACEECCFA/EIwm3v7+ALM2aJj3a5RuAAAAABJRU5ErkJg
         gg==
+</value>
+  </data>
+  <data name="LoginBtn.DownBack" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAMIAAAAeCAYAAAB+HcFlAAAABGdBTUEAALGPC/xhBQAAALRJREFUeF7t
+        3LERgkAYhFFSC3GgWFuhA3pi1AJ0l/gq4F7wIi7cbzT6l8frqGfs8Y4fTKBb7+a7/aURrHHG6DHcXbe/
+        NoRWMXoAs9gbgr9DzO7bEEYfYCpCgBAChBAghAAhBAghQAgBQggQQoAQAoQQIIQAIQQIIUAIAUIIEEKA
+        EAKEECCEACEEiIbgnAuzu865OPDF7K4DX1s4+cisuv2tIVTvn/aX4ROjx3A33Xo3n+0fyx92c4fVwGCO
+        8AAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="LoginBtn.MouseBack" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAMIAAAAeCAYAAAB+HcFlAAAABGdBTUEAALGPC/xhBQAAALNJREFUeF7t
+        3LERgkAYhFGacaAIW6YKC2LUIdZd4quAe8GLuHC/0ehfnq+zHrHHO34wgW69m+/2l0awxhGjx3B33f7a
+        EFrF6AHMYm8I/g4xu29DGH2AqQgBQggQQoAQAoQQIIQAIQQIIUAIAUIIEEKAEAKEECCEACEECCFACAFC
+        CBBCgBAChBAgGoJzLszuOufiwBezuw58beHkI7Pq9reGUL1/2l+GT4wew9106918tn8uf5zdAmq6DRpA
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="LoginBtn.NormlBack" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAMIAAAAeCAYAAAB+HcFlAAAABGdBTUEAALGPC/xhBQAAALRJREFUeF7t
+        3LERgkAYhFFSC3Ggb2M6ogdGLUB3ia8C7gUv4sL9RqN/ebyOesYe7/jBBLr1br7bXxrBGmeMHsPddftr
+        Q2gVowcwi70h+DvE7L4NYfQBpiIECCFACAFCCBBCgBAChBAghAAhBAghQAgBQggQQoAQAoQQIIQAIQQI
+        IUAIAUIIEEKAaAjOuTC765yLA1/M7jrwtYWTj8yq298aQvX+aX8ZPjF6DHfTrXfz2f6x/AEPNWqEvfEV
+        DAAAAABJRU5ErkJggg==
 </value>
   </data>
 </root>
