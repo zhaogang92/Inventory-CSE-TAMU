@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
-using MetroFramework;
+using CCWin;
 
 
 namespace InventoryApp
 {
-    public partial class Welcome : MaterialSkin.Controls.MaterialForm
+    public partial class Welcome : CCWin.CCSkinMain
     {
         public int DBIndex { get; set; }
 

@@ -28,41 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.skinPictureBox1 = new CCWin.SkinControl.SkinPictureBox();
+            this.components = new System.ComponentModel.Container();
+            CCWin.SkinControl.Animation animation1 = new CCWin.SkinControl.Animation();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Welcome));
             this.userNameLabel = new CCWin.SkinControl.SkinLabel();
             this.pwdLabel = new CCWin.SkinControl.SkinLabel();
-            //this.ChoosedbCb = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.loginBtn = new MaterialSkin.Controls.MaterialFlatButton();
             this.pwdTextbox = new System.Windows.Forms.TextBox();
             this.userNameTextbox = new System.Windows.Forms.TextBox();
+            this.skinAnimator1 = new CCWin.SkinControl.SkinAnimator(this.components);
+            this.skinPictureBox1 = new CCWin.SkinControl.SkinPictureBox();
+            this.LoginBtn = new CCWin.SkinControl.SkinButton();
             ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // skinPictureBox1
-            // 
-            this.skinPictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.skinPictureBox1.ErrorImage = null;
-            this.skinPictureBox1.Image = global::InventoryApp.Properties.Resources.loginImg;
-            this.skinPictureBox1.InitialImage = null;
-            this.skinPictureBox1.Location = new System.Drawing.Point(414, 66);
-            this.skinPictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.skinPictureBox1.Name = "skinPictureBox1";
-            this.skinPictureBox1.Size = new System.Drawing.Size(326, 327);
-            this.skinPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.skinPictureBox1.TabIndex = 3;
-            this.skinPictureBox1.TabStop = false;
             // 
             // userNameLabel
             // 
             this.userNameLabel.AutoSize = true;
             this.userNameLabel.BackColor = System.Drawing.Color.Transparent;
             this.userNameLabel.BorderColor = System.Drawing.Color.White;
-            this.userNameLabel.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.userNameLabel.Location = new System.Drawing.Point(66, 237);
-            this.userNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.skinAnimator1.SetDecoration(this.userNameLabel, CCWin.SkinControl.DecorationType.None);
+            this.userNameLabel.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.userNameLabel.Location = new System.Drawing.Point(7, 484);
             this.userNameLabel.Name = "userNameLabel";
-            this.userNameLabel.Size = new System.Drawing.Size(87, 21);
+            this.userNameLabel.Size = new System.Drawing.Size(130, 31);
             this.userNameLabel.TabIndex = 4;
             this.userNameLabel.Text = "Username";
             // 
@@ -71,90 +59,117 @@
             this.pwdLabel.AutoSize = true;
             this.pwdLabel.BackColor = System.Drawing.Color.Transparent;
             this.pwdLabel.BorderColor = System.Drawing.Color.White;
-            this.pwdLabel.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.pwdLabel.Location = new System.Drawing.Point(66, 282);
-            this.pwdLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.skinAnimator1.SetDecoration(this.pwdLabel, CCWin.SkinControl.DecorationType.None);
+            this.pwdLabel.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.pwdLabel.Location = new System.Drawing.Point(9, 561);
             this.pwdLabel.Name = "pwdLabel";
-            this.pwdLabel.Size = new System.Drawing.Size(82, 21);
+            this.pwdLabel.Size = new System.Drawing.Size(122, 31);
             this.pwdLabel.TabIndex = 7;
             this.pwdLabel.Text = "Password";
             // 
-            // ChoosedbCb
-            // 
-            //this.ChoosedbCb.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            //this.ChoosedbCb.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            //this.ChoosedbCb.FormattingEnabled = true;
-            //this.ChoosedbCb.Items.AddRange(new object[] {
-            //"Inventory Database",
-            //"Backup Database"});
-            //this.ChoosedbCb.Location = new System.Drawing.Point(104, 180);
-            //this.ChoosedbCb.Margin = new System.Windows.Forms.Padding(2);
-            //this.ChoosedbCb.Name = "ChoosedbCb";
-            //this.ChoosedbCb.Size = new System.Drawing.Size(266, 32);
-            //this.ChoosedbCb.TabIndex = 1;
-            //this.ChoosedbCb.Text = "Choose DataBase";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(74, 77);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(310, 90);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Welcome";
-            // 
-            // loginBtn
-            // 
-            this.loginBtn.AutoSize = true;
-            this.loginBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.loginBtn.Depth = 0;
-            this.loginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginBtn.Location = new System.Drawing.Point(208, 340);
-            this.loginBtn.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
-            this.loginBtn.MouseState = MaterialSkin.MouseState.HOVER;
-            this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Primary = false;
-            this.loginBtn.Size = new System.Drawing.Size(52, 36);
-            this.loginBtn.TabIndex = 9;
-            this.loginBtn.Text = "Login";
-            this.loginBtn.UseVisualStyleBackColor = true;
-            this.loginBtn.Click += new System.EventHandler(this.loginBtnClick);
-            // 
             // pwdTextbox
             // 
+            this.skinAnimator1.SetDecoration(this.pwdTextbox, CCWin.SkinControl.DecorationType.None);
             this.pwdTextbox.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pwdTextbox.Location = new System.Drawing.Point(175, 282);
+            this.pwdTextbox.Location = new System.Drawing.Point(138, 557);
+            this.pwdTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pwdTextbox.Name = "pwdTextbox";
-            this.pwdTextbox.Size = new System.Drawing.Size(198, 30);
+            this.pwdTextbox.Size = new System.Drawing.Size(324, 41);
             this.pwdTextbox.TabIndex = 10;
             // 
             // userNameTextbox
             // 
+            this.skinAnimator1.SetDecoration(this.userNameTextbox, CCWin.SkinControl.DecorationType.None);
             this.userNameTextbox.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userNameTextbox.Location = new System.Drawing.Point(175, 236);
+            this.userNameTextbox.Location = new System.Drawing.Point(138, 480);
+            this.userNameTextbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.userNameTextbox.Name = "userNameTextbox";
-            this.userNameTextbox.Size = new System.Drawing.Size(198, 30);
+            this.userNameTextbox.Size = new System.Drawing.Size(324, 41);
             this.userNameTextbox.TabIndex = 11;
+            // 
+            // skinAnimator1
+            // 
+            this.skinAnimator1.AnimationType = CCWin.SkinControl.AnimationType.Custom;
+            this.skinAnimator1.Cursor = null;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.skinAnimator1.DefaultAnimation = animation1;
+            // 
+            // skinPictureBox1
+            // 
+            this.skinPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.skinPictureBox1.BackgroundImage = global::InventoryApp.Properties.Resources.user_avatar;
+            this.skinPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.skinAnimator1.SetDecoration(this.skinPictureBox1, CCWin.SkinControl.DecorationType.None);
+            this.skinPictureBox1.Location = new System.Drawing.Point(156, 118);
+            this.skinPictureBox1.Name = "skinPictureBox1";
+            this.skinPictureBox1.Size = new System.Drawing.Size(150, 150);
+            this.skinPictureBox1.TabIndex = 12;
+            this.skinPictureBox1.TabStop = false;
+            // 
+            // LoginBtn
+            // 
+            this.LoginBtn.BackColor = System.Drawing.Color.Transparent;
+            this.LoginBtn.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinAnimator1.SetDecoration(this.LoginBtn, CCWin.SkinControl.DecorationType.None);
+            this.LoginBtn.DownBack = null;
+            this.LoginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginBtn.Location = new System.Drawing.Point(169, 708);
+            this.LoginBtn.MouseBack = null;
+            this.LoginBtn.Name = "LoginBtn";
+            this.LoginBtn.NormlBack = null;
+            this.LoginBtn.Size = new System.Drawing.Size(97, 44);
+            this.LoginBtn.TabIndex = 13;
+            this.LoginBtn.Text = "LOGIN";
+            this.LoginBtn.UseVisualStyleBackColor = false;
             // 
             // Welcome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(740, 417);
+            this.BackgroundImage = global::InventoryApp.Properties.Resources.Back;
+            this.BorderColor = System.Drawing.Color.Transparent;
+            this.ClientSize = new System.Drawing.Size(470, 830);
+            this.CloseBoxSize = new System.Drawing.Size(27, 22);
+            this.CloseDownBack = global::InventoryApp.Properties.Resources.CloseDownBack;
+            this.CloseMouseBack = global::InventoryApp.Properties.Resources.CloseMouseBack;
+            this.CloseNormlBack = global::InventoryApp.Properties.Resources.CloseNormlBack;
+            this.Controls.Add(this.LoginBtn);
+            this.Controls.Add(this.skinPictureBox1);
             this.Controls.Add(this.userNameTextbox);
             this.Controls.Add(this.pwdTextbox);
-            this.Controls.Add(this.loginBtn);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.pwdLabel);
             this.Controls.Add(this.userNameLabel);
-            this.Controls.Add(this.skinPictureBox1);
-            //this.Controls.Add(this.ChoosedbCb);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.skinAnimator1.SetDecoration(this, CCWin.SkinControl.DecorationType.None);
+            this.InnerBorderColor = System.Drawing.Color.Transparent;
+            this.MaxDownBack = global::InventoryApp.Properties.Resources.MaxDownBack;
+            this.MaxMouseBack = global::InventoryApp.Properties.Resources.MaxMouseBack;
+            this.MaxNormlBack = global::InventoryApp.Properties.Resources.MaxNormlBack;
+            this.MaxSize = new System.Drawing.Size(27, 22);
+            this.MiniDownBack = global::InventoryApp.Properties.Resources.MiniDownBack;
+            this.MiniMouseBack = global::InventoryApp.Properties.Resources.MiniMouseBack;
+            this.MiniNormlBack = global::InventoryApp.Properties.Resources.MiniNormlBack;
+            this.MiniSize = new System.Drawing.Size(27, 22);
             this.Name = "Welcome";
+            this.Radius = 1;
+            this.RestoreDownBack = global::InventoryApp.Properties.Resources.RestoreDownBack;
+            this.RestoreMouseBack = global::InventoryApp.Properties.Resources.RestoreMouseBack;
+            this.RestoreNormlBack = global::InventoryApp.Properties.Resources.RestoreNormlBack;
+            this.Shadow = false;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Welcome_Load);
             ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox1)).EndInit();
@@ -164,19 +179,17 @@
         }
 
         #endregion
-        private CCWin.SkinControl.SkinPictureBox skinPictureBox1;
         private CCWin.SkinControl.SkinLabel userNameLabel;
         //private CCWin.SkinControl.SkinTextBox userNameTextbox;
         //private CCWin.SkinControl.SkinTextBox pwdTextbox;
         //private System.Windows.Forms.TextBox userNameTextbox;
         //private System.Windows.Forms.TextBox pwdTextbox;
         private CCWin.SkinControl.SkinLabel pwdLabel;
-        //private CCWin.SkinControl.SkinComboBox ChoosedbCb;
-        //private System.Windows.Forms.ComboBox ChoosedbCb;
-        private System.Windows.Forms.Label label1;
-        private MaterialSkin.Controls.MaterialFlatButton loginBtn;
         private System.Windows.Forms.TextBox pwdTextbox;
         private System.Windows.Forms.TextBox userNameTextbox;
+        private CCWin.SkinControl.SkinAnimator skinAnimator1;
+        private CCWin.SkinControl.SkinPictureBox skinPictureBox1;
+        private CCWin.SkinControl.SkinButton LoginBtn;
     }
 }
 
