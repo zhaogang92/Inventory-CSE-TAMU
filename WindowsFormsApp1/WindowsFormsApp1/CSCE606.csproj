@@ -150,6 +150,12 @@
       <DependentUpon>InventoryPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Staff.cs" />
+    <Compile Include="View\ShowPicture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ShowPicture.Designer.cs">
+      <DependentUpon>ShowPicture.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\StaffView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\InventoryPage.resx">
       <DependentUpon>InventoryPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ShowPicture.resx">
+      <DependentUpon>ShowPicture.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\StaffView.resx">
       <DependentUpon>StaffView.cs</DependentUpon>

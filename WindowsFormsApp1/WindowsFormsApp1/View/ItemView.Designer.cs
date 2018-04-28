@@ -54,6 +54,9 @@
             this.Addbtn = new System.Windows.Forms.Button();
             this.Updatebtn = new System.Windows.Forms.Button();
             this.staffcomboBox = new System.Windows.Forms.ComboBox();
+            this.addPicture = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.picturetextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label2
@@ -306,7 +309,7 @@
             // Addbtn
             // 
             this.Addbtn.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Addbtn.Location = new System.Drawing.Point(87, 1045);
+            this.Addbtn.Location = new System.Drawing.Point(78, 1171);
             this.Addbtn.Name = "Addbtn";
             this.Addbtn.Size = new System.Drawing.Size(214, 80);
             this.Addbtn.TabIndex = 34;
@@ -317,7 +320,7 @@
             // Updatebtn
             // 
             this.Updatebtn.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Updatebtn.Location = new System.Drawing.Point(590, 1045);
+            this.Updatebtn.Location = new System.Drawing.Point(590, 1171);
             this.Updatebtn.Name = "Updatebtn";
             this.Updatebtn.Size = new System.Drawing.Size(214, 80);
             this.Updatebtn.TabIndex = 35;
@@ -335,11 +338,45 @@
             this.staffcomboBox.TabIndex = 39;
             this.staffcomboBox.SelectedIndexChanged += new System.EventHandler(this.staffcomboBox_SelectedIndexChanged);
             // 
+            // addPicture
+            // 
+            this.addPicture.Font = new System.Drawing.Font("Comic Sans MS", 9F);
+            this.addPicture.Location = new System.Drawing.Point(743, 1064);
+            this.addPicture.Name = "addPicture";
+            this.addPicture.Size = new System.Drawing.Size(153, 43);
+            this.addPicture.TabIndex = 40;
+            this.addPicture.Text = "addNewPic";
+            this.addPicture.UseVisualStyleBackColor = true;
+            this.addPicture.Click += new System.EventHandler(this.addPicture_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(59, 1059);
+            this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(96, 45);
+            this.label8.TabIndex = 41;
+            this.label8.Text = "Path:";
+            // 
+            // picturetextBox
+            // 
+            this.picturetextBox.Font = new System.Drawing.Font("Comic Sans MS", 9F);
+            this.picturetextBox.Location = new System.Drawing.Point(147, 1064);
+            this.picturetextBox.Margin = new System.Windows.Forms.Padding(6);
+            this.picturetextBox.Name = "picturetextBox";
+            this.picturetextBox.Size = new System.Drawing.Size(587, 41);
+            this.picturetextBox.TabIndex = 42;
+            // 
             // ItemView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(932, 1529);
+            this.Controls.Add(this.picturetextBox);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.addPicture);
             this.Controls.Add(this.staffcomboBox);
             this.Controls.Add(this.Updatebtn);
             this.Controls.Add(this.Addbtn);
@@ -401,5 +438,8 @@
         private System.Windows.Forms.Button Addbtn;
         private System.Windows.Forms.Button Updatebtn;
         private System.Windows.Forms.ComboBox staffcomboBox;
+        private System.Windows.Forms.Button addPicture;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox picturetextBox;
     }
 }

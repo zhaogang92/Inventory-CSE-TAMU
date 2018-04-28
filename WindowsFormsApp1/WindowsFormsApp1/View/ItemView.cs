@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.IO;
 using InventoryApp.Common;
 using InventoryApp.Model;
 using System.Data.SQLite;
@@ -21,12 +21,13 @@ namespace InventoryApp.View
         private Item it;
         NHibernateRepository repo = new NHibernateRepository();
         int index;
+        Byte[] pic;
         string[] staffName;
         private bool isbinding = false;
         public ItemView(bool IsAddNewItem, Item item)
         {
             InitializeComponent();
-            isAddNew= IsAddNewItem;
+            isAddNew = IsAddNewItem;
             it = item;
         }
 
@@ -35,7 +36,7 @@ namespace InventoryApp.View
 
         }
 
-        
+
 
         private void ItemView_Load(object sender, EventArgs e)
         {
@@ -47,7 +48,7 @@ namespace InventoryApp.View
                 staffName = new string[staffs.Count];
                 index = 0;
                 for (int i = 0; i < staffs.Count; i++)
-                    staffName[i] = staffs[i].firstName + "," + staffs[i].lastName;
+                    staffName[i] = staffs[i].lastName + "," + staffs[i].firstName;
                 staffcomboBox.DataSource = staffName;
 
                 staffcomboBox.SelectedItem = staffName[index];
@@ -68,19 +69,19 @@ namespace InventoryApp.View
                 otherLocationtextBox.Text = it.otherLocation;
                 serialNumbertextBox.Text = it.serialNumber;
                 Staff staff = it.Staffs;
-               
+
                 commentstextBox.Text = it.comments;
                 IList<Staff> staffs = repo.Query<Staff>();
                 staffName = new string[staffs.Count];
                 index = 0;
                 for (int i = 0; i < staffs.Count; i++)
                 {
-                    staffName[i] = staffs[i].firstName + "," + staffs[i].lastName;
+                    staffName[i] = staffs[i].lastName + "," + staffs[i].firstName;
                     if (staffs[i].firstName == it.Staffs.firstName && staffs[i].lastName == it.Staffs.lastName)
                         index = i;
                 }
                 staffcomboBox.DataSource = staffName;
-                
+
                 staffcomboBox.SelectedItem = staffName[index];
                 isbinding = true;
                 //staffcomboBox.ValueMember = it.Staffs.firstName + "," + it.Staffs.lastName;
@@ -112,16 +113,16 @@ namespace InventoryApp.View
                 for (i = 0; i < staffName.Length; i++)
                     if (ch[i] == ',')
                         break;
-                string firstName = staffName.Substring(0, i);
-                string lastName = staffName.Substring(i + 1, staffName.Length - i - 1);
+                string lastName = staffName.Substring(0, i);
+                string firstName = staffName.Substring(i + 1, staffName.Length - i - 1);
                 ICriterion[] expressions = new ICriterion[2];
                 expressions[0] = Expression.Eq("firstName", firstName);
                 expressions[1] = Expression.Eq("lastName", lastName);
 
                 IList<Staff> st = repo.Query<Staff>(expressions);
-                item.Staffs = st[0]; 
+                item.Staffs = st[0];
             }
-            
+
             if (assettextBox.Text != "" && bldgtextBox.Text != "" && campusCodetextBox.Text != "" && roomtextBox.Text != "" && costtextBox.Text != "" && descriptiontextBox.Text != "" && validateInteger(campusCodetextBox.Text))
             {
                 item.asset = assettextBox.Text;
@@ -153,8 +154,9 @@ namespace InventoryApp.View
                 item.serialNumber = serialNumbertextBox.Text;
             if (commentstextBox.Text != "")
                 item.comments = commentstextBox.Text;
-            
 
+            if (pic != null)
+                item.picture = pic;
             item.isDelete = false;
             repo.SaveOrUpdate(item);
 
@@ -166,7 +168,7 @@ namespace InventoryApp.View
 
         private void Updatebtn_Click(object sender, EventArgs e)
         {
-           
+
             repo.SaveOrUpdate(it);
             this.DialogResult = DialogResult.OK;
             this.Close();
@@ -205,7 +207,7 @@ namespace InventoryApp.View
                 }
             }
         }
-        
+
 
         private void campusCodetextBox_TextChanged(object sender, EventArgs e)
         {
@@ -277,7 +279,7 @@ namespace InventoryApp.View
             {
                 it.otherLocation = otherLocationtextBox.Text;
             }
-                
+
         }
 
         private void serialNumbertextBox_TextChanged(object sender, EventArgs e)
@@ -296,12 +298,12 @@ namespace InventoryApp.View
             }
         }
 
-       
-        
+
+
 
         private void staffcomboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-           // MessageBox.Show(staffcomboBox.SelectedItem.ToString());
+            // MessageBox.Show(staffcomboBox.SelectedItem.ToString());
             if (isbinding == true)
             {
                 if (!isAddNew) //update
@@ -313,9 +315,9 @@ namespace InventoryApp.View
                     for (i = 0; i < name.Length; i++)
                         if (ch[i] == ',')
                             break;
-                    string firstName = name.Substring(0, i);
+                    string lastName = name.Substring(0, i);
 
-                    string lastName = name.Substring(i + 1, name.Length - i - 1);
+                    string firstName = name.Substring(i + 1, name.Length - i - 1);
                     ICriterion[] expressions = new ICriterion[2];
                     expressions[0] = Expression.Eq("firstName", firstName);
                     expressions[1] = Expression.Eq("lastName", lastName);
@@ -324,9 +326,31 @@ namespace InventoryApp.View
                     it.Staffs = st[0];
                 }
             }
-           
-                
+        }
 
+
+        public Byte[] ImageToByteArray(System.Drawing.Image imageIn)
+        {
+            using (var ms = new MemoryStream())
+            {
+                imageIn.Save(ms, imageIn.RawFormat);
+                return ms.ToArray();
+            }
+        }
+        private void addPicture_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "*jpg|*.JPG|*.GIF|*.GIF|*.BMP|*.BMP";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string FileName = openFileDialog.FileName;
+                picturetextBox.Text = FileName.ToString();
+                pic = ImageToByteArray(Image.FromFile(FileName));
+                if (!isAddNew)
+                    it.picture = pic;
+
+            }
         }
     }
 }

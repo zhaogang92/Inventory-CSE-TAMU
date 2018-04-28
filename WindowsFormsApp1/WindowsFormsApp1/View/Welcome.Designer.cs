@@ -217,7 +217,7 @@
             this.LoginBtn.DrawType = CCWin.SkinControl.DrawStyle.Img;
             this.LoginBtn.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginBtn.ForeColor = System.Drawing.Color.White;
-            this.LoginBtn.Location = new System.Drawing.Point(156, 662);
+            this.LoginBtn.Location = new System.Drawing.Point(156, 735);
             this.LoginBtn.Margin = new System.Windows.Forms.Padding(0);
             this.LoginBtn.MouseBack = ((System.Drawing.Image)(resources.GetObject("LoginBtn.MouseBack")));
             this.LoginBtn.Name = "LoginBtn";

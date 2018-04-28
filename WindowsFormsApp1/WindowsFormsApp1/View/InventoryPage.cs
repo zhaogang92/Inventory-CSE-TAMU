@@ -344,9 +344,20 @@ namespace InventoryApp
         {
 
             rowindex = e.RowIndex;
-            //if(itemsDataGridView.SelectedColumns[])
-            //bytes[] pic =itemsDataGridView.Rows[rowindex].Cells[10].Value;
+            if(itemsDataGridView.Rows[rowindex].Cells[10].Selected == true)
+            {
+                if (itemsDataGridView.Rows[rowindex].Cells[10].Value != null)
+                {
 
+                    Byte[] pic = (Byte[])(itemsDataGridView.Rows[rowindex].Cells[10].Value);
+                    View.ShowPicture showPicture = new View.ShowPicture(pic);
+                    showPicture.ShowDialog();
+                }
+                else
+                    MessageBox.Show("No corresponding Image!");
+               
+            }
+            
         }
     }
 }
