@@ -399,5 +399,25 @@ namespace InventoryApp
             }
             
         }
+
+        private void backup()
+        {
+            IList<Item> items = repo.Query<Item>(Expression.Eq("isDelete", true));
+            SaveFileDialog dlg = new SaveFileDialog();
+            dlg.Filter = "CSV File(*.csv)|*.csv"; ;
+            dlg.Title = "Please choose a save location";
+            dlg.RestoreDirectory = true;
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                using (StreamWriter sw = new StreamWriter(dlg.OpenFile(), Encoding.UTF8))
+                {
+                    sw.WriteLine(Item.getHeader());
+                    foreach (Item item in items)
+                    {
+                        sw.WriteLine(item.ToString());
+                    }
+                }
+            }
+        }
     }
 }

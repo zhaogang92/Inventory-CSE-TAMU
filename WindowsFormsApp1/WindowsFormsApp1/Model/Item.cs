@@ -43,5 +43,19 @@ namespace InventoryApp.Model
         public virtual byte[] picture { get; set; }
         
         public virtual Staff Staffs { get; set; }
+
+        public static string getHeader()
+        {
+            return "Asset, Campus Code, Description, Bldg, Room, Other Location, Acquire Date, Total Cost, Model, SerialNumber, " +
+                "Group Code, Staff Name, Comments";
+        }
+
+        public override string ToString()
+        {
+            char[] ts = new char[] { '?' };
+            return String.Format("{0}, {1}, {2}, {3}, {4}, {5}, {6}, ${7}, {8}, {9}, {10}, {11}, {12}",
+                asset, campusCode, description, bldg, room, otherLocation,
+            acqDate.ToShortDateString(), totalCost, Model, serialNumber, groupCode, Staffs.lastName + ", " + Staffs.firstName, comments);
+        }
     }
 }
