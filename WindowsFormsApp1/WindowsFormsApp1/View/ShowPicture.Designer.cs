@@ -35,17 +35,19 @@
             // pictureBox
             // 
             this.pictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox.Location = new System.Drawing.Point(4, 28);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(1075, 747);
+            this.pictureBox.Size = new System.Drawing.Size(1067, 715);
             this.pictureBox.TabIndex = 0;
             this.pictureBox.TabStop = false;
             this.pictureBox.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // ShowPicture
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImage = global::InventoryApp.Properties.Resources.backbar;
             this.ClientSize = new System.Drawing.Size(1075, 747);
             this.Controls.Add(this.pictureBox);
             this.Name = "ShowPicture";

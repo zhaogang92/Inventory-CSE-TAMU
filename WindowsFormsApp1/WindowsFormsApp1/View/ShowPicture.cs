@@ -14,9 +14,11 @@ using InventoryApp.Model;
 using System.Data.SQLite;
 using NHibernate.Criterion;
 
+using CCWin;
+
 namespace InventoryApp.View
 {
-    public partial class ShowPicture : Form
+    public partial class ShowPicture : CCWin.CCSkinMain
     {
         Byte[] pic;
         public ShowPicture(Byte[] picture)

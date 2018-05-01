@@ -50,7 +50,7 @@
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(44, 247);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 23);
+            this.label2.Size = new System.Drawing.Size(115, 33);
             this.label2.TabIndex = 8;
             this.label2.Text = "Location:";
             // 
@@ -60,7 +60,7 @@
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(44, 204);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 23);
+            this.label1.Size = new System.Drawing.Size(88, 33);
             this.label1.TabIndex = 9;
             this.label1.Text = "phone:";
             // 
@@ -70,7 +70,7 @@
             this.label3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(44, 162);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 23);
+            this.label3.Size = new System.Drawing.Size(79, 33);
             this.label3.TabIndex = 10;
             this.label3.Text = "email:";
             // 
@@ -80,7 +80,7 @@
             this.label4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(44, 123);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 23);
+            this.label4.Size = new System.Drawing.Size(141, 33);
             this.label4.TabIndex = 11;
             this.label4.Text = "GroupCode:";
             // 
@@ -90,7 +90,7 @@
             this.label5.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(44, 81);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 23);
+            this.label5.Size = new System.Drawing.Size(131, 33);
             this.label5.TabIndex = 12;
             this.label5.Text = "LastName:";
             // 
@@ -100,7 +100,7 @@
             this.label6.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(44, 36);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(92, 23);
+            this.label6.Size = new System.Drawing.Size(139, 33);
             this.label6.TabIndex = 13;
             this.label6.Text = "FirstName:";
             // 
@@ -109,7 +109,7 @@
             this.phonetextBox.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phonetextBox.Location = new System.Drawing.Point(110, 204);
             this.phonetextBox.Name = "phonetextBox";
-            this.phonetextBox.Size = new System.Drawing.Size(246, 30);
+            this.phonetextBox.Size = new System.Drawing.Size(246, 41);
             this.phonetextBox.TabIndex = 21;
             this.phonetextBox.TextChanged += new System.EventHandler(this.phonetextBox_TextChanged);
             // 
@@ -118,7 +118,7 @@
             this.locationtextBox.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.locationtextBox.Location = new System.Drawing.Point(120, 247);
             this.locationtextBox.Name = "locationtextBox";
-            this.locationtextBox.Size = new System.Drawing.Size(236, 30);
+            this.locationtextBox.Size = new System.Drawing.Size(236, 41);
             this.locationtextBox.TabIndex = 22;
             this.locationtextBox.TextChanged += new System.EventHandler(this.locationtextBox_TextChanged);
             // 
@@ -127,7 +127,7 @@
             this.emailtextBox.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailtextBox.Location = new System.Drawing.Point(93, 165);
             this.emailtextBox.Name = "emailtextBox";
-            this.emailtextBox.Size = new System.Drawing.Size(263, 30);
+            this.emailtextBox.Size = new System.Drawing.Size(263, 41);
             this.emailtextBox.TabIndex = 24;
             this.emailtextBox.TextChanged += new System.EventHandler(this.emailtextBox_TextChanged);
             // 
@@ -136,7 +136,7 @@
             this.groupCodetextBox.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupCodetextBox.Location = new System.Drawing.Point(150, 123);
             this.groupCodetextBox.Name = "groupCodetextBox";
-            this.groupCodetextBox.Size = new System.Drawing.Size(154, 30);
+            this.groupCodetextBox.Size = new System.Drawing.Size(154, 41);
             this.groupCodetextBox.TabIndex = 25;
             this.groupCodetextBox.TextChanged += new System.EventHandler(this.groupCodetextBox_TextChanged);
             // 
@@ -218,7 +218,7 @@
             this.lastNametextBox.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lastNametextBox.Location = new System.Drawing.Point(150, 81);
             this.lastNametextBox.Name = "lastNametextBox";
-            this.lastNametextBox.Size = new System.Drawing.Size(154, 30);
+            this.lastNametextBox.Size = new System.Drawing.Size(154, 41);
             this.lastNametextBox.TabIndex = 26;
             this.lastNametextBox.TextChanged += new System.EventHandler(this.lastNametextBox_TextChanged);
             // 
@@ -301,7 +301,7 @@
             this.firstNametextBox.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firstNametextBox.Location = new System.Drawing.Point(150, 36);
             this.firstNametextBox.Name = "firstNametextBox";
-            this.firstNametextBox.Size = new System.Drawing.Size(154, 30);
+            this.firstNametextBox.Size = new System.Drawing.Size(154, 41);
             this.firstNametextBox.TabIndex = 27;
             this.firstNametextBox.TextChanged += new System.EventHandler(this.firstNametextBox_TextChanged);
             // 
@@ -331,8 +331,10 @@
             // 
             // StaffView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImage = global::InventoryApp.Properties.Resources.backbar;
             this.ClientSize = new System.Drawing.Size(412, 396);
             this.Controls.Add(this.UpdateBtn);
             this.Controls.Add(this.AddBtn);

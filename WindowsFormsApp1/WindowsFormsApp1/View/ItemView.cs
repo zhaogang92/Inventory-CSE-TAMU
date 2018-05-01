@@ -12,10 +12,11 @@ using InventoryApp.Common;
 using InventoryApp.Model;
 using System.Data.SQLite;
 using NHibernate.Criterion;
+using CCWin;
 
 namespace InventoryApp.View
 {
-    public partial class ItemView : System.Windows.Forms.Form
+    public partial class ItemView : CCWin.CCSkinMain
     {
         private bool isAddNew;
         private Item it;

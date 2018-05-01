@@ -12,9 +12,11 @@ using InventoryApp.Model;
 using System.Data.SQLite;
 using NHibernate.Criterion;
 
+using CCWin;
+
 namespace InventoryApp.View
 {
-    public partial class StaffView : Form
+    public partial class StaffView : CCWin.CCSkinMain
     {
         private bool isAddNew;
         private Staff st;
