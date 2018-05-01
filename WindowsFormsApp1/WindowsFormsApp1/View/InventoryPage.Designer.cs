@@ -63,7 +63,7 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Location = new System.Drawing.Point(4, 28);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -88,8 +88,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.deleteBtn);
             this.splitContainer1.Panel2.Controls.Add(this.editBtn);
             this.splitContainer1.Panel2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.splitContainer1.Size = new System.Drawing.Size(960, 426);
-            this.splitContainer1.SplitterDistance = 363;
+            this.splitContainer1.Size = new System.Drawing.Size(952, 420);
+            this.splitContainer1.SplitterDistance = 357;
             this.splitContainer1.TabIndex = 0;
             // 
             // tabControl
@@ -101,17 +101,17 @@
             this.tabControl.Location = new System.Drawing.Point(0, 0);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(960, 363);
+            this.tabControl.Size = new System.Drawing.Size(952, 357);
             this.tabControl.TabIndex = 0;
             this.tabControl.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.itemsDataGridView);
-            this.tabPage1.Location = new System.Drawing.Point(4, 32);
+            this.tabPage1.Location = new System.Drawing.Point(4, 42);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage1.Size = new System.Drawing.Size(952, 327);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(944, 311);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Items";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -122,7 +122,7 @@
             this.itemsDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.itemsDataGridView.Location = new System.Drawing.Point(3, 3);
             this.itemsDataGridView.Name = "itemsDataGridView";
-            this.itemsDataGridView.Size = new System.Drawing.Size(946, 321);
+            this.itemsDataGridView.Size = new System.Drawing.Size(938, 305);
             this.itemsDataGridView.TabIndex = 0;
             this.itemsDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemsDataGridView_CellClick);
             this.itemsDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemsDataGridView_CellContentClick);
@@ -131,10 +131,10 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.staffDataGridView);
-            this.tabPage2.Location = new System.Drawing.Point(4, 32);
+            this.tabPage2.Location = new System.Drawing.Point(4, 42);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage2.Size = new System.Drawing.Size(952, 360);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(944, 311);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Staffs";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -146,7 +146,7 @@
             this.staffDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.staffDataGridView.Location = new System.Drawing.Point(3, 3);
             this.staffDataGridView.Name = "staffDataGridView";
-            this.staffDataGridView.Size = new System.Drawing.Size(946, 354);
+            this.staffDataGridView.Size = new System.Drawing.Size(938, 305);
             this.staffDataGridView.TabIndex = 1;
             this.staffDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.staffDataGridView_CellClick);
             // 
@@ -166,7 +166,7 @@
             this.label5.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(518, 20);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(25, 23);
+            this.label5.Size = new System.Drawing.Size(38, 33);
             this.label5.TabIndex = 13;
             this.label5.Text = "to";
             // 
@@ -178,7 +178,7 @@
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker2.Location = new System.Drawing.Point(548, 16);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(117, 30);
+            this.dateTimePicker2.Size = new System.Drawing.Size(117, 41);
             this.dateTimePicker2.TabIndex = 12;
             // 
             // dateTimePicker1
@@ -189,7 +189,7 @@
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(397, 16);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(119, 30);
+            this.dateTimePicker1.Size = new System.Drawing.Size(119, 41);
             this.dateTimePicker1.TabIndex = 11;
             // 
             // label4
@@ -198,7 +198,7 @@
             this.label4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(672, 20);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 23);
+            this.label4.Size = new System.Drawing.Size(85, 33);
             this.label4.TabIndex = 10;
             this.label4.Text = "Staff:";
             // 
@@ -207,7 +207,7 @@
             this.textBox4.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.Location = new System.Drawing.Point(733, 16);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 30);
+            this.textBox4.Size = new System.Drawing.Size(100, 41);
             this.textBox4.TabIndex = 9;
             // 
             // label3
@@ -216,7 +216,7 @@
             this.label3.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(348, 20);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 23);
+            this.label3.Size = new System.Drawing.Size(74, 33);
             this.label3.TabIndex = 7;
             this.label3.Text = "Date:";
             // 
@@ -226,7 +226,7 @@
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(186, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 23);
+            this.label2.Size = new System.Drawing.Size(81, 33);
             this.label2.TabIndex = 6;
             this.label2.Text = "Room:";
             // 
@@ -236,7 +236,7 @@
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(6, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 23);
+            this.label1.Size = new System.Drawing.Size(110, 33);
             this.label1.TabIndex = 5;
             this.label1.Text = "Building:";
             // 
@@ -245,7 +245,7 @@
             this.textBox2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(241, 16);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 30);
+            this.textBox2.Size = new System.Drawing.Size(100, 41);
             this.textBox2.TabIndex = 4;
             // 
             // textBox1
@@ -253,7 +253,7 @@
             this.textBox1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(79, 16);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 30);
+            this.textBox1.Size = new System.Drawing.Size(100, 41);
             this.textBox1.TabIndex = 3;
             // 
             // searchBtn
@@ -288,14 +288,31 @@
             // 
             // InventoryPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(960, 426);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImage = global::InventoryApp.Properties.Resources.backbar;
+            this.ClientSize = new System.Drawing.Size(960, 452);
+            this.CloseBoxSize = new System.Drawing.Size(27, 22);
+            this.CloseDownBack = global::InventoryApp.Properties.Resources.CloseDownBack;
+            this.CloseMouseBack = global::InventoryApp.Properties.Resources.CloseMouseBack;
+            this.CloseNormlBack = global::InventoryApp.Properties.Resources.CloseNormlBack;
             this.Controls.Add(this.splitContainer1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaxDownBack = global::InventoryApp.Properties.Resources.MaxDownBack;
+            this.MaxMouseBack = global::InventoryApp.Properties.Resources.MaxMouseBack;
+            this.MaxNormlBack = global::InventoryApp.Properties.Resources.MaxNormlBack;
+            this.MaxSize = new System.Drawing.Size(27, 22);
+            this.MiniDownBack = global::InventoryApp.Properties.Resources.MiniDownBack;
+            this.MiniMouseBack = global::InventoryApp.Properties.Resources.MiniMouseBack;
             this.MinimumSize = new System.Drawing.Size(808, 452);
+            this.MiniNormlBack = global::InventoryApp.Properties.Resources.MiniNormlBack;
+            this.MiniSize = new System.Drawing.Size(27, 22);
             this.Name = "InventoryPage";
+            this.RestoreDownBack = global::InventoryApp.Properties.Resources.RestoreDownBack;
+            this.RestoreMouseBack = global::InventoryApp.Properties.Resources.RestoreMouseBack;
+            this.RestoreNormlBack = global::InventoryApp.Properties.Resources.RestoreNormlBack;
             this.Text = "Inventory";
             this.Load += new System.EventHandler(this.InventoryPage_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);

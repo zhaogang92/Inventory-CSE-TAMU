@@ -265,6 +265,7 @@
     <EmbeddedResource Include="Model\Staff.hbm.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <None Include="Resources\backbar.png" />
     <Content Include="Scripts\jquery-1.12.4.intellisense.js" />
     <Content Include="Scripts\jquery-1.12.4.js" />
     <Content Include="Scripts\jquery-1.12.4.min.js" />

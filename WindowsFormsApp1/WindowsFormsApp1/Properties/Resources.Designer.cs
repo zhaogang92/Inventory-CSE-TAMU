@@ -73,6 +73,16 @@ namespace InventoryApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap backbar {
+            get {
+                object obj = ResourceManager.GetObject("backbar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btn_Down {
             get {
                 object obj = ResourceManager.GetObject("btn_Down", resourceCulture);
