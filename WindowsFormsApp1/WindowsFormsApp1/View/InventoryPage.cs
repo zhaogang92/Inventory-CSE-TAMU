@@ -82,14 +82,21 @@ namespace InventoryApp
         */
         private void showPage(int page)
         {
-            if (page < 0)
-                page = 0;
-            curPage = page;
-
             var max_page = curItems.Count / PAGE_ITEM_COUNT;
-            if (page >= max_page)
-                curPage = max_page;
-
+            if (page < 0 || page > max_page)
+                return;
+        
+            curPage = page;
+            if (curPage == 0)
+                button2.Enabled = false;
+            else if (curPage == max_page)
+                button1.Enabled = false;
+            else
+            {
+                button1.Enabled = true;
+                button2.Enabled = true;
+            }
+            lablePage.Text = (curPage + 1) + "/" + (max_page + 1);
             var startIndex = curPage * PAGE_ITEM_COUNT;
             var endIndex = startIndex + PAGE_ITEM_COUNT;
             var len = PAGE_ITEM_COUNT;
@@ -190,10 +197,17 @@ namespace InventoryApp
                                   }
                                   select showedItem;
                 itemsDataGridView.DataSource = showedItems.ToList();*/
+                button1.Enabled = true;
+                button2.Enabled = true;
+
                 showAllItems(repo);
             }
             else //show all staffs
             {
+                button1.Enabled = false;
+                button2.Enabled = false;
+                lablePage.Text = "1/1";
+
                 showAllStaffs(repo);
             }
 
