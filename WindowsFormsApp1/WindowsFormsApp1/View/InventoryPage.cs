@@ -23,6 +23,11 @@ namespace InventoryApp
     public partial class InventoryPage : CCWin.CCSkinMain
     {
         private int dbIndex = 0;
+
+        private List<Object> curItems = null;
+        private int curPage = 0;
+        private const int PAGE_ITEM_COUNT = 30;
+
         NHibernateRepository repo = new NHibernateRepository();
         public InventoryPage()
         {
@@ -73,26 +78,51 @@ namespace InventoryApp
             }
         }
         */
+        private void showPage(int page)
+        {
+            if (page < 0)
+                page = 0;
+            curPage = page;
+
+            var max_page = curItems.Count / PAGE_ITEM_COUNT;
+            if (page >= max_page)
+                curPage = max_page;
+
+            var startIndex = curPage * PAGE_ITEM_COUNT;
+            var endIndex = startIndex + PAGE_ITEM_COUNT;
+            var len = PAGE_ITEM_COUNT;
+            if (endIndex > curItems.Count)
+                len = curItems.Count - startIndex;
+
+            itemsDataGridView.DataSource = curItems.GetRange(startIndex, len);
+        }
+
         public void showAllItems(NHibernateRepository repo)
         {
             var items = repo.Query<Item>(Expression.Eq("isDelete", false));
-            var showedItems = from item in items
-                              let showedItem = new
-                              {
-                                  Asset = item.asset,
-                                  StaffName = item.Staffs.lastName + "," + item.Staffs.firstName,
-                                  Building = item.bldg,
-                                  Room = item.room,
-                                  SerialNumber = item.serialNumber,
-                                  CampusCode = item.campusCode,
-                                  Description = item.description,
-                                  TotalCost = item.totalCost,
-                                  OtherLocation = item.otherLocation,
-                                  Model = item.Model,
-                                  Picture = item.picture
-                              }
-                              select showedItem;
-            itemsDataGridView.DataSource = showedItems.ToList();
+            List<Object> showedItems = new List<Object>();
+            for (int i = 0; i < items.Count; ++i)
+            {
+                Item item = items[i];
+                if (item.isDelete)
+                    continue;
+                showedItems.Add(new
+                {
+                    Asset = item.asset,
+                    Building = item.bldg,
+                    Room = item.room,
+                    SerialNumber = item.serialNumber,
+                    CampusCode = item.campusCode,
+                    Description = item.description,
+                    TotalCost = item.totalCost,
+                    OtherLocation = item.otherLocation,
+                    Model = item.Model
+                });
+            }
+
+            this.curItems = showedItems;
+            showPage(0);
+            //itemsDataGridView.DataSource = showedItems;
             return;
         }
 
@@ -204,26 +234,30 @@ namespace InventoryApp
                     expressions.Add(Expression.Between("acqDate", startdateTimePicker.Value, enddateTimePicker.Value));
                 expressions.Add(Expression.Eq("isDelete", false));
 
-
-
                 var items = repo.Query<Item>(expressions.ToArray());
-                var showedItems = from item in items
-                                  let showedItem = new
-                                  {
-                                      Asset = item.asset,
-                                      Building = item.bldg,
-                                      Room = item.room,
-                                      SerialNumber = item.serialNumber,
-                                      CampusCode = item.campusCode,
-                                      Description = item.description,
-                                      TotalCost = item.totalCost,
-                                      OtherLocation = item.otherLocation,
-                                      Model = item.Model,
-                                      Picture = item.picture
+                List<Object> showedItems = new List<Object>();
+                for (int i = 0; i < items.Count; ++i)
+                {
+                    Item item = items[i];
+                    if (item.isDelete)
+                        continue;
+                    showedItems.Add(new
+                    {
+                        Asset = item.asset,
+                        Building = item.bldg,
+                        Room = item.room,
+                        SerialNumber = item.serialNumber,
+                        CampusCode = item.campusCode,
+                        Description = item.description,
+                        TotalCost = item.totalCost,
+                        OtherLocation = item.otherLocation,
+                        Model = item.Model
+                    });
+                }
 
-                                  }
-                                  select showedItem;
-                itemsDataGridView.DataSource = showedItems.ToList();
+                curItems = showedItems;
+                showPage(0);
+                //itemsDataGridView.DataSource = showedItems.ToList();
                 //itemsDataGridView.DataSource = Items.ToList();
 
             }
@@ -398,6 +432,22 @@ namespace InventoryApp
                
             }
             
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (tabControl.SelectedTab == tabControl.TabPages[0])
+            {
+                showPage(curPage + 1);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (tabControl.SelectedTab == tabControl.TabPages[0])
+            {
+                showPage(curPage - 1);
+            }
         }
     }
 }
