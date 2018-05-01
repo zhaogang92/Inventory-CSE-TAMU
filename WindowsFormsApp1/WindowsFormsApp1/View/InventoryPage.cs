@@ -28,7 +28,7 @@ namespace InventoryApp
 
         private List<Object> curItems = null;
         private int curPage = 0;
-        private const int PAGE_ITEM_COUNT = 30;
+        private const int PAGE_ITEM_COUNT = 100;
 
         NHibernateRepository repo = new NHibernateRepository();
         public InventoryPage()
