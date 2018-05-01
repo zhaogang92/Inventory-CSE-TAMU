@@ -117,11 +117,14 @@ namespace InventoryApp.View
                 string lastName = staffName.Substring(0, i);
                 string firstName = staffName.Substring(i + 1, staffName.Length - i - 1);
                 ICriterion[] expressions = new ICriterion[2];
-                expressions[0] = Expression.Eq("firstName", firstName);
-                expressions[1] = Expression.Eq("lastName", lastName);
+                expressions[0] = Expression.Like("firstName", "%" + firstName + "%");
+                expressions[1] = Expression.Like("lastName", "%" + lastName + "%");
 
                 IList<Staff> st = repo.Query<Staff>(expressions);
                 item.Staffs = st[0];
+                item.firstName = item.Staffs.firstName;
+                item.lastName = item.Staffs.lastName;
+                item.groupCode = item.Staffs.lastName;
             }
 
             if (assettextBox.Text != "" && bldgtextBox.Text != "" && campusCodetextBox.Text != "" && roomtextBox.Text != "" && costtextBox.Text != "" && descriptiontextBox.Text != "" && validateInteger(campusCodetextBox.Text))
@@ -320,11 +323,14 @@ namespace InventoryApp.View
 
                     string firstName = name.Substring(i + 1, name.Length - i - 1);
                     ICriterion[] expressions = new ICriterion[2];
-                    expressions[0] = Expression.Eq("firstName", firstName);
-                    expressions[1] = Expression.Eq("lastName", lastName);
+                    expressions[0] = Expression.Like("firstName", "%" + firstName + "%");
+                    expressions[1] = Expression.Like("lastName", "%" + lastName + "%");
 
                     IList<Staff> st = repo.Query<Staff>(expressions);
                     it.Staffs = st[0];
+                    it.firstName = it.Staffs.firstName;
+                    it.lastName = it.Staffs.lastName;
+                    it.groupCode = it.Staffs.lastName;
                 }
             }
         }

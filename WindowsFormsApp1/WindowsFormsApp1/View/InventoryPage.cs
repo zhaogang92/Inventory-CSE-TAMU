@@ -122,6 +122,14 @@ namespace InventoryApp
                 showAllItems(repo);
             }
             editBtn.Enabled = false;
+            IList<Staff> staffs = repo.Query<Staff>();
+            string[] staffName = new string[staffs.Count];
+
+            for (int i = 0; i < staffs.Count; i++)
+            {
+                staffName[i] = staffs[i].lastName + "," + staffs[i].firstName;
+            }
+            staffcomboBox.DataSource = staffName;
         }
 
         private void itemsDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -159,72 +167,103 @@ namespace InventoryApp
 
         }
 
-        private List<TextBox> checkHowmanyTextBoxUsed()
-        {
-            int count = 0;
-            List<TextBox> textBoxList = new List<TextBox>();
-            if (textBox1.Text != "") 
-                textBoxList.Add(textBox1);
-            if (textBox2.Text != "")
-                textBoxList.Add(textBox2);
-            if (textBox4.Text != "")
-                textBoxList.Add(textBox4);
-            return textBoxList;
-        }
 
        
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
-           // NHibernateRepository repo = new NHibernateRepository();
+            // NHibernateRepository repo = new NHibernateRepository();
 
-            //search items
             if (tabControl.SelectedTab == tabControl.TabPages[0])
             {
-                List<TextBox> textBoxList = checkHowmanyTextBoxUsed();
-                int count = textBoxList.Count;
-                if (count == 0)
-                    MessageBox.Show("Please enter search query");
-                else
+
+                string name = staffcomboBox.SelectedItem.ToString();
+                List<ICriterion> expressions = new List<ICriterion>();
+                if (name != "None,None")
                 {
-                    ICriterion[] expressions = new ICriterion[count+1];
 
-                    for (int i = 0; i < count-1; i++)
-                        expressions[i] = Expression.Eq("firstName", textBoxList[i].Text);
-                    expressions[count-1] = Expression.Eq("isDelete", false);
-                    var items = repo.Query<Item>(expressions);
-                    var showedItems = from item in items
-                                      let showedItem = new
-                                      {
-                                          Asset = item.asset,
-                                          Building = item.bldg,
-                                          Room = item.room,
-                                          SerialNumber = item.serialNumber,
-                                          CampusCode = item.campusCode,
-                                          Description = item.description,
-                                          TotalCost = item.totalCost,
-                                          OtherLocation = item.otherLocation,
-                                          Model = item.Model,
-                                          Picture = item.picture
-
-                                      }
-                                      select showedItem;
-                    itemsDataGridView.DataSource = showedItems.ToList();
-                    //itemsDataGridView.DataSource = Items.ToList();
+                    char[] ch = new char[name.Length];
+                    ch = name.ToCharArray();
+                    int i;
+                    for (i = 0; i < name.Length; i++)
+                        if (ch[i] == ',')
+                            break;
+                    string lastName = name.Substring(0, i);
+                    string firstName = name.Substring(i + 1, name.Length - i - 1);
+                    if (lastName != "None" && firstName != "None")
+                    {
+                        expressions.Add(Expression.Like("firstName", "%" + firstName + "%"));
+                        expressions.Add(Expression.Like("lastName", "%" + lastName + "%"));
+                    }
                 }
+                if (buildingtextBox.Text != "")
+                    expressions.Add(Expression.Like("bldg", buildingtextBox.Text + "%"));
+                if (roomtextBox.Text != "")
+                    expressions.Add(Expression.Like("room", roomtextBox.Text + "%"));
+                if (startdateTimePicker.Value < enddateTimePicker.Value)
+                    expressions.Add(Expression.Between("acqDate", startdateTimePicker.Value, enddateTimePicker.Value));
+                expressions.Add(Expression.Eq("isDelete", false));
+
+
+
+                var items = repo.Query<Item>(expressions.ToArray());
+                var showedItems = from item in items
+                                  let showedItem = new
+                                  {
+                                      Asset = item.asset,
+                                      Building = item.bldg,
+                                      Room = item.room,
+                                      SerialNumber = item.serialNumber,
+                                      CampusCode = item.campusCode,
+                                      Description = item.description,
+                                      TotalCost = item.totalCost,
+                                      OtherLocation = item.otherLocation,
+                                      Model = item.Model,
+                                      Picture = item.picture
+
+                                  }
+                                  select showedItem;
+                itemsDataGridView.DataSource = showedItems.ToList();
+                //itemsDataGridView.DataSource = Items.ToList();
+
             }
             //search staff
             else
             {
-                if (textBox4.Text == "")
-                    MessageBox.Show("Please enter staff's name");
-                else
+                string name = staffcomboBox.SelectedItem.ToString();
+                List<ICriterion> expressions = new List<ICriterion>();
+                if (name != "None,None")
                 {
-                    ICriterion expression = Expression.Like("firstName",textBox4.Text);
-                    var staffs = repo.Query<Staff>(expression);
-                    staffDataGridView.DataSource = staffs.ToList();
-                    
+
+                    char[] ch = new char[name.Length];
+                    ch = name.ToCharArray();
+                    int i;
+                    for (i = 0; i < name.Length; i++)
+                        if (ch[i] == ',')
+                            break;
+                    string lastName = name.Substring(0, i);
+                    string firstName = name.Substring(i + 1, name.Length - i - 1);
+                    if (lastName != "None" && firstName != "None")
+                    {
+                        expressions.Add(Expression.Like("firstName", "%" + firstName + "%"));
+                        expressions.Add(Expression.Like("lastName", "%" + lastName + "%"));
+                    }
                 }
+
+                var staffs = repo.Query<Staff>(expressions.ToArray());
+                var showedStaffs = from staff in staffs
+                                   let showedStaff = new
+                                   {
+                                       lastname = staff.lastName,
+                                       firstname = staff.firstName,
+                                       groupcode = staff.groupCode,
+                                       email = staff.email,
+                                       phone = staff.phone,
+                                       location = staff.location
+                                   }
+                                   select showedStaff;
+                staffDataGridView.DataSource = showedStaffs.ToList();
+
             }
         }
         //delete one item from database, actually set isDelete = true
