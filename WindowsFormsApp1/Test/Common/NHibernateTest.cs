@@ -227,6 +227,15 @@ namespace Test
             Assert.AreEqual(1, staffs.Count);
         }
 
+        [TestMethod]
+        public void QueryUser()
+        {
+            var repo = new NHibernateRepository();
+            var users = repo.Query<User>(Expression.Eq("Name", "admin"));
+            Assert.AreEqual(0, users.Count);
+            User u = new User() { Name = "admin", Password = "password" };
+            repo.Save(u);
+        }
     }
 }
 

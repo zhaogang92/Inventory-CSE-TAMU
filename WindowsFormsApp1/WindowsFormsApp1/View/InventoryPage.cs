@@ -18,6 +18,8 @@ using System.Data.SQLite;
 using NHibernate.Criterion;
 
 using CCWin;
+using System.IO;
+
 namespace InventoryApp
 {
     public partial class InventoryPage : CCWin.CCSkinMain

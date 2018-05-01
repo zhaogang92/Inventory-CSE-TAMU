@@ -133,6 +133,7 @@
     <Compile Include="Common\NHibernateRepository.cs" />
     <Compile Include="Controller\DBHelper.cs" />
     <Compile Include="Common\IRepository.cs" />
+    <Compile Include="Model\User.cs" />
     <Compile Include="UserInfoData.cs" />
     <Compile Include="Model\Item.cs" />
     <Compile Include="Controller\InventoryManager.cs" />
@@ -266,6 +267,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="Resources\backbar.png" />
+    <EmbeddedResource Include="Model\User.hbm.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <Content Include="Scripts\jquery-1.12.4.intellisense.js" />
     <Content Include="Scripts\jquery-1.12.4.js" />
     <Content Include="Scripts\jquery-1.12.4.min.js" />
