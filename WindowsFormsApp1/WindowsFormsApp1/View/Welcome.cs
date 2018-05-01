@@ -11,6 +11,9 @@ using MySql.Data.MySqlClient;
 
 using CCWin;
 
+using InventoryApp.Common;
+using NHibernate.Criterion;
+using InventoryApp.Model;
 
 namespace InventoryApp
 {
@@ -25,10 +28,21 @@ namespace InventoryApp
 
         private bool validateUser(String userName, String password)
         {
-            if (userName == "admin" && password =="admin")
-                return true;
-            else
+            //if (userName == "admin" && password =="admin")
+            //    return true;
+            //else
+            //    return false;
+            var repo = new NHibernateRepository();
+            var users = repo.Query<User>(Expression.Eq("Name", userName));
+            if (1 != users.Count)
+            {
                 return false;
+            }
+            if (users[0].Password != password)
+            {
+                return false;
+            }
+            return true;
         }
 
         private void loginBtnClick(object sender, EventArgs e)

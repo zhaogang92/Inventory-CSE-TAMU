@@ -18,6 +18,8 @@ using System.Data.SQLite;
 using NHibernate.Criterion;
 
 using CCWin;
+using System.IO;
+
 namespace InventoryApp
 {
     public partial class InventoryPage : CCWin.CCSkinMain
@@ -434,6 +436,7 @@ namespace InventoryApp
             
         }
 
+
         private void button1_Click(object sender, EventArgs e)
         {
             if (tabControl.SelectedTab == tabControl.TabPages[0])
@@ -447,6 +450,27 @@ namespace InventoryApp
             if (tabControl.SelectedTab == tabControl.TabPages[0])
             {
                 showPage(curPage - 1);
+            }
+        }
+
+        private void backup()
+        {
+            IList<Item> items = repo.Query<Item>(Expression.Eq("isDelete", true));
+            SaveFileDialog dlg = new SaveFileDialog();
+            dlg.Filter = "CSV File(*.csv)|*.csv"; ;
+            dlg.Title = "Please choose a save location";
+            dlg.RestoreDirectory = true;
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                using (StreamWriter sw = new StreamWriter(dlg.OpenFile(), Encoding.UTF8))
+                {
+                    sw.WriteLine(Item.getHeader());
+                    foreach (Item item in items)
+                    {
+                        sw.WriteLine(item.ToString());
+                    }
+                }
+
             }
         }
     }
