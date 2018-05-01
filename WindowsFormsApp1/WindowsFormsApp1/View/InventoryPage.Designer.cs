@@ -88,8 +88,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.deleteBtn);
             this.splitContainer1.Panel2.Controls.Add(this.editBtn);
             this.splitContainer1.Panel2.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.splitContainer1.Size = new System.Drawing.Size(952, 420);
-            this.splitContainer1.SplitterDistance = 357;
+            this.splitContainer1.Size = new System.Drawing.Size(952, 422);
+            this.splitContainer1.SplitterDistance = 360;
             this.splitContainer1.TabIndex = 0;
             // 
             // tabControl
@@ -101,7 +101,7 @@
             this.tabControl.Location = new System.Drawing.Point(0, 0);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(952, 357);
+            this.tabControl.Size = new System.Drawing.Size(952, 360);
             this.tabControl.TabIndex = 0;
             this.tabControl.Click += new System.EventHandler(this.tabPage2_Click);
             // 
@@ -111,7 +111,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 42);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(944, 311);
+            this.tabPage1.Size = new System.Drawing.Size(944, 314);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Items";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -122,7 +122,7 @@
             this.itemsDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.itemsDataGridView.Location = new System.Drawing.Point(3, 3);
             this.itemsDataGridView.Name = "itemsDataGridView";
-            this.itemsDataGridView.Size = new System.Drawing.Size(938, 305);
+            this.itemsDataGridView.Size = new System.Drawing.Size(938, 308);
             this.itemsDataGridView.TabIndex = 0;
             this.itemsDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemsDataGridView_CellClick);
             this.itemsDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemsDataGridView_CellContentClick);
@@ -258,6 +258,7 @@
             // 
             // searchBtn
             // 
+            this.searchBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.searchBtn.Location = new System.Drawing.Point(849, 14);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.Size = new System.Drawing.Size(75, 35);

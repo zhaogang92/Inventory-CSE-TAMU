@@ -42,6 +42,7 @@
             this.userNameTextbox.SuspendLayout();
             this.pwdTextbox.SuspendLayout();
             this.SuspendLayout();
+            this.CanResize = false;
             // 
             // skinAnimator1
             // 
