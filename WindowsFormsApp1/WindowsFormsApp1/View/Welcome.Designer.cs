@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            CCWin.SkinControl.Animation animation1 = new CCWin.SkinControl.Animation();
+            CCWin.SkinControl.Animation animation2 = new CCWin.SkinControl.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Welcome));
             this.skinAnimator1 = new CCWin.SkinControl.SkinAnimator(this.components);
             this.skinPictureBox1 = new CCWin.SkinControl.SkinPictureBox();
@@ -47,22 +47,22 @@
             // 
             this.skinAnimator1.AnimationType = CCWin.SkinControl.AnimationType.Custom;
             this.skinAnimator1.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.skinAnimator1.DefaultAnimation = animation1;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.skinAnimator1.DefaultAnimation = animation2;
             // 
             // skinPictureBox1
             // 
@@ -70,9 +70,9 @@
             this.skinPictureBox1.BackgroundImage = global::InventoryApp.Properties.Resources.user_avatar;
             this.skinPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.skinAnimator1.SetDecoration(this.skinPictureBox1, CCWin.SkinControl.DecorationType.None);
-            this.skinPictureBox1.Location = new System.Drawing.Point(156, 118);
+            this.skinPictureBox1.Location = new System.Drawing.Point(123, 74);
             this.skinPictureBox1.Name = "skinPictureBox1";
-            this.skinPictureBox1.Size = new System.Drawing.Size(150, 150);
+            this.skinPictureBox1.Size = new System.Drawing.Size(147, 129);
             this.skinPictureBox1.TabIndex = 12;
             this.skinPictureBox1.TabStop = false;
             // 
@@ -88,7 +88,7 @@
             this.userNameTextbox.IsPasswordChat = '\0';
             this.userNameTextbox.IsSystemPasswordChar = false;
             this.userNameTextbox.Lines = new string[0];
-            this.userNameTextbox.Location = new System.Drawing.Point(13, 500);
+            this.userNameTextbox.Location = new System.Drawing.Point(13, 347);
             this.userNameTextbox.Margin = new System.Windows.Forms.Padding(0);
             this.userNameTextbox.MaxLength = 32767;
             this.userNameTextbox.MinimumSize = new System.Drawing.Size(28, 28);
@@ -100,7 +100,7 @@
             this.userNameTextbox.Padding = new System.Windows.Forms.Padding(5, 5, 28, 5);
             this.userNameTextbox.ReadOnly = false;
             this.userNameTextbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.userNameTextbox.Size = new System.Drawing.Size(450, 50);
+            this.userNameTextbox.Size = new System.Drawing.Size(359, 36);
             // 
             // 
             // 
@@ -110,7 +110,7 @@
             this.userNameTextbox.SkinTxt.Location = new System.Drawing.Point(5, 5);
             this.userNameTextbox.SkinTxt.Multiline = true;
             this.userNameTextbox.SkinTxt.Name = "BaseText";
-            this.userNameTextbox.SkinTxt.Size = new System.Drawing.Size(417, 40);
+            this.userNameTextbox.SkinTxt.Size = new System.Drawing.Size(326, 26);
             this.userNameTextbox.SkinTxt.TabIndex = 0;
             this.userNameTextbox.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.userNameTextbox.SkinTxt.WaterText = "User Name";
@@ -152,7 +152,7 @@
             this.pwdTextbox.IsPasswordChat = '\0';
             this.pwdTextbox.IsSystemPasswordChar = false;
             this.pwdTextbox.Lines = new string[0];
-            this.pwdTextbox.Location = new System.Drawing.Point(13, 571);
+            this.pwdTextbox.Location = new System.Drawing.Point(13, 416);
             this.pwdTextbox.Margin = new System.Windows.Forms.Padding(0);
             this.pwdTextbox.MaxLength = 32767;
             this.pwdTextbox.MinimumSize = new System.Drawing.Size(28, 28);
@@ -164,7 +164,7 @@
             this.pwdTextbox.Padding = new System.Windows.Forms.Padding(5, 5, 28, 5);
             this.pwdTextbox.ReadOnly = false;
             this.pwdTextbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.pwdTextbox.Size = new System.Drawing.Size(450, 50);
+            this.pwdTextbox.Size = new System.Drawing.Size(359, 36);
             // 
             // 
             // 
@@ -174,7 +174,7 @@
             this.pwdTextbox.SkinTxt.Location = new System.Drawing.Point(5, 5);
             this.pwdTextbox.SkinTxt.Multiline = true;
             this.pwdTextbox.SkinTxt.Name = "BaseText";
-            this.pwdTextbox.SkinTxt.Size = new System.Drawing.Size(417, 40);
+            this.pwdTextbox.SkinTxt.Size = new System.Drawing.Size(326, 26);
             this.pwdTextbox.SkinTxt.TabIndex = 0;
             this.pwdTextbox.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.pwdTextbox.SkinTxt.WaterText = "Password";
@@ -217,7 +217,7 @@
             this.LoginBtn.DrawType = CCWin.SkinControl.DrawStyle.Img;
             this.LoginBtn.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginBtn.ForeColor = System.Drawing.Color.White;
-            this.LoginBtn.Location = new System.Drawing.Point(156, 735);
+            this.LoginBtn.Location = new System.Drawing.Point(123, 516);
             this.LoginBtn.Margin = new System.Windows.Forms.Padding(0);
             this.LoginBtn.MouseBack = ((System.Drawing.Image)(resources.GetObject("LoginBtn.MouseBack")));
             this.LoginBtn.Name = "LoginBtn";
@@ -230,12 +230,12 @@
             // 
             // Welcome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::InventoryApp.Properties.Resources.Back;
             this.BorderColor = System.Drawing.Color.Transparent;
-            this.ClientSize = new System.Drawing.Size(470, 830);
+            this.ClientSize = new System.Drawing.Size(389, 668);
             this.CloseBoxSize = new System.Drawing.Size(27, 22);
             this.CloseDownBack = global::InventoryApp.Properties.Resources.CloseDownBack;
             this.CloseMouseBack = global::InventoryApp.Properties.Resources.CloseMouseBack;

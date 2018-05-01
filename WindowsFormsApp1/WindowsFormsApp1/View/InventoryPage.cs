@@ -17,9 +17,10 @@ using InventoryApp.Model;
 using System.Data.SQLite;
 using NHibernate.Criterion;
 
+using CCWin;
 namespace InventoryApp
 {
-    public partial class InventoryPage : System.Windows.Forms.Form
+    public partial class InventoryPage : CCWin.CCSkinMain
     {
         private int dbIndex = 0;
         NHibernateRepository repo = new NHibernateRepository();
