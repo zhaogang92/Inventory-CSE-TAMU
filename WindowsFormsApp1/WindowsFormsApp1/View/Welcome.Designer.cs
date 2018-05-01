@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            CCWin.SkinControl.Animation animation2 = new CCWin.SkinControl.Animation();
+            CCWin.SkinControl.Animation animation1 = new CCWin.SkinControl.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Welcome));
             this.skinAnimator1 = new CCWin.SkinControl.SkinAnimator(this.components);
             this.skinPictureBox1 = new CCWin.SkinControl.SkinPictureBox();
@@ -42,28 +42,27 @@
             this.userNameTextbox.SuspendLayout();
             this.pwdTextbox.SuspendLayout();
             this.SuspendLayout();
-            this.CanResize = false;
             // 
             // skinAnimator1
             // 
             this.skinAnimator1.AnimationType = CCWin.SkinControl.AnimationType.Custom;
             this.skinAnimator1.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.skinAnimator1.DefaultAnimation = animation2;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.skinAnimator1.DefaultAnimation = animation1;
             // 
             // skinPictureBox1
             // 
@@ -107,7 +106,7 @@
             // 
             this.userNameTextbox.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.userNameTextbox.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userNameTextbox.SkinTxt.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F);
+            this.userNameTextbox.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
             this.userNameTextbox.SkinTxt.Location = new System.Drawing.Point(5, 5);
             this.userNameTextbox.SkinTxt.Multiline = true;
             this.userNameTextbox.SkinTxt.Name = "BaseText";
@@ -171,7 +170,7 @@
             // 
             this.pwdTextbox.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.pwdTextbox.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pwdTextbox.SkinTxt.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F);
+            this.pwdTextbox.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
             this.pwdTextbox.SkinTxt.Location = new System.Drawing.Point(5, 5);
             this.pwdTextbox.SkinTxt.Multiline = true;
             this.pwdTextbox.SkinTxt.Name = "BaseText";
@@ -216,7 +215,7 @@
             this.skinAnimator1.SetDecoration(this.LoginBtn, CCWin.SkinControl.DecorationType.None);
             this.LoginBtn.DownBack = ((System.Drawing.Image)(resources.GetObject("LoginBtn.DownBack")));
             this.LoginBtn.DrawType = CCWin.SkinControl.DrawStyle.Img;
-            this.LoginBtn.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginBtn.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginBtn.ForeColor = System.Drawing.Color.White;
             this.LoginBtn.Location = new System.Drawing.Point(123, 516);
             this.LoginBtn.Margin = new System.Windows.Forms.Padding(0);
@@ -231,11 +230,12 @@
             // 
             // Welcome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::InventoryApp.Properties.Resources.Back;
             this.BorderColor = System.Drawing.Color.Transparent;
+            this.CanResize = false;
             this.ClientSize = new System.Drawing.Size(389, 668);
             this.CloseBoxSize = new System.Drawing.Size(27, 22);
             this.CloseDownBack = global::InventoryApp.Properties.Resources.CloseDownBack;
@@ -261,6 +261,7 @@
             this.RestoreMouseBack = global::InventoryApp.Properties.Resources.RestoreMouseBack;
             this.RestoreNormlBack = global::InventoryApp.Properties.Resources.RestoreNormlBack;
             this.Shadow = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Welcome_Load);
             ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox1)).EndInit();

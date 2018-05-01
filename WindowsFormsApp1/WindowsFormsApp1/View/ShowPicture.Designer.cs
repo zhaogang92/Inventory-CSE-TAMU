@@ -44,7 +44,7 @@
             // 
             // ShowPicture
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::InventoryApp.Properties.Resources.backbar;
@@ -66,6 +66,7 @@
             this.RestoreDownBack = global::InventoryApp.Properties.Resources.RestoreDownBack;
             this.RestoreMouseBack = global::InventoryApp.Properties.Resources.RestoreMouseBack;
             this.RestoreNormlBack = global::InventoryApp.Properties.Resources.RestoreNormlBack;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ShowPicture";
             this.Load += new System.EventHandler(this.ShowPicture_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();

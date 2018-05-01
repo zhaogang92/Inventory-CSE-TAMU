@@ -27,7 +27,7 @@ namespace InventoryApp
             if (DialogResult.OK == loginPage.DialogResult)
             {
                 var inventoryPage = new InventoryPage();
-                inventoryPage.Size = new System.Drawing.Size(1200, 600);
+                inventoryPage.Size = new System.Drawing.Size(1420, 750);
                 Application.Run(inventoryPage);
             }
         }

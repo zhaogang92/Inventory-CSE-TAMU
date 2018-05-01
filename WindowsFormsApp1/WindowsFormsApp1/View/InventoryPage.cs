@@ -246,8 +246,8 @@ namespace InventoryApp
                     expressions.Add(Expression.Like("bldg", buildingtextBox.Text + "%"));
                 if (roomtextBox.Text != "")
                     expressions.Add(Expression.Like("room", roomtextBox.Text + "%"));
-                if (startdateTimePicker.Value < enddateTimePicker.Value)
-                    expressions.Add(Expression.Between("acqDate", startdateTimePicker.Value, enddateTimePicker.Value));
+                //if (startdateTimePicker.Value < enddateTimePicker.Value)
+                //    expressions.Add(Expression.Between("acqDate", startdateTimePicker.Value, enddateTimePicker.Value));
                 expressions.Add(Expression.Eq("isDelete", false));
 
                 var items = repo.Query<Item>(expressions.ToArray());
@@ -486,6 +486,11 @@ namespace InventoryApp
                 }
 
             }
+        }
+
+        private void backupBtn_Click(object sender, EventArgs e)
+        {
+            backup();
         }
     }
 }
