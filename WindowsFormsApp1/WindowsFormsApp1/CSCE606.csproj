@@ -271,9 +271,11 @@
     <Content Include="Content\themes\base\tooltip.css" />
     <EmbeddedResource Include="Model\Item.hbm.xml">
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Model\Staff.hbm.xml">
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <None Include="Resources\backbar.png" />
     <EmbeddedResource Include="Model\User.hbm.xml">

@@ -117,6 +117,7 @@ namespace InventoryApp
                     continue;
                 showedItems.Add(new
                 {
+                    IsChecked = item.isChecked,
                     Asset = item.asset,
                     Building = item.bldg,
                     Room = item.room,
@@ -260,6 +261,7 @@ namespace InventoryApp
                         continue;
                     showedItems.Add(new
                     {
+                        IsChecked = item.isChecked,
                         Asset = item.asset,
                         Building = item.bldg,
                         Room = item.room,
@@ -404,6 +406,21 @@ namespace InventoryApp
             rowindex = e.RowIndex;
             string strid = Convert.ToString(itemsDataGridView.CurrentCell.RowIndex);
             //MessageBox.Show(strid);
+
+            if (e.ColumnIndex >= 0 && this.itemsDataGridView.Columns[e.ColumnIndex].Name == "IsChecked")
+            {
+                bool isChecked = (bool)this.itemsDataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
+                isChecked = !isChecked;
+                DataGridViewCheckBoxCell chkCell = (DataGridViewCheckBoxCell)this.itemsDataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex];
+                chkCell.Value = isChecked ? chkCell.TrueValue : chkCell.FalseValue;
+                ICriterion[] expressions = new ICriterion[2];
+                expressions[0] = Expression.Eq("asset", itemsDataGridView.Rows[rowindex].Cells["Asset"].Value);
+                expressions[1] = Expression.Eq("isDelete", false);
+                IList<Item> items = repo.Query<Item>(expressions);
+                items[0].isChecked = isChecked;
+                repo.Update(items[0]);
+                itemsDataGridView.EndEdit();
+            }
         }
 
         private void editBtn_Click(object sender, EventArgs e)
@@ -500,9 +517,19 @@ namespace InventoryApp
 
         }
 
+        private void clearCheckedStatus()
+        {
+            IList<Item> items = repo.Query<Item>(Expression.Eq("isDelete", false));
+            for (int i = 0; i < items.Count; ++i)
+            {
+                items[i].isChecked = false;
+                repo.Update(items[i]);
+            }
+        }
+
         private void clearCheckedBtn_Click(object sender, EventArgs e)
         {
-            
+            clearCheckedStatus();
         }
 
         private void userAddBtn_Click(object sender, EventArgs e)

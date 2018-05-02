@@ -12,6 +12,8 @@ namespace InventoryApp.Model
 
         public virtual string asset { get; set; }
 
+        public virtual bool isChecked { get; set; }
+
         public virtual int campusCode { get; set; }
         
         public virtual string description { get; set; }
