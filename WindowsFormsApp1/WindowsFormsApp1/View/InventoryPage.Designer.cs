@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.itemsDataGridView = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.staffDataGridView = new System.Windows.Forms.DataGridView();
+            this.searchBtn = new CCWin.SkinControl.SkinButton();
+            this.backupBtn = new System.Windows.Forms.Button();
             this.lablePage = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -44,10 +47,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.roomtextBox = new System.Windows.Forms.TextBox();
             this.buildingtextBox = new System.Windows.Forms.TextBox();
-            this.searchBtn = new System.Windows.Forms.Button();
             this.deleteBtn = new System.Windows.Forms.Button();
             this.editBtn = new System.Windows.Forms.Button();
-            this.backupBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -73,6 +74,7 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.searchBtn);
             this.splitContainer1.Panel2.Controls.Add(this.backupBtn);
             this.splitContainer1.Panel2.Controls.Add(this.lablePage);
             this.splitContainer1.Panel2.Controls.Add(this.button2);
@@ -84,7 +86,6 @@
             this.splitContainer1.Panel2.Controls.Add(this.label1);
             this.splitContainer1.Panel2.Controls.Add(this.roomtextBox);
             this.splitContainer1.Panel2.Controls.Add(this.buildingtextBox);
-            this.splitContainer1.Panel2.Controls.Add(this.searchBtn);
             this.splitContainer1.Panel2.Controls.Add(this.deleteBtn);
             this.splitContainer1.Panel2.Controls.Add(this.editBtn);
             this.splitContainer1.Panel2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -108,10 +109,10 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.itemsDataGridView);
-            this.tabPage1.Location = new System.Drawing.Point(4, 28);
+            this.tabPage1.Location = new System.Drawing.Point(4, 37);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1404, 624);
+            this.tabPage1.Size = new System.Drawing.Size(1404, 615);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Items";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -123,7 +124,7 @@
             this.itemsDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.itemsDataGridView.Location = new System.Drawing.Point(3, 3);
             this.itemsDataGridView.Name = "itemsDataGridView";
-            this.itemsDataGridView.Size = new System.Drawing.Size(1398, 618);
+            this.itemsDataGridView.Size = new System.Drawing.Size(1398, 609);
             this.itemsDataGridView.TabIndex = 0;
             this.itemsDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemsDataGridView_CellClick);
             this.itemsDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemsDataGridView_CellContentClick);
@@ -132,10 +133,10 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.staffDataGridView);
-            this.tabPage2.Location = new System.Drawing.Point(4, 28);
+            this.tabPage2.Location = new System.Drawing.Point(4, 37);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1404, 624);
+            this.tabPage2.Size = new System.Drawing.Size(1404, 615);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Staffs";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -148,16 +149,48 @@
             this.staffDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.staffDataGridView.Location = new System.Drawing.Point(3, 3);
             this.staffDataGridView.Name = "staffDataGridView";
-            this.staffDataGridView.Size = new System.Drawing.Size(1398, 618);
+            this.staffDataGridView.Size = new System.Drawing.Size(1398, 609);
             this.staffDataGridView.TabIndex = 1;
             this.staffDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.staffDataGridView_CellClick);
+            // 
+            // searchBtn
+            // 
+            this.searchBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.searchBtn.BackColor = System.Drawing.Color.Transparent;
+            this.searchBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.searchBtn.BackRectangle = new System.Drawing.Rectangle(50, 23, 50, 23);
+            this.searchBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(21)))), ((int)(((byte)(26)))));
+            this.searchBtn.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.searchBtn.DownBack = global::InventoryApp.Properties.Resources.ic_search_2x;
+            this.searchBtn.DrawType = CCWin.SkinControl.DrawStyle.Img;
+            this.searchBtn.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchBtn.ForeColor = System.Drawing.Color.White;
+            this.searchBtn.Location = new System.Drawing.Point(627, 11);
+            this.searchBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.searchBtn.MouseBack = global::InventoryApp.Properties.Resources.ic_search_2x;
+            this.searchBtn.Name = "searchBtn";
+            this.searchBtn.NormlBack = global::InventoryApp.Properties.Resources.ic_search_2x;
+            this.searchBtn.Size = new System.Drawing.Size(35, 35);
+            this.searchBtn.TabIndex = 43;
+            this.searchBtn.UseVisualStyleBackColor = false;
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
+            // 
+            // backupBtn
+            // 
+            this.backupBtn.Location = new System.Drawing.Point(1257, 12);
+            this.backupBtn.Name = "backupBtn";
+            this.backupBtn.Size = new System.Drawing.Size(147, 34);
+            this.backupBtn.TabIndex = 18;
+            this.backupBtn.Text = "Backup Deleted";
+            this.backupBtn.UseVisualStyleBackColor = true;
+            this.backupBtn.Click += new System.EventHandler(this.backupBtn_Click);
             // 
             // lablePage
             // 
             this.lablePage.AutoSize = true;
             this.lablePage.Location = new System.Drawing.Point(1101, 20);
             this.lablePage.Name = "lablePage";
-            this.lablePage.Size = new System.Drawing.Size(36, 19);
+            this.lablePage.Size = new System.Drawing.Size(51, 28);
             this.lablePage.TabIndex = 17;
             this.lablePage.Text = "0/0";
             // 
@@ -186,7 +219,7 @@
             this.staffcomboBox.FormattingEnabled = true;
             this.staffcomboBox.Location = new System.Drawing.Point(438, 16);
             this.staffcomboBox.Name = "staffcomboBox";
-            this.staffcomboBox.Size = new System.Drawing.Size(166, 27);
+            this.staffcomboBox.Size = new System.Drawing.Size(166, 36);
             this.staffcomboBox.TabIndex = 1;
             // 
             // addBtn
@@ -205,7 +238,7 @@
             this.label4.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(369, 20);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 19);
+            this.label4.Size = new System.Drawing.Size(90, 28);
             this.label4.TabIndex = 10;
             this.label4.Text = "Staff:";
             // 
@@ -215,7 +248,7 @@
             this.label2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(205, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 19);
+            this.label2.Size = new System.Drawing.Size(77, 28);
             this.label2.TabIndex = 6;
             this.label2.Text = "Room:";
             // 
@@ -225,7 +258,7 @@
             this.label1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(6, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 19);
+            this.label1.Size = new System.Drawing.Size(129, 28);
             this.label1.TabIndex = 5;
             this.label1.Text = "Building:";
             // 
@@ -234,7 +267,7 @@
             this.roomtextBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roomtextBox.Location = new System.Drawing.Point(263, 16);
             this.roomtextBox.Name = "roomtextBox";
-            this.roomtextBox.Size = new System.Drawing.Size(100, 26);
+            this.roomtextBox.Size = new System.Drawing.Size(100, 36);
             this.roomtextBox.TabIndex = 4;
             // 
             // buildingtextBox
@@ -242,19 +275,8 @@
             this.buildingtextBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buildingtextBox.Location = new System.Drawing.Point(99, 16);
             this.buildingtextBox.Name = "buildingtextBox";
-            this.buildingtextBox.Size = new System.Drawing.Size(100, 26);
+            this.buildingtextBox.Size = new System.Drawing.Size(100, 36);
             this.buildingtextBox.TabIndex = 3;
-            // 
-            // searchBtn
-            // 
-            this.searchBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.searchBtn.Location = new System.Drawing.Point(627, 12);
-            this.searchBtn.Name = "searchBtn";
-            this.searchBtn.Size = new System.Drawing.Size(75, 35);
-            this.searchBtn.TabIndex = 2;
-            this.searchBtn.Text = "Search";
-            this.searchBtn.UseVisualStyleBackColor = true;
-            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
             // deleteBtn
             // 
@@ -276,19 +298,9 @@
             this.editBtn.UseVisualStyleBackColor = true;
             this.editBtn.Click += new System.EventHandler(this.editBtn_Click_1);
             // 
-            // backupBtn
-            // 
-            this.backupBtn.Location = new System.Drawing.Point(1257, 12);
-            this.backupBtn.Name = "backupBtn";
-            this.backupBtn.Size = new System.Drawing.Size(147, 34);
-            this.backupBtn.TabIndex = 18;
-            this.backupBtn.Text = "Backup Deleted";
-            this.backupBtn.UseVisualStyleBackColor = true;
-            this.backupBtn.Click += new System.EventHandler(this.backupBtn_Click);
-            // 
             // InventoryPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;
@@ -337,7 +349,6 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button editBtn;
         private System.Windows.Forms.Button deleteBtn;
-        private System.Windows.Forms.Button searchBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox roomtextBox;
         private System.Windows.Forms.TextBox buildingtextBox;
@@ -352,5 +363,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lablePage;
         private System.Windows.Forms.Button backupBtn;
+        private CCWin.SkinControl.SkinButton searchBtn;
     }
 }

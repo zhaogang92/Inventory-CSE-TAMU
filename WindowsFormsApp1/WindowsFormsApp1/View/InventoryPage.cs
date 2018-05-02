@@ -494,5 +494,10 @@ namespace InventoryApp
         {
             backup();
         }
+
+        private void searchBtn_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
