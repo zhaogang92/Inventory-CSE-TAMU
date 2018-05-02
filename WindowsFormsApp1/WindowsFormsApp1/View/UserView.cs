@@ -16,7 +16,7 @@ using CCWin;
 
 namespace InventoryApp.View
 {
-    public partial class UserView : Form
+    public partial class UserView : CCSkinMain
     {
         public UserView(bool isAddNew)
         {

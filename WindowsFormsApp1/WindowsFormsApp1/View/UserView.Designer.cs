@@ -114,7 +114,7 @@
             this.userNametextBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userNametextBox.Location = new System.Drawing.Point(195, 102);
             this.userNametextBox.Name = "userNametextBox";
-            this.userNametextBox.Size = new System.Drawing.Size(293, 45);
+            this.userNametextBox.Size = new System.Drawing.Size(293, 36);
             this.userNametextBox.TabIndex = 28;
             this.userNametextBox.TextChanged += new System.EventHandler(this.userNametextBox_TextChanged);
             // 
@@ -197,7 +197,7 @@
             this.passwordtextBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordtextBox.Location = new System.Drawing.Point(195, 205);
             this.passwordtextBox.Name = "passwordtextBox";
-            this.passwordtextBox.Size = new System.Drawing.Size(293, 45);
+            this.passwordtextBox.Size = new System.Drawing.Size(293, 36);
             this.passwordtextBox.TabIndex = 29;
             // 
             // confirmPasswordtextBox
@@ -279,7 +279,7 @@
             this.confirmPasswordtextBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirmPasswordtextBox.Location = new System.Drawing.Point(195, 307);
             this.confirmPasswordtextBox.Name = "confirmPasswordtextBox";
-            this.confirmPasswordtextBox.Size = new System.Drawing.Size(293, 45);
+            this.confirmPasswordtextBox.Size = new System.Drawing.Size(293, 36);
             this.confirmPasswordtextBox.TabIndex = 30;
             // 
             // AddBtn
@@ -300,15 +300,16 @@
             this.authorizedcheckBox.Font = new System.Drawing.Font("Consolas", 12F);
             this.authorizedcheckBox.Location = new System.Drawing.Point(195, 405);
             this.authorizedcheckBox.Name = "authorizedcheckBox";
-            this.authorizedcheckBox.Size = new System.Drawing.Size(229, 41);
+            this.authorizedcheckBox.Size = new System.Drawing.Size(168, 32);
             this.authorizedcheckBox.TabIndex = 38;
             this.authorizedcheckBox.Text = "Authorized";
             this.authorizedcheckBox.UseVisualStyleBackColor = true;
             // 
             // UserView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::InventoryApp.Properties.Resources.backbar;
             this.ClientSize = new System.Drawing.Size(664, 647);
             this.Controls.Add(this.authorizedcheckBox);
