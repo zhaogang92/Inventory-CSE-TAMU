@@ -35,20 +35,20 @@
             this.itemsDataGridView = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.staffDataGridView = new System.Windows.Forms.DataGridView();
+            this.button1 = new CCWin.SkinControl.SkinButton();
+            this.button2 = new CCWin.SkinControl.SkinButton();
+            this.addBtn = new CCWin.SkinControl.SkinButton();
+            this.editBtn = new CCWin.SkinControl.SkinButton();
+            this.deleteBtn = new CCWin.SkinControl.SkinButton();
             this.searchBtn = new CCWin.SkinControl.SkinButton();
             this.backupBtn = new System.Windows.Forms.Button();
             this.lablePage = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.staffcomboBox = new System.Windows.Forms.ComboBox();
-            this.addBtn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.roomtextBox = new System.Windows.Forms.TextBox();
             this.buildingtextBox = new System.Windows.Forms.TextBox();
-            this.deleteBtn = new System.Windows.Forms.Button();
-            this.editBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -74,20 +74,20 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.button1);
+            this.splitContainer1.Panel2.Controls.Add(this.button2);
+            this.splitContainer1.Panel2.Controls.Add(this.addBtn);
+            this.splitContainer1.Panel2.Controls.Add(this.editBtn);
+            this.splitContainer1.Panel2.Controls.Add(this.deleteBtn);
             this.splitContainer1.Panel2.Controls.Add(this.searchBtn);
             this.splitContainer1.Panel2.Controls.Add(this.backupBtn);
             this.splitContainer1.Panel2.Controls.Add(this.lablePage);
-            this.splitContainer1.Panel2.Controls.Add(this.button2);
-            this.splitContainer1.Panel2.Controls.Add(this.button1);
             this.splitContainer1.Panel2.Controls.Add(this.staffcomboBox);
-            this.splitContainer1.Panel2.Controls.Add(this.addBtn);
             this.splitContainer1.Panel2.Controls.Add(this.label4);
             this.splitContainer1.Panel2.Controls.Add(this.label2);
             this.splitContainer1.Panel2.Controls.Add(this.label1);
             this.splitContainer1.Panel2.Controls.Add(this.roomtextBox);
             this.splitContainer1.Panel2.Controls.Add(this.buildingtextBox);
-            this.splitContainer1.Panel2.Controls.Add(this.deleteBtn);
-            this.splitContainer1.Panel2.Controls.Add(this.editBtn);
             this.splitContainer1.Panel2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.splitContainer1.Size = new System.Drawing.Size(1412, 718);
             this.splitContainer1.SplitterDistance = 656;
@@ -153,6 +153,116 @@
             this.staffDataGridView.TabIndex = 1;
             this.staffDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.staffDataGridView_CellClick);
             // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.BackRectangle = new System.Drawing.Rectangle(50, 23, 50, 23);
+            this.button1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(21)))), ((int)(((byte)(26)))));
+            this.button1.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.button1.DownBack = global::InventoryApp.Properties.Resources.ic_arrow_forward_black_pressed;
+            this.button1.DrawType = CCWin.SkinControl.DrawStyle.Img;
+            this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(1153, 12);
+            this.button1.Margin = new System.Windows.Forms.Padding(0);
+            this.button1.MouseBack = global::InventoryApp.Properties.Resources.ic_arrow_forward_black_24px;
+            this.button1.Name = "button1";
+            this.button1.NormlBack = global::InventoryApp.Properties.Resources.ic_arrow_forward_black_24px;
+            this.button1.Size = new System.Drawing.Size(35, 35);
+            this.button1.TabIndex = 49;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button2.BackRectangle = new System.Drawing.Rectangle(50, 23, 50, 23);
+            this.button2.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(21)))), ((int)(((byte)(26)))));
+            this.button2.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.button2.DownBack = global::InventoryApp.Properties.Resources.ic_arrow_back_black_24px;
+            this.button2.DrawType = CCWin.SkinControl.DrawStyle.Img;
+            this.button2.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(1027, 12);
+            this.button2.Margin = new System.Windows.Forms.Padding(0);
+            this.button2.MouseBack = global::InventoryApp.Properties.Resources.ic_arrow_back_black;
+            this.button2.Name = "button2";
+            this.button2.NormlBack = global::InventoryApp.Properties.Resources.ic_arrow_back_black;
+            this.button2.Size = new System.Drawing.Size(35, 35);
+            this.button2.TabIndex = 48;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // addBtn
+            // 
+            this.addBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.addBtn.BackColor = System.Drawing.Color.Transparent;
+            this.addBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.addBtn.BackRectangle = new System.Drawing.Rectangle(50, 23, 50, 23);
+            this.addBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(21)))), ((int)(((byte)(26)))));
+            this.addBtn.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.addBtn.DownBack = global::InventoryApp.Properties.Resources.ic_add_black_24px_pressed;
+            this.addBtn.DrawType = CCWin.SkinControl.DrawStyle.Img;
+            this.addBtn.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addBtn.ForeColor = System.Drawing.Color.White;
+            this.addBtn.Location = new System.Drawing.Point(778, 11);
+            this.addBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.addBtn.MouseBack = global::InventoryApp.Properties.Resources.ic_add_black_24px;
+            this.addBtn.Name = "addBtn";
+            this.addBtn.NormlBack = global::InventoryApp.Properties.Resources.ic_add_black_24px;
+            this.addBtn.Size = new System.Drawing.Size(35, 35);
+            this.addBtn.TabIndex = 47;
+            this.addBtn.UseVisualStyleBackColor = false;
+            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
+            // 
+            // editBtn
+            // 
+            this.editBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.editBtn.BackColor = System.Drawing.Color.Transparent;
+            this.editBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.editBtn.BackRectangle = new System.Drawing.Rectangle(50, 23, 50, 23);
+            this.editBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(21)))), ((int)(((byte)(26)))));
+            this.editBtn.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.editBtn.DownBack = global::InventoryApp.Properties.Resources.ic_create_black_pressed;
+            this.editBtn.DrawType = CCWin.SkinControl.DrawStyle.Img;
+            this.editBtn.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editBtn.ForeColor = System.Drawing.Color.White;
+            this.editBtn.Location = new System.Drawing.Point(678, 12);
+            this.editBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.editBtn.MouseBack = global::InventoryApp.Properties.Resources.ic_create_black;
+            this.editBtn.Name = "editBtn";
+            this.editBtn.NormlBack = global::InventoryApp.Properties.Resources.ic_create_black;
+            this.editBtn.Size = new System.Drawing.Size(35, 35);
+            this.editBtn.TabIndex = 46;
+            this.editBtn.UseVisualStyleBackColor = false;
+            this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
+            // 
+            // deleteBtn
+            // 
+            this.deleteBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.deleteBtn.BackColor = System.Drawing.Color.Transparent;
+            this.deleteBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.deleteBtn.BackRectangle = new System.Drawing.Rectangle(50, 23, 50, 23);
+            this.deleteBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(21)))), ((int)(((byte)(26)))));
+            this.deleteBtn.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.deleteBtn.DownBack = global::InventoryApp.Properties.Resources.ic_delete_black_pressed;
+            this.deleteBtn.DrawType = CCWin.SkinControl.DrawStyle.Img;
+            this.deleteBtn.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteBtn.ForeColor = System.Drawing.Color.White;
+            this.deleteBtn.Location = new System.Drawing.Point(728, 11);
+            this.deleteBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.deleteBtn.MouseBack = global::InventoryApp.Properties.Resources.ic_delete_black;
+            this.deleteBtn.Name = "deleteBtn";
+            this.deleteBtn.NormlBack = global::InventoryApp.Properties.Resources.ic_delete_black;
+            this.deleteBtn.Size = new System.Drawing.Size(35, 35);
+            this.deleteBtn.TabIndex = 45;
+            this.deleteBtn.UseVisualStyleBackColor = false;
+            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
+            // 
             // searchBtn
             // 
             this.searchBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -161,11 +271,11 @@
             this.searchBtn.BackRectangle = new System.Drawing.Rectangle(50, 23, 50, 23);
             this.searchBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(21)))), ((int)(((byte)(26)))));
             this.searchBtn.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.searchBtn.DownBack = global::InventoryApp.Properties.Resources.ic_search_2x;
+            this.searchBtn.DownBack = global::InventoryApp.Properties.Resources.ic_search_2x_pressed;
             this.searchBtn.DrawType = CCWin.SkinControl.DrawStyle.Img;
             this.searchBtn.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchBtn.ForeColor = System.Drawing.Color.White;
-            this.searchBtn.Location = new System.Drawing.Point(627, 11);
+            this.searchBtn.Location = new System.Drawing.Point(630, 12);
             this.searchBtn.Margin = new System.Windows.Forms.Padding(0);
             this.searchBtn.MouseBack = global::InventoryApp.Properties.Resources.ic_search_2x;
             this.searchBtn.Name = "searchBtn";
@@ -188,31 +298,11 @@
             // lablePage
             // 
             this.lablePage.AutoSize = true;
-            this.lablePage.Location = new System.Drawing.Point(1101, 20);
+            this.lablePage.Location = new System.Drawing.Point(1078, 14);
             this.lablePage.Name = "lablePage";
             this.lablePage.Size = new System.Drawing.Size(51, 28);
             this.lablePage.TabIndex = 17;
             this.lablePage.Text = "0/0";
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(1009, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(87, 34);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "Prev";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(1145, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 34);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Next";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // staffcomboBox
             // 
@@ -221,16 +311,6 @@
             this.staffcomboBox.Name = "staffcomboBox";
             this.staffcomboBox.Size = new System.Drawing.Size(166, 36);
             this.staffcomboBox.TabIndex = 1;
-            // 
-            // addBtn
-            // 
-            this.addBtn.Location = new System.Drawing.Point(901, 12);
-            this.addBtn.Name = "addBtn";
-            this.addBtn.Size = new System.Drawing.Size(75, 35);
-            this.addBtn.TabIndex = 14;
-            this.addBtn.Text = "Add";
-            this.addBtn.UseVisualStyleBackColor = true;
-            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
             // label4
             // 
@@ -277,26 +357,6 @@
             this.buildingtextBox.Name = "buildingtextBox";
             this.buildingtextBox.Size = new System.Drawing.Size(100, 36);
             this.buildingtextBox.TabIndex = 3;
-            // 
-            // deleteBtn
-            // 
-            this.deleteBtn.Location = new System.Drawing.Point(812, 12);
-            this.deleteBtn.Name = "deleteBtn";
-            this.deleteBtn.Size = new System.Drawing.Size(75, 35);
-            this.deleteBtn.TabIndex = 1;
-            this.deleteBtn.Text = "Delete";
-            this.deleteBtn.UseVisualStyleBackColor = true;
-            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
-            // 
-            // editBtn
-            // 
-            this.editBtn.Location = new System.Drawing.Point(719, 12);
-            this.editBtn.Name = "editBtn";
-            this.editBtn.Size = new System.Drawing.Size(75, 35);
-            this.editBtn.TabIndex = 0;
-            this.editBtn.Text = "Edit";
-            this.editBtn.UseVisualStyleBackColor = true;
-            this.editBtn.Click += new System.EventHandler(this.editBtn_Click_1);
             // 
             // InventoryPage
             // 
@@ -347,22 +407,22 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button editBtn;
-        private System.Windows.Forms.Button deleteBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox roomtextBox;
         private System.Windows.Forms.TextBox buildingtextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button addBtn;
         private System.Windows.Forms.DataGridView staffDataGridView;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DataGridView itemsDataGridView;
         private System.Windows.Forms.ComboBox staffcomboBox;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lablePage;
         private System.Windows.Forms.Button backupBtn;
         private CCWin.SkinControl.SkinButton searchBtn;
+        private CCWin.SkinControl.SkinButton deleteBtn;
+        private CCWin.SkinControl.SkinButton editBtn;
+        private CCWin.SkinControl.SkinButton addBtn;
+        private CCWin.SkinControl.SkinButton button1;
+        private CCWin.SkinControl.SkinButton button2;
     }
 }

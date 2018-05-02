@@ -280,6 +280,17 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <None Include="Resources\ic_search_2x.png" />
+    <None Include="Resources\ic_search_2x_pressed.png" />
+    <None Include="Resources\ic_delete_black.png" />
+    <None Include="Resources\ic_delete_black_pressed.png" />
+    <None Include="Resources\ic_arrow_back_black.png" />
+    <None Include="Resources\ic_arrow_back_black_24px.png" />
+    <None Include="Resources\ic_arrow_forward_black_24px.png" />
+    <None Include="Resources\ic_arrow_forward_black_pressed.png" />
+    <None Include="Resources\ic_create_black.png" />
+    <None Include="Resources\ic_create_black_pressed.png" />
+    <None Include="Resources\ic_add_black_24px.png" />
+    <None Include="Resources\ic_add_black_24px_pressed.png" />
     <Content Include="Scripts\jquery-1.12.4.intellisense.js" />
     <Content Include="Scripts\jquery-1.12.4.js" />
     <Content Include="Scripts\jquery-1.12.4.min.js" />

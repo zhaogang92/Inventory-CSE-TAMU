@@ -406,7 +406,7 @@ namespace InventoryApp
             //MessageBox.Show(strid);
         }
 
-        private void editBtn_Click_1(object sender, EventArgs e)
+        private void editBtn_Click(object sender, EventArgs e)
         {   
             if (tabControl.SelectedTab == tabControl.TabPages[0])
             {
@@ -493,11 +493,6 @@ namespace InventoryApp
         private void backupBtn_Click(object sender, EventArgs e)
         {
             backup();
-        }
-
-        private void searchBtn_Click_1(object sender, EventArgs e)
-        {
-
         }
     }
 }
