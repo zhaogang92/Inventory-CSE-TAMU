@@ -494,5 +494,20 @@ namespace InventoryApp
         {
             backup();
         }
+
+        private void userBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void clearCheckedBtn_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void userAddBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
