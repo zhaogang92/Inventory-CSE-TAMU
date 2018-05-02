@@ -29,11 +29,13 @@ namespace InventoryApp
         private List<Object> curItems = null;
         private int curPage = 0;
         private const int PAGE_ITEM_COUNT = 100;
-
+        private User user;
         NHibernateRepository repo = new NHibernateRepository();
-        public InventoryPage()
+        public InventoryPage(User us)
         {
             InitializeComponent();
+            user = us;
+
 
             //set tool tips
             new ToolTip().SetToolTip(this.addBtn, "add new records");
@@ -170,6 +172,16 @@ namespace InventoryApp
 
         private void InventoryPage_Load(object sender, EventArgs e)
         {
+            if (!user.IsAuthorized)
+            {
+                addBtn.Enabled = false;
+                deleteBtn.Enabled = false;
+                editBtn.Enabled = false;
+                userAddBtn.Enabled = false;
+                userUpdateBtn.Enabled = false;
+                clearCheckedBtn.Enabled = false;
+                backupBtn.Enabled = false;
+            }
             NHibernateRepository repo = new NHibernateRepository();
             if (tabControl.SelectedTab == tabControl.TabPages[0])
             {
@@ -257,6 +269,8 @@ namespace InventoryApp
                         expressions.Add(Expression.Like("lastName", "%" + lastName + "%"));
                     }
                 }
+                if(assettextBox.Text != "")
+                    expressions.Add(Expression.Like("asset", "%"+assettextBox.Text + "%"));
                 if (buildingtextBox.Text != "")
                     expressions.Add(Expression.Like("bldg", buildingtextBox.Text + "%"));
                 if (roomtextBox.Text != "")
@@ -530,7 +544,8 @@ namespace InventoryApp
 
         private void userBtn_Click(object sender, EventArgs e)
         {
-
+            View.UserView userView = new View.UserView(false, user);
+            userView.ShowDialog();
         }
 
         private void clearCheckedStatus()
@@ -551,7 +566,8 @@ namespace InventoryApp
 
         private void userAddBtn_Click(object sender, EventArgs e)
         {
-
+            View.UserView userView = new View.UserView(true,null);
+            userView.ShowDialog();
         }
 
         private void itemsDataGridView_CellValueChanged(object sender, DataGridViewCellEventArgs e)

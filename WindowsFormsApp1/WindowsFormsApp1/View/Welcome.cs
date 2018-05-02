@@ -20,6 +20,7 @@ namespace InventoryApp
     public partial class Welcome : CCWin.CCSkinMain
     {
         public int DBIndex { get; set; }
+        public User user { get; set; }
 
         public Welcome()
         {
@@ -82,13 +83,18 @@ namespace InventoryApp
 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
-            if (!validateUser(this.userNameTextbox.Text, this.pwdTextbox.Text))
+            var repo = new NHibernateRepository();
+            ICriterion[] expressions = new ICriterion[2];
+            expressions[0] = Expression.Eq("Name", userNameTextbox.Text);
+            expressions[1] = Expression.Eq("Password", pwdTextbox.Text);
+            var users = repo.Query<User>(expressions);
+            if (users.Count != 1)
             {
                 CCWin.MessageBoxEx.Show("Username/password is incorrect!", "Error", MessageBoxButtons.OK);
                 return;
             }
 
-           
+            user = users[0];
             this.DialogResult = DialogResult.OK;
 
             this.Close();
@@ -98,12 +104,7 @@ namespace InventoryApp
             return;
         }
 
-        private void AddNewButton_Click(object sender, EventArgs e)
-        {
-            View.UserView userView = new View.UserView(true);
-            userView.ShowDialog();
-
-        }
+       
 
         //public static MySqlConnection connection;
         //MySql.Data.MySqlClient.MySqlCommand command;

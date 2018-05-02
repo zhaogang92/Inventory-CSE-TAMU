@@ -22,6 +22,7 @@ namespace InventoryApp.View
         private Staff st;
         NHibernateRepository repo = new NHibernateRepository();
         bool isLoad = false;
+        
         public StaffView(bool IsAddNew, Staff staff)
         {
             InitializeComponent();
@@ -141,7 +142,7 @@ namespace InventoryApp.View
 
         private void phonetextBox_TextChanged(object sender, EventArgs e)
         {
-            if (!isAddNew)
+            if (!isAddNew && isLoad)
             {
                 st.phone = phonetextBox.Text;
             }
@@ -149,7 +150,7 @@ namespace InventoryApp.View
 
         private void locationtextBox_TextChanged(object sender, EventArgs e)
         {
-            if (!isAddNew)
+            if (!isAddNew && isLoad)
             {
                 st.location = locationtextBox.Text;
             }

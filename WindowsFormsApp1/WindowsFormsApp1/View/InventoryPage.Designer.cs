@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InventoryPage));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -48,10 +49,12 @@
             this.lablePage = new System.Windows.Forms.Label();
             this.staffcomboBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.roomtextBox = new System.Windows.Forms.TextBox();
-            this.buildingtextBox = new System.Windows.Forms.TextBox();
+            this.assettextBox = new CCWin.SkinControl.SkinTextBox();
+            this.btnId = new CCWin.SkinControl.SkinButton();
+            this.buildingtextBox = new CCWin.SkinControl.SkinTextBox();
+            this.skinButton1 = new CCWin.SkinControl.SkinButton();
+            this.roomtextBox = new CCWin.SkinControl.SkinTextBox();
+            this.skinButton2 = new CCWin.SkinControl.SkinButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -61,6 +64,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.itemsDataGridView)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.staffDataGridView)).BeginInit();
+            this.assettextBox.SuspendLayout();
+            this.buildingtextBox.SuspendLayout();
+            this.roomtextBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -77,6 +83,9 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.roomtextBox);
+            this.splitContainer1.Panel2.Controls.Add(this.buildingtextBox);
+            this.splitContainer1.Panel2.Controls.Add(this.assettextBox);
             this.splitContainer1.Panel2.Controls.Add(this.userAddBtn);
             this.splitContainer1.Panel2.Controls.Add(this.clearCheckedBtn);
             this.splitContainer1.Panel2.Controls.Add(this.userUpdateBtn);
@@ -90,10 +99,6 @@
             this.splitContainer1.Panel2.Controls.Add(this.lablePage);
             this.splitContainer1.Panel2.Controls.Add(this.staffcomboBox);
             this.splitContainer1.Panel2.Controls.Add(this.label4);
-            this.splitContainer1.Panel2.Controls.Add(this.label2);
-            this.splitContainer1.Panel2.Controls.Add(this.label1);
-            this.splitContainer1.Panel2.Controls.Add(this.roomtextBox);
-            this.splitContainer1.Panel2.Controls.Add(this.buildingtextBox);
             this.splitContainer1.Panel2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.splitContainer1.Size = new System.Drawing.Size(1412, 718);
             this.splitContainer1.SplitterDistance = 656;
@@ -115,10 +120,10 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.itemsDataGridView);
-            this.tabPage1.Location = new System.Drawing.Point(4, 28);
+            this.tabPage1.Location = new System.Drawing.Point(8, 51);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1404, 624);
+            this.tabPage1.Size = new System.Drawing.Size(1396, 597);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Items";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -131,7 +136,7 @@
             this.itemsDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.itemsDataGridView.Location = new System.Drawing.Point(3, 3);
             this.itemsDataGridView.Name = "itemsDataGridView";
-            this.itemsDataGridView.Size = new System.Drawing.Size(1398, 618);
+            this.itemsDataGridView.Size = new System.Drawing.Size(1390, 591);
             this.itemsDataGridView.TabIndex = 0;
             this.itemsDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemsDataGridView_CellClick);
             this.itemsDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemsDataGridView_CellContentClick);
@@ -142,10 +147,10 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.staffDataGridView);
-            this.tabPage2.Location = new System.Drawing.Point(4, 28);
+            this.tabPage2.Location = new System.Drawing.Point(8, 51);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1404, 624);
+            this.tabPage2.Size = new System.Drawing.Size(1396, 597);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Staffs";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -158,7 +163,7 @@
             this.staffDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.staffDataGridView.Location = new System.Drawing.Point(3, 3);
             this.staffDataGridView.Name = "staffDataGridView";
-            this.staffDataGridView.Size = new System.Drawing.Size(1398, 618);
+            this.staffDataGridView.Size = new System.Drawing.Size(1390, 591);
             this.staffDataGridView.TabIndex = 1;
             this.staffDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.staffDataGridView_CellClick);
             // 
@@ -170,7 +175,7 @@
             this.userAddBtn.DownBack = global::InventoryApp.Properties.Resources.ic_person_add_black_24px;
             this.userAddBtn.DownBaseColor = System.Drawing.Color.Black;
             this.userAddBtn.DrawType = CCWin.SkinControl.DrawStyle.Img;
-            this.userAddBtn.Location = new System.Drawing.Point(1055, 11);
+            this.userAddBtn.Location = new System.Drawing.Point(1126, 11);
             this.userAddBtn.MouseBack = global::InventoryApp.Properties.Resources.ic_person_add_black;
             this.userAddBtn.Name = "userAddBtn";
             this.userAddBtn.NormlBack = global::InventoryApp.Properties.Resources.ic_person_add_black;
@@ -185,7 +190,7 @@
             this.clearCheckedBtn.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.clearCheckedBtn.DownBack = global::InventoryApp.Properties.Resources.ic_close_black_24px_pressed;
             this.clearCheckedBtn.DrawType = CCWin.SkinControl.DrawStyle.Img;
-            this.clearCheckedBtn.Location = new System.Drawing.Point(1173, 12);
+            this.clearCheckedBtn.Location = new System.Drawing.Point(1267, 10);
             this.clearCheckedBtn.MouseBack = global::InventoryApp.Properties.Resources.ic_close_black_24px;
             this.clearCheckedBtn.Name = "clearCheckedBtn";
             this.clearCheckedBtn.NormlBack = global::InventoryApp.Properties.Resources.ic_close_black_24px;
@@ -200,7 +205,7 @@
             this.userUpdateBtn.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.userUpdateBtn.DownBack = global::InventoryApp.Properties.Resources.ic_person_black_24px;
             this.userUpdateBtn.DrawType = CCWin.SkinControl.DrawStyle.Img;
-            this.userUpdateBtn.Location = new System.Drawing.Point(1114, 11);
+            this.userUpdateBtn.Location = new System.Drawing.Point(1194, 11);
             this.userUpdateBtn.MouseBack = global::InventoryApp.Properties.Resources.ic_person_black;
             this.userUpdateBtn.Name = "userUpdateBtn";
             this.userUpdateBtn.NormlBack = global::InventoryApp.Properties.Resources.ic_person_black;
@@ -219,7 +224,7 @@
             this.backupBtn.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.backupBtn.DownBack = global::InventoryApp.Properties.Resources.ic_work_black_24px_pressed;
             this.backupBtn.DrawType = CCWin.SkinControl.DrawStyle.Img;
-            this.backupBtn.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backupBtn.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backupBtn.ForeColor = System.Drawing.Color.White;
             this.backupBtn.Location = new System.Drawing.Point(1338, 11);
             this.backupBtn.Margin = new System.Windows.Forms.Padding(0);
@@ -241,9 +246,9 @@
             this.button1.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.button1.DownBack = global::InventoryApp.Properties.Resources.ic_arrow_forward_black_pressed;
             this.button1.DrawType = CCWin.SkinControl.DrawStyle.Img;
-            this.button1.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(972, 11);
+            this.button1.Location = new System.Drawing.Point(1062, 11);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.MouseBack = global::InventoryApp.Properties.Resources.ic_arrow_forward_black_24px;
             this.button1.Name = "button1";
@@ -263,9 +268,9 @@
             this.button2.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.button2.DownBack = global::InventoryApp.Properties.Resources.ic_arrow_back_black_24px;
             this.button2.DrawType = CCWin.SkinControl.DrawStyle.Img;
-            this.button2.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(844, 12);
+            this.button2.Location = new System.Drawing.Point(916, 13);
             this.button2.Margin = new System.Windows.Forms.Padding(0);
             this.button2.MouseBack = global::InventoryApp.Properties.Resources.ic_arrow_back_black;
             this.button2.Name = "button2";
@@ -285,9 +290,9 @@
             this.addBtn.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.addBtn.DownBack = global::InventoryApp.Properties.Resources.ic_add_black_24px_pressed;
             this.addBtn.DrawType = CCWin.SkinControl.DrawStyle.Img;
-            this.addBtn.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addBtn.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addBtn.ForeColor = System.Drawing.Color.White;
-            this.addBtn.Location = new System.Drawing.Point(778, 11);
+            this.addBtn.Location = new System.Drawing.Point(865, 15);
             this.addBtn.Margin = new System.Windows.Forms.Padding(0);
             this.addBtn.MouseBack = global::InventoryApp.Properties.Resources.ic_add_black_24px;
             this.addBtn.Name = "addBtn";
@@ -307,9 +312,9 @@
             this.editBtn.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.editBtn.DownBack = global::InventoryApp.Properties.Resources.ic_create_black_pressed;
             this.editBtn.DrawType = CCWin.SkinControl.DrawStyle.Img;
-            this.editBtn.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editBtn.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editBtn.ForeColor = System.Drawing.Color.White;
-            this.editBtn.Location = new System.Drawing.Point(678, 12);
+            this.editBtn.Location = new System.Drawing.Point(767, 12);
             this.editBtn.Margin = new System.Windows.Forms.Padding(0);
             this.editBtn.MouseBack = global::InventoryApp.Properties.Resources.ic_create_black;
             this.editBtn.Name = "editBtn";
@@ -329,9 +334,9 @@
             this.deleteBtn.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.deleteBtn.DownBack = global::InventoryApp.Properties.Resources.ic_delete_black_pressed;
             this.deleteBtn.DrawType = CCWin.SkinControl.DrawStyle.Img;
-            this.deleteBtn.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteBtn.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteBtn.ForeColor = System.Drawing.Color.White;
-            this.deleteBtn.Location = new System.Drawing.Point(728, 11);
+            this.deleteBtn.Location = new System.Drawing.Point(818, 11);
             this.deleteBtn.Margin = new System.Windows.Forms.Padding(0);
             this.deleteBtn.MouseBack = global::InventoryApp.Properties.Resources.ic_delete_black;
             this.deleteBtn.Name = "deleteBtn";
@@ -351,9 +356,9 @@
             this.searchBtn.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.searchBtn.DownBack = global::InventoryApp.Properties.Resources.ic_search_2x_pressed;
             this.searchBtn.DrawType = CCWin.SkinControl.DrawStyle.Img;
-            this.searchBtn.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchBtn.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchBtn.ForeColor = System.Drawing.Color.White;
-            this.searchBtn.Location = new System.Drawing.Point(630, 12);
+            this.searchBtn.Location = new System.Drawing.Point(700, 11);
             this.searchBtn.Margin = new System.Windows.Forms.Padding(0);
             this.searchBtn.MouseBack = global::InventoryApp.Properties.Resources.ic_search_2x;
             this.searchBtn.Name = "searchBtn";
@@ -367,69 +372,219 @@
             // 
             this.lablePage.AutoSize = true;
             this.lablePage.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lablePage.Location = new System.Drawing.Point(911, 19);
+            this.lablePage.Location = new System.Drawing.Point(967, 17);
             this.lablePage.Name = "lablePage";
-            this.lablePage.Size = new System.Drawing.Size(35, 24);
+            this.lablePage.Size = new System.Drawing.Size(73, 44);
             this.lablePage.TabIndex = 17;
             this.lablePage.Text = "0/0";
             // 
             // staffcomboBox
             // 
             this.staffcomboBox.FormattingEnabled = true;
-            this.staffcomboBox.Location = new System.Drawing.Point(438, 16);
+            this.staffcomboBox.Location = new System.Drawing.Point(521, 12);
             this.staffcomboBox.Name = "staffcomboBox";
-            this.staffcomboBox.Size = new System.Drawing.Size(166, 27);
+            this.staffcomboBox.Size = new System.Drawing.Size(166, 45);
             this.staffcomboBox.TabIndex = 1;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(369, 20);
+            this.label4.Font = new System.Drawing.Font("Consolas", 10F);
+            this.label4.Location = new System.Drawing.Point(410, 21);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 19);
+            this.label4.Size = new System.Drawing.Size(105, 32);
             this.label4.TabIndex = 10;
             this.label4.Text = "Staff:";
             // 
-            // label2
+            // assettextBox
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(205, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 19);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Room:";
+            this.assettextBox.BackColor = System.Drawing.Color.Transparent;
+            this.assettextBox.Controls.Add(this.btnId);
+            this.assettextBox.DownBack = null;
+            this.assettextBox.Icon = null;
+            this.assettextBox.IconIsButton = false;
+            this.assettextBox.IconMouseState = CCWin.SkinClass.ControlState.Normal;
+            this.assettextBox.IsPasswordChat = '\0';
+            this.assettextBox.IsSystemPasswordChar = false;
+            this.assettextBox.Lines = new string[0];
+            this.assettextBox.Location = new System.Drawing.Point(8, 12);
+            this.assettextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.assettextBox.MaxLength = 32767;
+            this.assettextBox.MinimumSize = new System.Drawing.Size(28, 28);
+            this.assettextBox.MouseBack = ((System.Drawing.Bitmap)(resources.GetObject("assettextBox.MouseBack")));
+            this.assettextBox.MouseState = CCWin.SkinClass.ControlState.Normal;
+            this.assettextBox.Multiline = true;
+            this.assettextBox.Name = "assettextBox";
+            this.assettextBox.NormlBack = ((System.Drawing.Bitmap)(resources.GetObject("assettextBox.NormlBack")));
+            this.assettextBox.Padding = new System.Windows.Forms.Padding(5, 5, 28, 5);
+            this.assettextBox.ReadOnly = false;
+            this.assettextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.assettextBox.Size = new System.Drawing.Size(124, 36);
             // 
-            // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 19);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Building:";
             // 
-            // roomtextBox
+            this.assettextBox.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.assettextBox.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.assettextBox.SkinTxt.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F);
+            this.assettextBox.SkinTxt.Location = new System.Drawing.Point(5, 5);
+            this.assettextBox.SkinTxt.Multiline = true;
+            this.assettextBox.SkinTxt.Name = "BaseText";
+            this.assettextBox.SkinTxt.Size = new System.Drawing.Size(91, 26);
+            this.assettextBox.SkinTxt.TabIndex = 0;
+            this.assettextBox.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.assettextBox.SkinTxt.WaterText = "Asset";
+            this.assettextBox.TabIndex = 54;
+            this.assettextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.assettextBox.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.assettextBox.WaterText = "Asset";
+            this.assettextBox.WordWrap = true;
             // 
-            this.roomtextBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roomtextBox.Location = new System.Drawing.Point(263, 16);
-            this.roomtextBox.Name = "roomtextBox";
-            this.roomtextBox.Size = new System.Drawing.Size(100, 26);
-            this.roomtextBox.TabIndex = 4;
+            // btnId
+            // 
+            this.btnId.BackColor = System.Drawing.Color.White;
+            this.btnId.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnId.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(21)))), ((int)(((byte)(26)))));
+            this.btnId.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btnId.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnId.DownBack = ((System.Drawing.Image)(resources.GetObject("btnId.DownBack")));
+            this.btnId.DrawType = CCWin.SkinControl.DrawStyle.Img;
+            this.btnId.IsEnabledDraw = false;
+            this.btnId.Location = new System.Drawing.Point(170, 3);
+            this.btnId.Margin = new System.Windows.Forms.Padding(0);
+            this.btnId.MouseBack = ((System.Drawing.Image)(resources.GetObject("btnId.MouseBack")));
+            this.btnId.Name = "btnId";
+            this.btnId.NormlBack = ((System.Drawing.Image)(resources.GetObject("btnId.NormlBack")));
+            this.btnId.Size = new System.Drawing.Size(22, 24);
+            this.btnId.TabIndex = 36;
+            this.btnId.UseVisualStyleBackColor = false;
             // 
             // buildingtextBox
             // 
-            this.buildingtextBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buildingtextBox.Location = new System.Drawing.Point(99, 16);
+            this.buildingtextBox.BackColor = System.Drawing.Color.Transparent;
+            this.buildingtextBox.Controls.Add(this.skinButton1);
+            this.buildingtextBox.DownBack = null;
+            this.buildingtextBox.Icon = null;
+            this.buildingtextBox.IconIsButton = false;
+            this.buildingtextBox.IconMouseState = CCWin.SkinClass.ControlState.Normal;
+            this.buildingtextBox.IsPasswordChat = '\0';
+            this.buildingtextBox.IsSystemPasswordChar = false;
+            this.buildingtextBox.Lines = new string[0];
+            this.buildingtextBox.Location = new System.Drawing.Point(154, 12);
+            this.buildingtextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.buildingtextBox.MaxLength = 32767;
+            this.buildingtextBox.MinimumSize = new System.Drawing.Size(28, 28);
+            this.buildingtextBox.MouseBack = ((System.Drawing.Bitmap)(resources.GetObject("buildingtextBox.MouseBack")));
+            this.buildingtextBox.MouseState = CCWin.SkinClass.ControlState.Normal;
+            this.buildingtextBox.Multiline = true;
             this.buildingtextBox.Name = "buildingtextBox";
-            this.buildingtextBox.Size = new System.Drawing.Size(100, 26);
-            this.buildingtextBox.TabIndex = 3;
+            this.buildingtextBox.NormlBack = ((System.Drawing.Bitmap)(resources.GetObject("buildingtextBox.NormlBack")));
+            this.buildingtextBox.Padding = new System.Windows.Forms.Padding(5, 5, 28, 5);
+            this.buildingtextBox.ReadOnly = false;
+            this.buildingtextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.buildingtextBox.Size = new System.Drawing.Size(124, 36);
+            // 
+            // 
+            // 
+            this.buildingtextBox.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.buildingtextBox.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buildingtextBox.SkinTxt.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F);
+            this.buildingtextBox.SkinTxt.Location = new System.Drawing.Point(5, 5);
+            this.buildingtextBox.SkinTxt.Multiline = true;
+            this.buildingtextBox.SkinTxt.Name = "BaseText";
+            this.buildingtextBox.SkinTxt.Size = new System.Drawing.Size(91, 26);
+            this.buildingtextBox.SkinTxt.TabIndex = 0;
+            this.buildingtextBox.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.buildingtextBox.SkinTxt.WaterText = "Bldg";
+            this.buildingtextBox.TabIndex = 55;
+            this.buildingtextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.buildingtextBox.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.buildingtextBox.WaterText = "Bldg";
+            this.buildingtextBox.WordWrap = true;
+            // 
+            // skinButton1
+            // 
+            this.skinButton1.BackColor = System.Drawing.Color.White;
+            this.skinButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.skinButton1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(21)))), ((int)(((byte)(26)))));
+            this.skinButton1.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.skinButton1.DownBack = ((System.Drawing.Image)(resources.GetObject("skinButton1.DownBack")));
+            this.skinButton1.DrawType = CCWin.SkinControl.DrawStyle.Img;
+            this.skinButton1.IsEnabledDraw = false;
+            this.skinButton1.Location = new System.Drawing.Point(170, 3);
+            this.skinButton1.Margin = new System.Windows.Forms.Padding(0);
+            this.skinButton1.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinButton1.MouseBack")));
+            this.skinButton1.Name = "skinButton1";
+            this.skinButton1.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinButton1.NormlBack")));
+            this.skinButton1.Size = new System.Drawing.Size(22, 24);
+            this.skinButton1.TabIndex = 36;
+            this.skinButton1.UseVisualStyleBackColor = false;
+            // 
+            // roomtextBox
+            // 
+            this.roomtextBox.BackColor = System.Drawing.Color.Transparent;
+            this.roomtextBox.Controls.Add(this.skinButton2);
+            this.roomtextBox.DownBack = null;
+            this.roomtextBox.Icon = null;
+            this.roomtextBox.IconIsButton = false;
+            this.roomtextBox.IconMouseState = CCWin.SkinClass.ControlState.Normal;
+            this.roomtextBox.IsPasswordChat = '\0';
+            this.roomtextBox.IsSystemPasswordChar = false;
+            this.roomtextBox.Lines = new string[0];
+            this.roomtextBox.Location = new System.Drawing.Point(297, 13);
+            this.roomtextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.roomtextBox.MaxLength = 32767;
+            this.roomtextBox.MinimumSize = new System.Drawing.Size(28, 28);
+            this.roomtextBox.MouseBack = ((System.Drawing.Bitmap)(resources.GetObject("roomtextBox.MouseBack")));
+            this.roomtextBox.MouseState = CCWin.SkinClass.ControlState.Normal;
+            this.roomtextBox.Multiline = true;
+            this.roomtextBox.Name = "roomtextBox";
+            this.roomtextBox.NormlBack = ((System.Drawing.Bitmap)(resources.GetObject("roomtextBox.NormlBack")));
+            this.roomtextBox.Padding = new System.Windows.Forms.Padding(5, 5, 28, 5);
+            this.roomtextBox.ReadOnly = false;
+            this.roomtextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.roomtextBox.Size = new System.Drawing.Size(124, 36);
+            // 
+            // 
+            // 
+            this.roomtextBox.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.roomtextBox.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.roomtextBox.SkinTxt.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F);
+            this.roomtextBox.SkinTxt.Location = new System.Drawing.Point(5, 5);
+            this.roomtextBox.SkinTxt.Multiline = true;
+            this.roomtextBox.SkinTxt.Name = "BaseText";
+            this.roomtextBox.SkinTxt.Size = new System.Drawing.Size(91, 26);
+            this.roomtextBox.SkinTxt.TabIndex = 0;
+            this.roomtextBox.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.roomtextBox.SkinTxt.WaterText = "Room";
+            this.roomtextBox.TabIndex = 56;
+            this.roomtextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.roomtextBox.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.roomtextBox.WaterText = "Room";
+            this.roomtextBox.WordWrap = true;
+            // 
+            // skinButton2
+            // 
+            this.skinButton2.BackColor = System.Drawing.Color.White;
+            this.skinButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.skinButton2.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(21)))), ((int)(((byte)(26)))));
+            this.skinButton2.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.skinButton2.DownBack = ((System.Drawing.Image)(resources.GetObject("skinButton2.DownBack")));
+            this.skinButton2.DrawType = CCWin.SkinControl.DrawStyle.Img;
+            this.skinButton2.IsEnabledDraw = false;
+            this.skinButton2.Location = new System.Drawing.Point(170, 3);
+            this.skinButton2.Margin = new System.Windows.Forms.Padding(0);
+            this.skinButton2.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinButton2.MouseBack")));
+            this.skinButton2.Name = "skinButton2";
+            this.skinButton2.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinButton2.NormlBack")));
+            this.skinButton2.Size = new System.Drawing.Size(22, 24);
+            this.skinButton2.TabIndex = 36;
+            this.skinButton2.UseVisualStyleBackColor = false;
             // 
             // InventoryPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;
@@ -467,6 +622,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.itemsDataGridView)).EndInit();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.staffDataGridView)).EndInit();
+            this.assettextBox.ResumeLayout(false);
+            this.assettextBox.PerformLayout();
+            this.buildingtextBox.ResumeLayout(false);
+            this.buildingtextBox.PerformLayout();
+            this.roomtextBox.ResumeLayout(false);
+            this.roomtextBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -476,8 +637,6 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TextBox roomtextBox;
-        private System.Windows.Forms.TextBox buildingtextBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView staffDataGridView;
         private System.Windows.Forms.TabPage tabPage1;
@@ -491,10 +650,14 @@
         private CCWin.SkinControl.SkinButton button1;
         private CCWin.SkinControl.SkinButton button2;
         private CCWin.SkinControl.SkinButton backupBtn;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private CCWin.SkinControl.SkinButton userUpdateBtn;
         private CCWin.SkinControl.SkinButton clearCheckedBtn;
         private CCWin.SkinControl.SkinButton userAddBtn;
+        private CCWin.SkinControl.SkinTextBox roomtextBox;
+        private CCWin.SkinControl.SkinButton skinButton2;
+        private CCWin.SkinControl.SkinTextBox buildingtextBox;
+        private CCWin.SkinControl.SkinButton skinButton1;
+        private CCWin.SkinControl.SkinTextBox assettextBox;
+        private CCWin.SkinControl.SkinButton btnId;
     }
 }

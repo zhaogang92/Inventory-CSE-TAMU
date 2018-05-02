@@ -16,23 +16,23 @@ using CCWin;
 
 namespace InventoryApp.View
 {
+    
     public partial class UserView : CCSkinMain
     {
-        public UserView(bool isAddNew)
+        bool isAddNewUser;
+        User user;
+        bool isLoad = false;
+        
+        public UserView(bool isAddNew,User us)
         {
             InitializeComponent();
-        }
-
-        private bool Authorize(String str)
-        {
-            if (str == "admin")
-                return true;
-            else
-                return false;
+            isAddNewUser = isAddNew;
+            user = us;
         }
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
+
             NHibernateRepository repo = new NHibernateRepository();
             if (passwordtextBox.Text != confirmPasswordtextBox.Text)
             {
@@ -41,7 +41,7 @@ namespace InventoryApp.View
             }
             if (userNametextBox.Text != "")
             {
-                var users = repo.Query<User>(Expression.Eq("userName", userNametextBox.Text));
+                var users = repo.Query<User>(Expression.Eq("Name", userNametextBox.Text));
                 if (users.Count > 0)
                 {
                     MessageBox.Show("This user has already existed!");
@@ -59,22 +59,78 @@ namespace InventoryApp.View
                     this.DialogResult = DialogResult.OK;
                     this.Close();
                     return;
-
-
                 }
-
-
             }
         }
 
         private void userNametextBox_TextChanged(object sender, EventArgs e)
         {
+            if (!isAddNewUser && isLoad)
+            {
+                NHibernateRepository repo = new NHibernateRepository();
+                var users = repo.Query<User>(Expression.Eq("Name", userNametextBox.Text));
+                if (users.Count != 0)
+                {
+                    MessageBox.Show("This username has already existed!");
+                    return;
+                }
+                else
+                    user.Name = userNametextBox.Text;
+            }
+
 
         }
 
         private void UserView_Load(object sender, EventArgs e)
         {
+            if (isAddNewUser)
+            {
+                AddBtn.Enabled = true;
+                UpdateBtn.Enabled = false;
+            }
+            else
+            {
+                AddBtn.Enabled = false;
+                UpdateBtn.Enabled = true;
+                userNametextBox.Text = user.Name;
+                passwordtextBox.Text = user.Password;
+                confirmPasswordtextBox.Text = user.Password;
+                authorizedcheckBox.Checked = user.IsAuthorized;
+                isLoad = true;
+               
 
+            }
+        }
+
+        private void UpdateBtn_Click(object sender, EventArgs e)
+        {
+            if (passwordtextBox.Text != confirmPasswordtextBox.Text)
+            {
+                MessageBox.Show("Please make sure the passwords are the same");
+                return;
+            }
+            else
+                user.Password = passwordtextBox.Text;
+
+            NHibernateRepository repo = new NHibernateRepository();
+            repo.SaveOrUpdate(user);
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+            return;
+        }
+
+        private void passwordtextBox_TextChanged(object sender, EventArgs e)
+        {
+           /* if (!isAddNewUser && isLoad)
+            {
+                if (passwordtextBox.Text != confirmPasswordtextBox.Text)
+                {
+                    MessageBox.Show("Please make sure the passwords are the same");
+                    return;
+                }
+                else
+                    user.Password = passwordtextBox.Text;
+            }*/
         }
     }
 }
