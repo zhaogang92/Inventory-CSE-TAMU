@@ -35,13 +35,13 @@
             this.itemsDataGridView = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.staffDataGridView = new System.Windows.Forms.DataGridView();
+            this.backupBtn = new CCWin.SkinControl.SkinButton();
             this.button1 = new CCWin.SkinControl.SkinButton();
             this.button2 = new CCWin.SkinControl.SkinButton();
             this.addBtn = new CCWin.SkinControl.SkinButton();
             this.editBtn = new CCWin.SkinControl.SkinButton();
             this.deleteBtn = new CCWin.SkinControl.SkinButton();
             this.searchBtn = new CCWin.SkinControl.SkinButton();
-            this.backupBtn = new System.Windows.Forms.Button();
             this.lablePage = new System.Windows.Forms.Label();
             this.staffcomboBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -74,13 +74,13 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.backupBtn);
             this.splitContainer1.Panel2.Controls.Add(this.button1);
             this.splitContainer1.Panel2.Controls.Add(this.button2);
             this.splitContainer1.Panel2.Controls.Add(this.addBtn);
             this.splitContainer1.Panel2.Controls.Add(this.editBtn);
             this.splitContainer1.Panel2.Controls.Add(this.deleteBtn);
             this.splitContainer1.Panel2.Controls.Add(this.searchBtn);
-            this.splitContainer1.Panel2.Controls.Add(this.backupBtn);
             this.splitContainer1.Panel2.Controls.Add(this.lablePage);
             this.splitContainer1.Panel2.Controls.Add(this.staffcomboBox);
             this.splitContainer1.Panel2.Controls.Add(this.label4);
@@ -153,6 +153,28 @@
             this.staffDataGridView.TabIndex = 1;
             this.staffDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.staffDataGridView_CellClick);
             // 
+            // backupBtn
+            // 
+            this.backupBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.backupBtn.BackColor = System.Drawing.Color.Transparent;
+            this.backupBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.backupBtn.BackRectangle = new System.Drawing.Rectangle(50, 23, 50, 23);
+            this.backupBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(21)))), ((int)(((byte)(26)))));
+            this.backupBtn.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.backupBtn.DownBack = global::InventoryApp.Properties.Resources.ic_work_black_24px_pressed;
+            this.backupBtn.DrawType = CCWin.SkinControl.DrawStyle.Img;
+            this.backupBtn.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backupBtn.ForeColor = System.Drawing.Color.White;
+            this.backupBtn.Location = new System.Drawing.Point(1338, 11);
+            this.backupBtn.Margin = new System.Windows.Forms.Padding(0);
+            this.backupBtn.MouseBack = global::InventoryApp.Properties.Resources.ic_work_black;
+            this.backupBtn.Name = "backupBtn";
+            this.backupBtn.NormlBack = global::InventoryApp.Properties.Resources.ic_work_black;
+            this.backupBtn.Size = new System.Drawing.Size(35, 35);
+            this.backupBtn.TabIndex = 50;
+            this.backupBtn.UseVisualStyleBackColor = false;
+            this.backupBtn.Click += new System.EventHandler(this.backupBtn_Click);
+            // 
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -165,7 +187,7 @@
             this.button1.DrawType = CCWin.SkinControl.DrawStyle.Img;
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1153, 12);
+            this.button1.Location = new System.Drawing.Point(1155, 11);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.MouseBack = global::InventoryApp.Properties.Resources.ic_arrow_forward_black_24px;
             this.button1.Name = "button1";
@@ -284,16 +306,6 @@
             this.searchBtn.TabIndex = 43;
             this.searchBtn.UseVisualStyleBackColor = false;
             this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
-            // 
-            // backupBtn
-            // 
-            this.backupBtn.Location = new System.Drawing.Point(1257, 12);
-            this.backupBtn.Name = "backupBtn";
-            this.backupBtn.Size = new System.Drawing.Size(147, 34);
-            this.backupBtn.TabIndex = 18;
-            this.backupBtn.Text = "Backup Deleted";
-            this.backupBtn.UseVisualStyleBackColor = true;
-            this.backupBtn.Click += new System.EventHandler(this.backupBtn_Click);
             // 
             // lablePage
             // 
@@ -417,12 +429,12 @@
         private System.Windows.Forms.DataGridView itemsDataGridView;
         private System.Windows.Forms.ComboBox staffcomboBox;
         private System.Windows.Forms.Label lablePage;
-        private System.Windows.Forms.Button backupBtn;
         private CCWin.SkinControl.SkinButton searchBtn;
         private CCWin.SkinControl.SkinButton deleteBtn;
         private CCWin.SkinControl.SkinButton editBtn;
         private CCWin.SkinControl.SkinButton addBtn;
         private CCWin.SkinControl.SkinButton button1;
         private CCWin.SkinControl.SkinButton button2;
+        private CCWin.SkinControl.SkinButton backupBtn;
     }
 }

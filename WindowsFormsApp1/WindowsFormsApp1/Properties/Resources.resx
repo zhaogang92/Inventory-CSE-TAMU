@@ -148,6 +148,9 @@
   <data name="RestoreMouseBack" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RestoreMouseBack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ic_add_black_24px_pressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_add_black_24px_pressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ic_arrow_forward_black_pressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ic_arrow_forward_black_pressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -169,11 +172,11 @@
   <data name="MaxMouseBack" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MaxMouseBack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="CloseMouseBack" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CloseMouseBack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="RestoreDownBack" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RestoreDownBack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user-avatar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user-avatar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MiniMouseBack" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MiniMouseBack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,6 +190,9 @@
   <data name="ic_create_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ic_create_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ic_add_black_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_add_black_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="user-avatar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user-avatar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -199,8 +205,8 @@
   <data name="ic_search_2x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ic_search_2x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="user-avatar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user-avatar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CloseMouseBack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CloseMouseBack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MaxNormlBack" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MaxNormlBack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -208,10 +214,10 @@
   <data name="MiniNormlBack" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MiniNormlBack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ic_add_black_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic_add_black_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ic_work_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_work_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ic_add_black_24px_pressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic_add_black_24px_pressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ic_work_black_24px_pressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_work_black_24px_pressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
