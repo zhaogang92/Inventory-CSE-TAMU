@@ -113,6 +113,10 @@ namespace InventoryApp
                 len = curItems.Count - startIndex;
 
             itemsDataGridView.DataSource = curItems.GetRange(startIndex, len);
+
+            DataGridViewCheckBoxColumn CheckboxColumn = (DataGridViewCheckBoxColumn)itemsDataGridView.Columns["IsChecked"];
+            CheckboxColumn.TrueValue = true;
+            CheckboxColumn.FalseValue = false;
         }
 
         public void showAllItems(NHibernateRepository repo)
@@ -421,13 +425,16 @@ namespace InventoryApp
                 bool isChecked = (bool)this.itemsDataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
                 isChecked = !isChecked;
                 DataGridViewCheckBoxCell chkCell = (DataGridViewCheckBoxCell)this.itemsDataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex];
-                chkCell.Value = isChecked ? chkCell.TrueValue : chkCell.FalseValue;
+                //chkCell.Value = chkCell.FalseValue;
+                chkCell.Selected = true;
+                this.itemsDataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = true;
                 ICriterion[] expressions = new ICriterion[2];
                 expressions[0] = Expression.Eq("asset", itemsDataGridView.Rows[rowindex].Cells["Asset"].Value);
                 expressions[1] = Expression.Eq("isDelete", false);
                 IList<Item> items = repo.Query<Item>(expressions);
                 items[0].isChecked = isChecked;
                 repo.Update(items[0]);
+                itemsDataGridView.Update();
                 itemsDataGridView.EndEdit();
             }
         }
@@ -539,11 +546,25 @@ namespace InventoryApp
         private void clearCheckedBtn_Click(object sender, EventArgs e)
         {
             clearCheckedStatus();
+            showAllItems(repo);
         }
 
         private void userAddBtn_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void itemsDataGridView_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+
+        private void itemsDataGridView_CurrentCellDirtyStateChanged(object sender, EventArgs e)
+        {
+            DataGridView grid = sender as DataGridView;
+            if (grid != null)
+            {
+                grid.CommitEdit(DataGridViewDataErrorContexts.Commit);
+            }
         }
     }
 }
