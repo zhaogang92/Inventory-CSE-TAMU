@@ -98,6 +98,13 @@ namespace InventoryApp
             return;
         }
 
+        private void AddNewButton_Click(object sender, EventArgs e)
+        {
+            View.UserView userView = new View.UserView(true);
+            userView.ShowDialog();
+
+        }
+
         //public static MySqlConnection connection;
         //MySql.Data.MySqlClient.MySqlCommand command;
         //private void Welcome_Load(object sender, EventArgs e)

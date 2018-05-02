@@ -11,5 +11,6 @@ namespace InventoryApp.Model
         public virtual int ID { get; set; }
         public virtual string Name { get; set; }
         public virtual string Password { get; set; }
+        public virtual bool IsAuthorized { get; set; }
     }
 }

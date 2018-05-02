@@ -106,7 +106,7 @@
             // 
             this.userNameTextbox.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.userNameTextbox.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userNameTextbox.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
+            this.userNameTextbox.SkinTxt.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F);
             this.userNameTextbox.SkinTxt.Location = new System.Drawing.Point(5, 5);
             this.userNameTextbox.SkinTxt.Multiline = true;
             this.userNameTextbox.SkinTxt.Name = "BaseText";
@@ -150,7 +150,7 @@
             this.pwdTextbox.IconIsButton = false;
             this.pwdTextbox.IconMouseState = CCWin.SkinClass.ControlState.Normal;
             this.pwdTextbox.IsPasswordChat = '\0';
-            this.pwdTextbox.IsSystemPasswordChar = false;
+            this.pwdTextbox.IsSystemPasswordChar = true;
             this.pwdTextbox.Lines = new string[0];
             this.pwdTextbox.Location = new System.Drawing.Point(13, 416);
             this.pwdTextbox.Margin = new System.Windows.Forms.Padding(0);
@@ -170,12 +170,13 @@
             // 
             this.pwdTextbox.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.pwdTextbox.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pwdTextbox.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
+            this.pwdTextbox.SkinTxt.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F);
             this.pwdTextbox.SkinTxt.Location = new System.Drawing.Point(5, 5);
             this.pwdTextbox.SkinTxt.Multiline = true;
             this.pwdTextbox.SkinTxt.Name = "BaseText";
             this.pwdTextbox.SkinTxt.Size = new System.Drawing.Size(326, 26);
             this.pwdTextbox.SkinTxt.TabIndex = 0;
+            this.pwdTextbox.SkinTxt.UseSystemPasswordChar = true;
             this.pwdTextbox.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.pwdTextbox.SkinTxt.WaterText = "Password";
             this.pwdTextbox.TabIndex = 41;
@@ -215,7 +216,7 @@
             this.skinAnimator1.SetDecoration(this.LoginBtn, CCWin.SkinControl.DecorationType.None);
             this.LoginBtn.DownBack = ((System.Drawing.Image)(resources.GetObject("LoginBtn.DownBack")));
             this.LoginBtn.DrawType = CCWin.SkinControl.DrawStyle.Img;
-            this.LoginBtn.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginBtn.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginBtn.ForeColor = System.Drawing.Color.White;
             this.LoginBtn.Location = new System.Drawing.Point(123, 516);
             this.LoginBtn.Margin = new System.Windows.Forms.Padding(0);
@@ -230,7 +231,7 @@
             // 
             // Welcome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::InventoryApp.Properties.Resources.Back;

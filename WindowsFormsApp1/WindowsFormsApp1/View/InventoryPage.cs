@@ -125,7 +125,8 @@ namespace InventoryApp
                     Description = item.description,
                     TotalCost = item.totalCost,
                     OtherLocation = item.otherLocation,
-                    Model = item.Model
+                    Model = item.Model,
+                    Picture = item.picture
                 });
             }
 
@@ -267,7 +268,8 @@ namespace InventoryApp
                         Description = item.description,
                         TotalCost = item.totalCost,
                         OtherLocation = item.otherLocation,
-                        Model = item.Model
+                        Model = item.Model,
+                        Picture = item.picture
                     });
                 }
 
@@ -434,12 +436,12 @@ namespace InventoryApp
         {
 
             rowindex = e.RowIndex;
-            if(itemsDataGridView.Rows[rowindex].Cells[10].Selected == true)
+            if(itemsDataGridView.Rows[rowindex].Cells["Picture"].Selected == true)
             {
-                if (itemsDataGridView.Rows[rowindex].Cells[10].Value != null)
+                if (itemsDataGridView.Rows[rowindex].Cells["Picture"].Value != null)
                 {
 
-                    Byte[] pic = (Byte[])(itemsDataGridView.Rows[rowindex].Cells[10].Value);
+                    Byte[] pic = (Byte[])(itemsDataGridView.Rows[rowindex].Cells["Picture"].Value);
                     View.ShowPicture showPicture = new View.ShowPicture(pic);
                     showPicture.ShowDialog();
                 }

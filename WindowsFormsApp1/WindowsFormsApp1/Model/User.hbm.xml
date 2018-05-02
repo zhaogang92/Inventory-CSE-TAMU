@@ -17,6 +17,8 @@
 
     <property name="Password" column ="password" not-null="true"/>
 
+    <property name="IsAuthorized" column ="isAuthorized"/>
+
   </class>
 
 </hibernate-mapping>
