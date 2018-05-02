@@ -115,10 +115,10 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.itemsDataGridView);
-            this.tabPage1.Location = new System.Drawing.Point(4, 28);
+            this.tabPage1.Location = new System.Drawing.Point(4, 37);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1404, 624);
+            this.tabPage1.Size = new System.Drawing.Size(1404, 615);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Items";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -130,7 +130,7 @@
             this.itemsDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.itemsDataGridView.Location = new System.Drawing.Point(3, 3);
             this.itemsDataGridView.Name = "itemsDataGridView";
-            this.itemsDataGridView.Size = new System.Drawing.Size(1398, 618);
+            this.itemsDataGridView.Size = new System.Drawing.Size(1398, 609);
             this.itemsDataGridView.TabIndex = 0;
             this.itemsDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemsDataGridView_CellClick);
             this.itemsDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemsDataGridView_CellContentClick);
@@ -139,10 +139,10 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.staffDataGridView);
-            this.tabPage2.Location = new System.Drawing.Point(4, 28);
+            this.tabPage2.Location = new System.Drawing.Point(4, 37);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1404, 624);
+            this.tabPage2.Size = new System.Drawing.Size(1404, 615);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Staffs";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -155,22 +155,24 @@
             this.staffDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.staffDataGridView.Location = new System.Drawing.Point(3, 3);
             this.staffDataGridView.Name = "staffDataGridView";
-            this.staffDataGridView.Size = new System.Drawing.Size(1398, 618);
+            this.staffDataGridView.Size = new System.Drawing.Size(1398, 609);
             this.staffDataGridView.TabIndex = 1;
             this.staffDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.staffDataGridView_CellClick);
             // 
             // userAddBtn
             // 
             this.userAddBtn.BackColor = System.Drawing.Color.Transparent;
+            this.userAddBtn.BaseColor = System.Drawing.Color.Black;
             this.userAddBtn.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.userAddBtn.DownBack = null;
-            this.userAddBtn.Location = new System.Drawing.Point(1070, 19);
-            this.userAddBtn.MouseBack = null;
+            this.userAddBtn.DownBack = global::InventoryApp.Properties.Resources.ic_person_add_black_24px;
+            this.userAddBtn.DownBaseColor = System.Drawing.Color.Black;
+            this.userAddBtn.DrawType = CCWin.SkinControl.DrawStyle.Img;
+            this.userAddBtn.Location = new System.Drawing.Point(1055, 11);
+            this.userAddBtn.MouseBack = global::InventoryApp.Properties.Resources.ic_person_add_black;
             this.userAddBtn.Name = "userAddBtn";
-            this.userAddBtn.NormlBack = null;
-            this.userAddBtn.Size = new System.Drawing.Size(75, 23);
+            this.userAddBtn.NormlBack = global::InventoryApp.Properties.Resources.ic_person_add_black;
+            this.userAddBtn.Size = new System.Drawing.Size(35, 35);
             this.userAddBtn.TabIndex = 53;
-            this.userAddBtn.Text = "skinButton1";
             this.userAddBtn.UseVisualStyleBackColor = false;
             this.userAddBtn.Click += new System.EventHandler(this.userAddBtn_Click);
             // 
@@ -178,14 +180,14 @@
             // 
             this.clearCheckedBtn.BackColor = System.Drawing.Color.Transparent;
             this.clearCheckedBtn.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.clearCheckedBtn.DownBack = null;
-            this.clearCheckedBtn.Location = new System.Drawing.Point(1155, 19);
-            this.clearCheckedBtn.MouseBack = null;
+            this.clearCheckedBtn.DownBack = global::InventoryApp.Properties.Resources.ic_close_black_24px_pressed;
+            this.clearCheckedBtn.DrawType = CCWin.SkinControl.DrawStyle.Img;
+            this.clearCheckedBtn.Location = new System.Drawing.Point(1173, 12);
+            this.clearCheckedBtn.MouseBack = global::InventoryApp.Properties.Resources.ic_close_black_24px;
             this.clearCheckedBtn.Name = "clearCheckedBtn";
-            this.clearCheckedBtn.NormlBack = null;
-            this.clearCheckedBtn.Size = new System.Drawing.Size(75, 23);
+            this.clearCheckedBtn.NormlBack = global::InventoryApp.Properties.Resources.ic_close_black_24px;
+            this.clearCheckedBtn.Size = new System.Drawing.Size(35, 35);
             this.clearCheckedBtn.TabIndex = 52;
-            this.clearCheckedBtn.Text = "skinButton1";
             this.clearCheckedBtn.UseVisualStyleBackColor = false;
             this.clearCheckedBtn.Click += new System.EventHandler(this.clearCheckedBtn_Click);
             // 
@@ -193,14 +195,14 @@
             // 
             this.userUpdateBtn.BackColor = System.Drawing.Color.Transparent;
             this.userUpdateBtn.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.userUpdateBtn.DownBack = null;
-            this.userUpdateBtn.Location = new System.Drawing.Point(1249, 18);
-            this.userUpdateBtn.MouseBack = null;
+            this.userUpdateBtn.DownBack = global::InventoryApp.Properties.Resources.ic_person_black_24px;
+            this.userUpdateBtn.DrawType = CCWin.SkinControl.DrawStyle.Img;
+            this.userUpdateBtn.Location = new System.Drawing.Point(1114, 11);
+            this.userUpdateBtn.MouseBack = global::InventoryApp.Properties.Resources.ic_person_black;
             this.userUpdateBtn.Name = "userUpdateBtn";
-            this.userUpdateBtn.NormlBack = null;
-            this.userUpdateBtn.Size = new System.Drawing.Size(75, 23);
+            this.userUpdateBtn.NormlBack = global::InventoryApp.Properties.Resources.ic_person_black;
+            this.userUpdateBtn.Size = new System.Drawing.Size(35, 35);
             this.userUpdateBtn.TabIndex = 51;
-            this.userUpdateBtn.Text = "skinButton1";
             this.userUpdateBtn.UseVisualStyleBackColor = false;
             this.userUpdateBtn.Click += new System.EventHandler(this.userBtn_Click);
             // 
@@ -214,7 +216,7 @@
             this.backupBtn.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.backupBtn.DownBack = global::InventoryApp.Properties.Resources.ic_work_black_24px_pressed;
             this.backupBtn.DrawType = CCWin.SkinControl.DrawStyle.Img;
-            this.backupBtn.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backupBtn.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backupBtn.ForeColor = System.Drawing.Color.White;
             this.backupBtn.Location = new System.Drawing.Point(1338, 11);
             this.backupBtn.Margin = new System.Windows.Forms.Padding(0);
@@ -236,7 +238,7 @@
             this.button1.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.button1.DownBack = global::InventoryApp.Properties.Resources.ic_arrow_forward_black_pressed;
             this.button1.DrawType = CCWin.SkinControl.DrawStyle.Img;
-            this.button1.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(972, 11);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
@@ -258,7 +260,7 @@
             this.button2.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.button2.DownBack = global::InventoryApp.Properties.Resources.ic_arrow_back_black_24px;
             this.button2.DrawType = CCWin.SkinControl.DrawStyle.Img;
-            this.button2.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(844, 12);
             this.button2.Margin = new System.Windows.Forms.Padding(0);
@@ -280,7 +282,7 @@
             this.addBtn.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.addBtn.DownBack = global::InventoryApp.Properties.Resources.ic_add_black_24px_pressed;
             this.addBtn.DrawType = CCWin.SkinControl.DrawStyle.Img;
-            this.addBtn.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addBtn.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addBtn.ForeColor = System.Drawing.Color.White;
             this.addBtn.Location = new System.Drawing.Point(778, 11);
             this.addBtn.Margin = new System.Windows.Forms.Padding(0);
@@ -302,7 +304,7 @@
             this.editBtn.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.editBtn.DownBack = global::InventoryApp.Properties.Resources.ic_create_black_pressed;
             this.editBtn.DrawType = CCWin.SkinControl.DrawStyle.Img;
-            this.editBtn.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editBtn.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editBtn.ForeColor = System.Drawing.Color.White;
             this.editBtn.Location = new System.Drawing.Point(678, 12);
             this.editBtn.Margin = new System.Windows.Forms.Padding(0);
@@ -324,7 +326,7 @@
             this.deleteBtn.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.deleteBtn.DownBack = global::InventoryApp.Properties.Resources.ic_delete_black_pressed;
             this.deleteBtn.DrawType = CCWin.SkinControl.DrawStyle.Img;
-            this.deleteBtn.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteBtn.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteBtn.ForeColor = System.Drawing.Color.White;
             this.deleteBtn.Location = new System.Drawing.Point(728, 11);
             this.deleteBtn.Margin = new System.Windows.Forms.Padding(0);
@@ -346,7 +348,7 @@
             this.searchBtn.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.searchBtn.DownBack = global::InventoryApp.Properties.Resources.ic_search_2x_pressed;
             this.searchBtn.DrawType = CCWin.SkinControl.DrawStyle.Img;
-            this.searchBtn.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchBtn.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchBtn.ForeColor = System.Drawing.Color.White;
             this.searchBtn.Location = new System.Drawing.Point(630, 12);
             this.searchBtn.Margin = new System.Windows.Forms.Padding(0);
@@ -361,10 +363,10 @@
             // lablePage
             // 
             this.lablePage.AutoSize = true;
-            this.lablePage.Font = new System.Drawing.Font("黑体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lablePage.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lablePage.Location = new System.Drawing.Point(911, 19);
             this.lablePage.Name = "lablePage";
-            this.lablePage.Size = new System.Drawing.Size(39, 19);
+            this.lablePage.Size = new System.Drawing.Size(55, 33);
             this.lablePage.TabIndex = 17;
             this.lablePage.Text = "0/0";
             // 
@@ -373,7 +375,7 @@
             this.staffcomboBox.FormattingEnabled = true;
             this.staffcomboBox.Location = new System.Drawing.Point(438, 16);
             this.staffcomboBox.Name = "staffcomboBox";
-            this.staffcomboBox.Size = new System.Drawing.Size(166, 27);
+            this.staffcomboBox.Size = new System.Drawing.Size(166, 36);
             this.staffcomboBox.TabIndex = 1;
             // 
             // label4
@@ -382,7 +384,7 @@
             this.label4.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(369, 20);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 19);
+            this.label4.Size = new System.Drawing.Size(90, 28);
             this.label4.TabIndex = 10;
             this.label4.Text = "Staff:";
             // 
@@ -392,7 +394,7 @@
             this.label2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(205, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 19);
+            this.label2.Size = new System.Drawing.Size(77, 28);
             this.label2.TabIndex = 6;
             this.label2.Text = "Room:";
             // 
@@ -402,7 +404,7 @@
             this.label1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(6, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 19);
+            this.label1.Size = new System.Drawing.Size(129, 28);
             this.label1.TabIndex = 5;
             this.label1.Text = "Building:";
             // 
@@ -411,7 +413,7 @@
             this.roomtextBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roomtextBox.Location = new System.Drawing.Point(263, 16);
             this.roomtextBox.Name = "roomtextBox";
-            this.roomtextBox.Size = new System.Drawing.Size(100, 26);
+            this.roomtextBox.Size = new System.Drawing.Size(100, 36);
             this.roomtextBox.TabIndex = 4;
             // 
             // buildingtextBox
@@ -419,12 +421,12 @@
             this.buildingtextBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buildingtextBox.Location = new System.Drawing.Point(99, 16);
             this.buildingtextBox.Name = "buildingtextBox";
-            this.buildingtextBox.Size = new System.Drawing.Size(100, 26);
+            this.buildingtextBox.Size = new System.Drawing.Size(100, 36);
             this.buildingtextBox.TabIndex = 3;
             // 
             // InventoryPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;

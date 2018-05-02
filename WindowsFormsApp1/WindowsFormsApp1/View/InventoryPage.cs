@@ -35,7 +35,16 @@ namespace InventoryApp
         {
             InitializeComponent();
 
-            
+            //set tool tips
+            new ToolTip().SetToolTip(this.addBtn, "add new records");
+            new ToolTip().SetToolTip(this.deleteBtn, "delete record");
+            new ToolTip().SetToolTip(this.editBtn, "edit record");
+            new ToolTip().SetToolTip(this.searchBtn, "search");
+            new ToolTip().SetToolTip(this.userAddBtn, "add new users");
+            new ToolTip().SetToolTip(this.clearCheckedBtn, "clear checked items");
+            new ToolTip().SetToolTip(this.userUpdateBtn, "update user information");
+            new ToolTip().SetToolTip(this.backupBtn, "backup");
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

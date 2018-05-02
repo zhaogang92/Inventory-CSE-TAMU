@@ -293,6 +293,14 @@
     <None Include="Resources\ic_create_black_pressed.png" />
     <None Include="Resources\ic_add_black_24px.png" />
     <None Include="Resources\ic_add_black_24px_pressed.png" />
+    <None Include="Resources\ic_work_black.png" />
+    <None Include="Resources\ic_work_black_24px_pressed.png" />
+    <None Include="Resources\ic_close_black_24px.png" />
+    <None Include="Resources\ic_close_black_24px_pressed.png" />
+    <None Include="Resources\ic_person_add_black.png" />
+    <None Include="Resources\ic_person_add_black_24px.png" />
+    <None Include="Resources\ic_person_black.png" />
+    <None Include="Resources\ic_person_black_24px.png" />
     <Content Include="Scripts\jquery-1.12.4.intellisense.js" />
     <Content Include="Scripts\jquery-1.12.4.js" />
     <Content Include="Scripts\jquery-1.12.4.min.js" />
