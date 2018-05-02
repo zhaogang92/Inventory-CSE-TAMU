@@ -203,6 +203,26 @@ namespace InventoryApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ic_close_black_24px {
+            get {
+                object obj = ResourceManager.GetObject("ic_close_black_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_close_black_24px_pressed {
+            get {
+                object obj = ResourceManager.GetObject("ic_close_black_24px_pressed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ic_create_black {
             get {
                 object obj = ResourceManager.GetObject("ic_create_black", resourceCulture);
@@ -236,6 +256,46 @@ namespace InventoryApp.Properties {
         internal static System.Drawing.Bitmap ic_delete_black_pressed {
             get {
                 object obj = ResourceManager.GetObject("ic_delete_black_pressed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_person_add_black {
+            get {
+                object obj = ResourceManager.GetObject("ic_person_add_black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_person_add_black_24px {
+            get {
+                object obj = ResourceManager.GetObject("ic_person_add_black_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_person_black {
+            get {
+                object obj = ResourceManager.GetObject("ic_person_black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_person_black_24px {
+            get {
+                object obj = ResourceManager.GetObject("ic_person_black_24px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
