@@ -134,6 +134,7 @@
     <Compile Include="Controller\DBHelper.cs" />
     <Compile Include="Common\IRepository.cs" />
     <Compile Include="Model\User.cs" />
+    <Compile Include="Model\ViewItem.cs" />
     <Compile Include="UserInfoData.cs" />
     <Compile Include="Model\Item.cs" />
     <Compile Include="Controller\InventoryManager.cs" />

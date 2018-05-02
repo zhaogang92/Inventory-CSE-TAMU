@@ -31,6 +31,9 @@ namespace InventoryApp
         private const int PAGE_ITEM_COUNT = 100;
         private User user;
         NHibernateRepository repo = new NHibernateRepository();
+
+        private List<ICriterion> expressions = new List<ICriterion>();
+
         public InventoryPage(User us)
         {
             InitializeComponent();
@@ -124,13 +127,23 @@ namespace InventoryApp
         public void showAllItems(NHibernateRepository repo)
         {
             var items = repo.Query<Item>(Expression.Eq("isDelete", false));
+            if (expressions.Count > 0)
+            {
+                IList<ICriterion> localExpressions = new List<ICriterion>(expressions);
+                items = repo.Query<Item>(localExpressions.ToArray());
+            }
+            else
+            {
+                items = repo.Query<Item>(Expression.Eq("isDelete", false));
+            }
+
             List<Object> showedItems = new List<Object>();
             for (int i = 0; i < items.Count; ++i)
             {
                 Item item = items[i];
                 if (item.isDelete)
                     continue;
-                showedItems.Add(new
+                showedItems.Add(new ViewItem
                 {
                     IsChecked = item.isChecked,
                     Asset = item.asset,
@@ -286,7 +299,7 @@ namespace InventoryApp
                     Item item = items[i];
                     if (item.isDelete)
                         continue;
-                    showedItems.Add(new
+                    showedItems.Add(new ViewItem
                     {
                         IsChecked = item.isChecked,
                         Asset = item.asset,
@@ -359,7 +372,7 @@ namespace InventoryApp
                     if (result == DialogResult.Yes)
                     {
                         ICriterion[] expressions = new ICriterion[2];
-                        expressions[0] = Expression.Eq("asset", itemsDataGridView.Rows[rowindex].Cells[0].Value);
+                        expressions[0] = Expression.Eq("asset", itemsDataGridView.Rows[rowindex].Cells["Asset"].Value);
                         expressions[1] = Expression.Eq("isDelete", false);
                         IList<Item> items = repo.Query<Item>(expressions);
                         if (items.Count > 1)
@@ -436,20 +449,15 @@ namespace InventoryApp
 
             if (e.ColumnIndex >= 0 && this.itemsDataGridView.Columns[e.ColumnIndex].Name == "IsChecked")
             {
-                bool isChecked = (bool)this.itemsDataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
-                isChecked = !isChecked;
-                DataGridViewCheckBoxCell chkCell = (DataGridViewCheckBoxCell)this.itemsDataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex];
-                //chkCell.Value = chkCell.FalseValue;
-                chkCell.Selected = true;
-                this.itemsDataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = true;
+                bool isChecked = !Convert.ToBoolean(itemsDataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value);
+                itemsDataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = isChecked;
                 ICriterion[] expressions = new ICriterion[2];
                 expressions[0] = Expression.Eq("asset", itemsDataGridView.Rows[rowindex].Cells["Asset"].Value);
                 expressions[1] = Expression.Eq("isDelete", false);
                 IList<Item> items = repo.Query<Item>(expressions);
-                items[0].isChecked = isChecked;
+                items[0].isChecked = false;
                 repo.Update(items[0]);
-                itemsDataGridView.Update();
-                itemsDataGridView.EndEdit();
+                //showAllItems(repo);
             }
         }
 
@@ -459,7 +467,7 @@ namespace InventoryApp
             {
                // NHibernateRepository repo = new NHibernateRepository();
                 ICriterion[] expressions = new ICriterion[2];
-                expressions[0] = Expression.Eq("asset", itemsDataGridView.Rows[rowindex].Cells[0].Value);
+                expressions[0] = Expression.Eq("asset", itemsDataGridView.Rows[rowindex].Cells["Asset"].Value);
                 expressions[1] = Expression.Eq("isDelete", false);
                 IList<Item> items = repo.Query<Item>(expressions);
                 View.ItemView itemView = new View.ItemView(false, items[0]);
@@ -469,7 +477,7 @@ namespace InventoryApp
             }
             else
             {
-                ICriterion criterion = Expression.Eq("groupCode", staffDataGridView.Rows[rowindex].Cells[2].Value);
+                ICriterion criterion = Expression.Eq("groupCode", staffDataGridView.Rows[rowindex].Cells["groupCode"].Value);
                 IList<Staff> staffs= repo.Query<Staff>(criterion);
                 View.StaffView staffView = new View.StaffView(false, staffs[0]);
                 staffView.ShowDialog();
@@ -554,8 +562,8 @@ namespace InventoryApp
             for (int i = 0; i < items.Count; ++i)
             {
                 items[i].isChecked = false;
-                repo.Update(items[i]);
             }
+            repo.Update<Item>(items);
         }
 
         private void clearCheckedBtn_Click(object sender, EventArgs e)

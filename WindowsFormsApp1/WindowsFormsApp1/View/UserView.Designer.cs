@@ -34,6 +34,9 @@
             this.AddBtn = new System.Windows.Forms.Button();
             this.authorizedcheckBox = new System.Windows.Forms.CheckBox();
             this.UpdateBtn = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // userNametextBox
@@ -115,7 +118,7 @@
             this.userNametextBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userNametextBox.Location = new System.Drawing.Point(213, 98);
             this.userNametextBox.Name = "userNametextBox";
-            this.userNametextBox.Size = new System.Drawing.Size(293, 45);
+            this.userNametextBox.Size = new System.Drawing.Size(293, 26);
             this.userNametextBox.TabIndex = 28;
             this.userNametextBox.TextChanged += new System.EventHandler(this.userNametextBox_TextChanged);
             // 
@@ -198,7 +201,8 @@
             this.passwordtextBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordtextBox.Location = new System.Drawing.Point(213, 205);
             this.passwordtextBox.Name = "passwordtextBox";
-            this.passwordtextBox.Size = new System.Drawing.Size(293, 45);
+            this.passwordtextBox.PasswordChar = '*';
+            this.passwordtextBox.Size = new System.Drawing.Size(293, 26);
             this.passwordtextBox.TabIndex = 29;
             this.passwordtextBox.TextChanged += new System.EventHandler(this.passwordtextBox_TextChanged);
             // 
@@ -281,7 +285,8 @@
             this.confirmPasswordtextBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirmPasswordtextBox.Location = new System.Drawing.Point(213, 305);
             this.confirmPasswordtextBox.Name = "confirmPasswordtextBox";
-            this.confirmPasswordtextBox.Size = new System.Drawing.Size(293, 45);
+            this.confirmPasswordtextBox.PasswordChar = '*';
+            this.confirmPasswordtextBox.Size = new System.Drawing.Size(293, 26);
             this.confirmPasswordtextBox.TabIndex = 30;
             // 
             // AddBtn
@@ -302,7 +307,7 @@
             this.authorizedcheckBox.Font = new System.Drawing.Font("Consolas", 12F);
             this.authorizedcheckBox.Location = new System.Drawing.Point(213, 406);
             this.authorizedcheckBox.Name = "authorizedcheckBox";
-            this.authorizedcheckBox.Size = new System.Drawing.Size(229, 41);
+            this.authorizedcheckBox.Size = new System.Drawing.Size(118, 23);
             this.authorizedcheckBox.TabIndex = 38;
             this.authorizedcheckBox.Text = "Authorized";
             this.authorizedcheckBox.UseVisualStyleBackColor = true;
@@ -319,13 +324,46 @@
             this.UpdateBtn.UseVisualStyleBackColor = true;
             this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(117, 101);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(90, 19);
+            this.label7.TabIndex = 40;
+            this.label7.Text = "UserName:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(117, 208);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(90, 19);
+            this.label1.TabIndex = 41;
+            this.label1.Text = "Password:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(117, 305);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 19);
+            this.label2.TabIndex = 42;
+            this.label2.Text = "Confirm:";
+            // 
             // UserView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::InventoryApp.Properties.Resources.backbar;
             this.ClientSize = new System.Drawing.Size(664, 647);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.UpdateBtn);
             this.Controls.Add(this.authorizedcheckBox);
             this.Controls.Add(this.AddBtn);
@@ -348,5 +386,8 @@
         private System.Windows.Forms.Button AddBtn;
         private System.Windows.Forms.CheckBox authorizedcheckBox;
         private System.Windows.Forms.Button UpdateBtn;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

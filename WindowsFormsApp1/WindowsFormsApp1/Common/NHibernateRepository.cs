@@ -150,6 +150,26 @@ namespace InventoryApp.Common
             }
         }
 
+        public void Update<T>(IList<T> models) where T : class
+        {
+            using (ITransaction transaction = session.BeginTransaction())
+            {
+                try
+                {
+                    foreach (T model in models)
+                    {
+                        session.Update(model);
+                    }
+                    transaction.Commit();
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    throw ex;
+                }
+            }
+        }
+
         public void Save(object model)
         {
             using (ITransaction transaction = session.BeginTransaction())
