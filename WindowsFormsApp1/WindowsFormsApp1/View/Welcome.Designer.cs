@@ -94,7 +94,7 @@
             this.userNameTextbox.MinimumSize = new System.Drawing.Size(28, 28);
             this.userNameTextbox.MouseBack = ((System.Drawing.Bitmap)(resources.GetObject("userNameTextbox.MouseBack")));
             this.userNameTextbox.MouseState = CCWin.SkinClass.ControlState.Normal;
-            this.userNameTextbox.Multiline = true;
+            this.userNameTextbox.Multiline = false;
             this.userNameTextbox.Name = "userNameTextbox";
             this.userNameTextbox.NormlBack = ((System.Drawing.Bitmap)(resources.GetObject("userNameTextbox.NormlBack")));
             this.userNameTextbox.Padding = new System.Windows.Forms.Padding(5, 5, 28, 5);
@@ -108,9 +108,8 @@
             this.userNameTextbox.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
             this.userNameTextbox.SkinTxt.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F);
             this.userNameTextbox.SkinTxt.Location = new System.Drawing.Point(5, 5);
-            this.userNameTextbox.SkinTxt.Multiline = true;
             this.userNameTextbox.SkinTxt.Name = "BaseText";
-            this.userNameTextbox.SkinTxt.Size = new System.Drawing.Size(326, 26);
+            this.userNameTextbox.SkinTxt.Size = new System.Drawing.Size(326, 35);
             this.userNameTextbox.SkinTxt.TabIndex = 0;
             this.userNameTextbox.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.userNameTextbox.SkinTxt.WaterText = "User Name";
@@ -158,7 +157,7 @@
             this.pwdTextbox.MinimumSize = new System.Drawing.Size(28, 28);
             this.pwdTextbox.MouseBack = ((System.Drawing.Bitmap)(resources.GetObject("pwdTextbox.MouseBack")));
             this.pwdTextbox.MouseState = CCWin.SkinClass.ControlState.Normal;
-            this.pwdTextbox.Multiline = true;
+            this.pwdTextbox.Multiline = false;
             this.pwdTextbox.Name = "pwdTextbox";
             this.pwdTextbox.NormlBack = ((System.Drawing.Bitmap)(resources.GetObject("pwdTextbox.NormlBack")));
             this.pwdTextbox.Padding = new System.Windows.Forms.Padding(5, 5, 28, 5);
@@ -172,10 +171,9 @@
             this.pwdTextbox.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pwdTextbox.SkinTxt.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F);
             this.pwdTextbox.SkinTxt.Location = new System.Drawing.Point(5, 5);
-            this.pwdTextbox.SkinTxt.Multiline = true;
             this.pwdTextbox.SkinTxt.Name = "BaseText";
             this.pwdTextbox.SkinTxt.PasswordChar = '*';
-            this.pwdTextbox.SkinTxt.Size = new System.Drawing.Size(326, 26);
+            this.pwdTextbox.SkinTxt.Size = new System.Drawing.Size(326, 35);
             this.pwdTextbox.SkinTxt.TabIndex = 0;
             this.pwdTextbox.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.pwdTextbox.SkinTxt.WaterText = "Password";
@@ -231,7 +229,7 @@
             // 
             // Welcome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::InventoryApp.Properties.Resources.Back;

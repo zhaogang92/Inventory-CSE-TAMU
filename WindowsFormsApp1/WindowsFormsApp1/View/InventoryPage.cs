@@ -497,15 +497,18 @@ namespace InventoryApp
         {
 
             rowindex = e.RowIndex;
-            if(e.ColumnIndex > 0 && itemsDataGridView.Columns[e.ColumnIndex].Name.Equals("Picture"))
+            if (e.ColumnIndex > 0 && itemsDataGridView.Columns[e.ColumnIndex].Name.Equals("Picture"))
             {
-                if (itemsDataGridView.Rows[rowindex].Cells["Picture"].Value != null)
+                //Image smallImage = Image.FromFile("./Resources/img_icon.png");
+                //var pic = ImageToByteArray(smallImage);
+                ICriterion[] expressions = new ICriterion[2];
+                expressions[0] = Expression.Eq("asset", itemsDataGridView.Rows[rowindex].Cells["Asset"].Value);
+                expressions[1] = Expression.Eq("isDelete", false);
+                IList<Item> items = repo.Query<Item>(expressions);
+                var dbPic = items[0].picture;
+                if (dbPic != null && dbPic.Length > 0)
                 {
-                    ICriterion[] expressions = new ICriterion[2];
-                    expressions[0] = Expression.Eq("asset", itemsDataGridView.Rows[rowindex].Cells["Asset"].Value);
-                    expressions[1] = Expression.Eq("isDelete", false);
-                    IList<Item> items = repo.Query<Item>(expressions);
-                    View.ShowPicture showPicture = new View.ShowPicture(items[0].picture);
+                    View.ShowPicture showPicture = new View.ShowPicture(dbPic);
                     showPicture.ShowDialog();
                 }
                 else
