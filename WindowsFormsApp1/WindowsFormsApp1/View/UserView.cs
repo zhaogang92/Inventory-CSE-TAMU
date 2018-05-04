@@ -28,6 +28,9 @@ namespace InventoryApp.View
             InitializeComponent();
             isAddNewUser = isAddNew;
             user = us;
+            if (!isAddNew)
+                authorizedcheckBox.Enabled = false;
+                
         }
 
         private void AddBtn_Click(object sender, EventArgs e)

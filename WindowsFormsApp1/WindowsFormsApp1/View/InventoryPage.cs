@@ -28,7 +28,7 @@ namespace InventoryApp
 
         private List<Object> curItems = null;
         private int curPage = 0;
-        private const int PAGE_ITEM_COUNT = 100;
+        private const int PAGE_ITEM_COUNT = 50;
         private User user;
         NHibernateRepository repo = new NHibernateRepository();
 
@@ -118,15 +118,11 @@ namespace InventoryApp
                 len = curItems.Count - startIndex;
 
             itemsDataGridView.DataSource = curItems.GetRange(startIndex, len);
-
-            DataGridViewCheckBoxColumn CheckboxColumn = (DataGridViewCheckBoxColumn)itemsDataGridView.Columns["IsChecked"];
-            CheckboxColumn.TrueValue = true;
-            CheckboxColumn.FalseValue = false;
         }
 
         public void showAllItems(NHibernateRepository repo)
         {
-            var items = repo.Query<Item>(Expression.Eq("isDelete", false));
+            IList<Item> items = null;
             if (expressions.Count > 0)
             {
                 IList<ICriterion> localExpressions = new List<ICriterion>(expressions);
@@ -138,6 +134,8 @@ namespace InventoryApp
             }
 
             List<Object> showedItems = new List<Object>();
+            Image smallImage = Image.FromFile("./Resources/img_icon.png");
+            var pic = ImageToByteArray(smallImage);
             for (int i = 0; i < items.Count; ++i)
             {
                 Item item = items[i];
@@ -155,7 +153,7 @@ namespace InventoryApp
                     TotalCost = item.totalCost,
                     OtherLocation = item.otherLocation,
                     Model = item.Model,
-                    Picture = item.picture
+                    Picture = pic
                 });
             }
 
@@ -191,7 +189,7 @@ namespace InventoryApp
                 deleteBtn.Enabled = false;
                 editBtn.Enabled = false;
                 userAddBtn.Enabled = false;
-                userUpdateBtn.Enabled = false;
+                
                 clearCheckedBtn.Enabled = false;
                 backupBtn.Enabled = false;
             }
@@ -254,7 +252,14 @@ namespace InventoryApp
         }
 
 
-       
+        public Byte[] ImageToByteArray(System.Drawing.Image imageIn)
+        {
+            using (var ms = new MemoryStream())
+            {
+                imageIn.Save(ms, imageIn.RawFormat);
+                return ms.ToArray();
+            }
+        }
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
@@ -264,8 +269,8 @@ namespace InventoryApp
             {
 
                 string name = staffcomboBox.SelectedItem.ToString();
-                List<ICriterion> expressions = new List<ICriterion>();
-                if (name != "None,None")
+                expressions = new List<ICriterion>();
+                if (name != "All,")
                 {
 
                     char[] ch = new char[name.Length];
@@ -276,16 +281,14 @@ namespace InventoryApp
                             break;
                     string lastName = name.Substring(0, i);
                     string firstName = name.Substring(i + 1, name.Length - i - 1);
-                    if (lastName != "None" && firstName != "None")
-                    {
-                        expressions.Add(Expression.Like("firstName", "%" + firstName + "%"));
-                        expressions.Add(Expression.Like("lastName", "%" + lastName + "%"));
-                    }
+                    expressions.Add(Expression.Like("firstName", "%" + firstName + "%"));
+                    expressions.Add(Expression.Like("lastName", "%" + lastName + "%"));
+                    
                 }
                 if(assettextBox.Text != "")
                     expressions.Add(Expression.Like("asset", "%"+assettextBox.Text + "%"));
                 if (buildingtextBox.Text != "")
-                    expressions.Add(Expression.Like("bldg", buildingtextBox.Text + "%"));
+                    expressions.Add(Expression.Like("bldg", "%"+buildingtextBox.Text + "%"));
                 if (roomtextBox.Text != "")
                     expressions.Add(Expression.Like("room", roomtextBox.Text + "%"));
                 //if (startdateTimePicker.Value < enddateTimePicker.Value)
@@ -294,11 +297,14 @@ namespace InventoryApp
 
                 var items = repo.Query<Item>(expressions.ToArray());
                 List<Object> showedItems = new List<Object>();
+                Image smallImage = Image.FromFile("./Resources/img_icon.png");
+                var pic = ImageToByteArray(smallImage);
                 for (int i = 0; i < items.Count; ++i)
                 {
                     Item item = items[i];
                     if (item.isDelete)
                         continue;
+                    
                     showedItems.Add(new ViewItem
                     {
                         IsChecked = item.isChecked,
@@ -311,7 +317,7 @@ namespace InventoryApp
                         TotalCost = item.totalCost,
                         OtherLocation = item.otherLocation,
                         Model = item.Model,
-                        Picture = item.picture
+                        Picture = pic
                     });
                 }
 
@@ -455,7 +461,7 @@ namespace InventoryApp
                 expressions[0] = Expression.Eq("asset", itemsDataGridView.Rows[rowindex].Cells["Asset"].Value);
                 expressions[1] = Expression.Eq("isDelete", false);
                 IList<Item> items = repo.Query<Item>(expressions);
-                items[0].isChecked = false;
+                items[0].isChecked = isChecked;
                 repo.Update(items[0]);
                 //showAllItems(repo);
             }
@@ -491,13 +497,15 @@ namespace InventoryApp
         {
 
             rowindex = e.RowIndex;
-            if(itemsDataGridView.Rows[rowindex].Cells["Picture"].Selected == true)
+            if(e.ColumnIndex > 0 && itemsDataGridView.Columns[e.ColumnIndex].Name.Equals("Picture"))
             {
                 if (itemsDataGridView.Rows[rowindex].Cells["Picture"].Value != null)
                 {
-
-                    Byte[] pic = (Byte[])(itemsDataGridView.Rows[rowindex].Cells["Picture"].Value);
-                    View.ShowPicture showPicture = new View.ShowPicture(pic);
+                    ICriterion[] expressions = new ICriterion[2];
+                    expressions[0] = Expression.Eq("asset", itemsDataGridView.Rows[rowindex].Cells["Asset"].Value);
+                    expressions[1] = Expression.Eq("isDelete", false);
+                    IList<Item> items = repo.Query<Item>(expressions);
+                    View.ShowPicture showPicture = new View.ShowPicture(items[0].picture);
                     showPicture.ShowDialog();
                 }
                 else

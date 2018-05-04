@@ -116,9 +116,9 @@
             this.userNametextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.userNametextBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.userNametextBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userNametextBox.Location = new System.Drawing.Point(213, 98);
+            this.userNametextBox.Location = new System.Drawing.Point(143, 42);
             this.userNametextBox.Name = "userNametextBox";
-            this.userNametextBox.Size = new System.Drawing.Size(293, 26);
+            this.userNametextBox.Size = new System.Drawing.Size(163, 31);
             this.userNametextBox.TabIndex = 28;
             this.userNametextBox.TextChanged += new System.EventHandler(this.userNametextBox_TextChanged);
             // 
@@ -199,10 +199,10 @@
             this.passwordtextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.passwordtextBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.passwordtextBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordtextBox.Location = new System.Drawing.Point(213, 205);
+            this.passwordtextBox.Location = new System.Drawing.Point(143, 110);
             this.passwordtextBox.Name = "passwordtextBox";
             this.passwordtextBox.PasswordChar = '*';
-            this.passwordtextBox.Size = new System.Drawing.Size(293, 26);
+            this.passwordtextBox.Size = new System.Drawing.Size(163, 31);
             this.passwordtextBox.TabIndex = 29;
             this.passwordtextBox.TextChanged += new System.EventHandler(this.passwordtextBox_TextChanged);
             // 
@@ -283,16 +283,16 @@
             this.confirmPasswordtextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.confirmPasswordtextBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.confirmPasswordtextBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.confirmPasswordtextBox.Location = new System.Drawing.Point(213, 305);
+            this.confirmPasswordtextBox.Location = new System.Drawing.Point(143, 178);
             this.confirmPasswordtextBox.Name = "confirmPasswordtextBox";
             this.confirmPasswordtextBox.PasswordChar = '*';
-            this.confirmPasswordtextBox.Size = new System.Drawing.Size(293, 26);
+            this.confirmPasswordtextBox.Size = new System.Drawing.Size(163, 31);
             this.confirmPasswordtextBox.TabIndex = 30;
             // 
             // AddBtn
             // 
             this.AddBtn.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddBtn.Location = new System.Drawing.Point(140, 501);
+            this.AddBtn.Location = new System.Drawing.Point(26, 265);
             this.AddBtn.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(107, 38);
@@ -305,9 +305,9 @@
             // 
             this.authorizedcheckBox.AutoSize = true;
             this.authorizedcheckBox.Font = new System.Drawing.Font("Consolas", 12F);
-            this.authorizedcheckBox.Location = new System.Drawing.Point(213, 406);
+            this.authorizedcheckBox.Location = new System.Drawing.Point(143, 224);
             this.authorizedcheckBox.Name = "authorizedcheckBox";
-            this.authorizedcheckBox.Size = new System.Drawing.Size(118, 23);
+            this.authorizedcheckBox.Size = new System.Drawing.Size(142, 27);
             this.authorizedcheckBox.TabIndex = 38;
             this.authorizedcheckBox.Text = "Authorized";
             this.authorizedcheckBox.UseVisualStyleBackColor = true;
@@ -315,7 +315,7 @@
             // UpdateBtn
             // 
             this.UpdateBtn.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateBtn.Location = new System.Drawing.Point(384, 501);
+            this.UpdateBtn.Location = new System.Drawing.Point(187, 265);
             this.UpdateBtn.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.UpdateBtn.Name = "UpdateBtn";
             this.UpdateBtn.Size = new System.Drawing.Size(107, 38);
@@ -328,9 +328,9 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(117, 101);
+            this.label7.Location = new System.Drawing.Point(19, 48);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 19);
+            this.label7.Size = new System.Drawing.Size(109, 23);
             this.label7.TabIndex = 40;
             this.label7.Text = "UserName:";
             // 
@@ -338,9 +338,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(117, 208);
+            this.label1.Location = new System.Drawing.Point(19, 112);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 19);
+            this.label1.Size = new System.Drawing.Size(109, 23);
             this.label1.TabIndex = 41;
             this.label1.Text = "Password:";
             // 
@@ -348,19 +348,23 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(117, 305);
+            this.label2.Location = new System.Drawing.Point(19, 182);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 19);
+            this.label2.Size = new System.Drawing.Size(98, 23);
             this.label2.TabIndex = 42;
             this.label2.Text = "Confirm:";
             // 
             // UserView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::InventoryApp.Properties.Resources.backbar;
-            this.ClientSize = new System.Drawing.Size(664, 647);
+            this.ClientSize = new System.Drawing.Size(323, 318);
+            this.CloseBoxSize = new System.Drawing.Size(27, 22);
+            this.CloseDownBack = global::InventoryApp.Properties.Resources.CloseDownBack;
+            this.CloseMouseBack = global::InventoryApp.Properties.Resources.CloseMouseBack;
+            this.CloseNormlBack = global::InventoryApp.Properties.Resources.CloseNormlBack;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label7);
@@ -370,7 +374,18 @@
             this.Controls.Add(this.confirmPasswordtextBox);
             this.Controls.Add(this.passwordtextBox);
             this.Controls.Add(this.userNametextBox);
+            this.MaxDownBack = global::InventoryApp.Properties.Resources.MaxDownBack;
+            this.MaxMouseBack = global::InventoryApp.Properties.Resources.MaxMouseBack;
+            this.MaxNormlBack = global::InventoryApp.Properties.Resources.MaxNormlBack;
+            this.MaxSize = new System.Drawing.Size(27, 22);
+            this.MiniDownBack = global::InventoryApp.Properties.Resources.MiniDownBack;
+            this.MiniMouseBack = global::InventoryApp.Properties.Resources.MiniMouseBack;
+            this.MiniNormlBack = global::InventoryApp.Properties.Resources.MiniNormlBack;
+            this.MiniSize = new System.Drawing.Size(27, 22);
             this.Name = "UserView";
+            this.RestoreDownBack = global::InventoryApp.Properties.Resources.RestoreDownBack;
+            this.RestoreMouseBack = global::InventoryApp.Properties.Resources.RestoreMouseBack;
+            this.RestoreNormlBack = global::InventoryApp.Properties.Resources.RestoreNormlBack;
             this.Text = "UserView";
             this.Load += new System.EventHandler(this.UserView_Load);
             this.ResumeLayout(false);

@@ -162,6 +162,7 @@ namespace InventoryApp.View
             if (pic != null)
                 item.picture = pic;
             item.isDelete = false;
+            item.isChecked = false;
             repo.SaveOrUpdate(item);
 
             this.DialogResult = DialogResult.OK;

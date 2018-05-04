@@ -46,6 +46,7 @@ namespace InventoryApp.View
                 groupCodetextBox.Text = st.groupCode;
                 emailtextBox.Text = st.email;
                 phonetextBox.Text = st.phone;
+                locationtextBox.Text = st.location;
                 isLoad = true;
             }
         }
