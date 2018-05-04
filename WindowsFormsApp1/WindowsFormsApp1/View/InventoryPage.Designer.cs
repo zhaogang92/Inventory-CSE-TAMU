@@ -120,10 +120,10 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.itemsDataGridView);
-            this.tabPage1.Location = new System.Drawing.Point(4, 32);
+            this.tabPage1.Location = new System.Drawing.Point(8, 51);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1404, 620);
+            this.tabPage1.Size = new System.Drawing.Size(1396, 597);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Items";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -136,7 +136,7 @@
             this.itemsDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.itemsDataGridView.Location = new System.Drawing.Point(3, 3);
             this.itemsDataGridView.Name = "itemsDataGridView";
-            this.itemsDataGridView.Size = new System.Drawing.Size(1398, 614);
+            this.itemsDataGridView.Size = new System.Drawing.Size(1390, 591);
             this.itemsDataGridView.TabIndex = 0;
             this.itemsDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemsDataGridView_CellClick);
             this.itemsDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemsDataGridView_CellContentClick);
@@ -147,10 +147,10 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.staffDataGridView);
-            this.tabPage2.Location = new System.Drawing.Point(4, 32);
+            this.tabPage2.Location = new System.Drawing.Point(8, 51);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1404, 620);
+            this.tabPage2.Size = new System.Drawing.Size(1396, 597);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Staffs";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -163,7 +163,7 @@
             this.staffDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.staffDataGridView.Location = new System.Drawing.Point(3, 3);
             this.staffDataGridView.Name = "staffDataGridView";
-            this.staffDataGridView.Size = new System.Drawing.Size(1398, 614);
+            this.staffDataGridView.Size = new System.Drawing.Size(1390, 591);
             this.staffDataGridView.TabIndex = 1;
             this.staffDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.staffDataGridView_CellClick);
             // 
@@ -558,9 +558,9 @@
             // 
             this.lablePage.AutoSize = true;
             this.lablePage.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lablePage.Location = new System.Drawing.Point(993, 16);
+            this.lablePage.Location = new System.Drawing.Point(990, 15);
             this.lablePage.Name = "lablePage";
-            this.lablePage.Size = new System.Drawing.Size(46, 29);
+            this.lablePage.Size = new System.Drawing.Size(73, 44);
             this.lablePage.TabIndex = 17;
             this.lablePage.Text = "0/0";
             // 
@@ -569,7 +569,7 @@
             this.staffcomboBox.FormattingEnabled = true;
             this.staffcomboBox.Location = new System.Drawing.Point(521, 15);
             this.staffcomboBox.Name = "staffcomboBox";
-            this.staffcomboBox.Size = new System.Drawing.Size(166, 31);
+            this.staffcomboBox.Size = new System.Drawing.Size(166, 45);
             this.staffcomboBox.TabIndex = 1;
             // 
             // label4
@@ -578,13 +578,13 @@
             this.label4.Font = new System.Drawing.Font("Consolas", 10F);
             this.label4.Location = new System.Drawing.Point(443, 20);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 20);
+            this.label4.Size = new System.Drawing.Size(105, 32);
             this.label4.TabIndex = 10;
             this.label4.Text = "Staff:";
             // 
             // InventoryPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;

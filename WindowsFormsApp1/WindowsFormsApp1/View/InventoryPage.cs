@@ -281,8 +281,14 @@ namespace InventoryApp
                             break;
                     string lastName = name.Substring(0, i);
                     string firstName = name.Substring(i + 1, name.Length - i - 1);
-                    expressions.Add(Expression.Like("firstName", "%" + firstName + "%"));
-                    expressions.Add(Expression.Like("lastName", "%" + lastName + "%"));
+                    var staffs = repo.Query<Staff>(Expression.Eq("staffID", -1));
+                    if (lastName == "None" && firstName == "None")
+                        expressions.Add(Expression.Eq("Staffs", staffs[0]));
+                    else
+                    {
+                        expressions.Add(Expression.Like("firstName", "%" + firstName + "%"));
+                        expressions.Add(Expression.Like("lastName", "%" + lastName + "%"));
+                    }
                     
                 }
                 if(assettextBox.Text != "")
@@ -332,7 +338,7 @@ namespace InventoryApp
             {
                 string name = staffcomboBox.SelectedItem.ToString();
                 List<ICriterion> expressions = new List<ICriterion>();
-                if (name != "None,None")
+                if (name != "All,")
                 {
 
                     char[] ch = new char[name.Length];
