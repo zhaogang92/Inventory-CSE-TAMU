@@ -348,7 +348,7 @@ namespace InventoryApp.View
         private void addPicture_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "*jpg|*.JPG|*.GIF|*.GIF|*.BMP|*.BMP";
+            openFileDialog.Filter = "*png|*.PNG|*jpg|*.JPG|*.GIF|*.GIF|*.BMP|*.BMP";
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {

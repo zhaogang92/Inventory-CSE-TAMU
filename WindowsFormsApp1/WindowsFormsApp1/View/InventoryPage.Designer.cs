@@ -120,10 +120,10 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.itemsDataGridView);
-            this.tabPage1.Location = new System.Drawing.Point(8, 51);
+            this.tabPage1.Location = new System.Drawing.Point(4, 28);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1396, 597);
+            this.tabPage1.Size = new System.Drawing.Size(1404, 624);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Items";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -136,7 +136,7 @@
             this.itemsDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.itemsDataGridView.Location = new System.Drawing.Point(3, 3);
             this.itemsDataGridView.Name = "itemsDataGridView";
-            this.itemsDataGridView.Size = new System.Drawing.Size(1390, 591);
+            this.itemsDataGridView.Size = new System.Drawing.Size(1398, 618);
             this.itemsDataGridView.TabIndex = 0;
             this.itemsDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemsDataGridView_CellClick);
             this.itemsDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.itemsDataGridView_CellContentClick);
@@ -147,10 +147,10 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.staffDataGridView);
-            this.tabPage2.Location = new System.Drawing.Point(8, 51);
+            this.tabPage2.Location = new System.Drawing.Point(4, 28);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1396, 597);
+            this.tabPage2.Size = new System.Drawing.Size(1404, 624);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Staffs";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -163,7 +163,7 @@
             this.staffDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.staffDataGridView.Location = new System.Drawing.Point(3, 3);
             this.staffDataGridView.Name = "staffDataGridView";
-            this.staffDataGridView.Size = new System.Drawing.Size(1390, 591);
+            this.staffDataGridView.Size = new System.Drawing.Size(1398, 618);
             this.staffDataGridView.TabIndex = 1;
             this.staffDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.staffDataGridView_CellClick);
             // 
@@ -184,7 +184,7 @@
             this.roomtextBox.MinimumSize = new System.Drawing.Size(28, 28);
             this.roomtextBox.MouseBack = ((System.Drawing.Bitmap)(resources.GetObject("roomtextBox.MouseBack")));
             this.roomtextBox.MouseState = CCWin.SkinClass.ControlState.Normal;
-            this.roomtextBox.Multiline = true;
+            this.roomtextBox.Multiline = false;
             this.roomtextBox.Name = "roomtextBox";
             this.roomtextBox.NormlBack = ((System.Drawing.Bitmap)(resources.GetObject("roomtextBox.NormlBack")));
             this.roomtextBox.Padding = new System.Windows.Forms.Padding(5, 5, 28, 5);
@@ -196,11 +196,10 @@
             // 
             this.roomtextBox.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.roomtextBox.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.roomtextBox.SkinTxt.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F);
+            this.roomtextBox.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
             this.roomtextBox.SkinTxt.Location = new System.Drawing.Point(5, 5);
-            this.roomtextBox.SkinTxt.Multiline = true;
             this.roomtextBox.SkinTxt.Name = "BaseText";
-            this.roomtextBox.SkinTxt.Size = new System.Drawing.Size(91, 26);
+            this.roomtextBox.SkinTxt.Size = new System.Drawing.Size(91, 18);
             this.roomtextBox.SkinTxt.TabIndex = 0;
             this.roomtextBox.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.roomtextBox.SkinTxt.WaterText = "Room";
@@ -246,7 +245,7 @@
             this.buildingtextBox.MinimumSize = new System.Drawing.Size(28, 28);
             this.buildingtextBox.MouseBack = ((System.Drawing.Bitmap)(resources.GetObject("buildingtextBox.MouseBack")));
             this.buildingtextBox.MouseState = CCWin.SkinClass.ControlState.Normal;
-            this.buildingtextBox.Multiline = true;
+            this.buildingtextBox.Multiline = false;
             this.buildingtextBox.Name = "buildingtextBox";
             this.buildingtextBox.NormlBack = ((System.Drawing.Bitmap)(resources.GetObject("buildingtextBox.NormlBack")));
             this.buildingtextBox.Padding = new System.Windows.Forms.Padding(5, 5, 28, 5);
@@ -258,11 +257,10 @@
             // 
             this.buildingtextBox.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.buildingtextBox.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buildingtextBox.SkinTxt.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F);
+            this.buildingtextBox.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
             this.buildingtextBox.SkinTxt.Location = new System.Drawing.Point(5, 5);
-            this.buildingtextBox.SkinTxt.Multiline = true;
             this.buildingtextBox.SkinTxt.Name = "BaseText";
-            this.buildingtextBox.SkinTxt.Size = new System.Drawing.Size(91, 26);
+            this.buildingtextBox.SkinTxt.Size = new System.Drawing.Size(91, 18);
             this.buildingtextBox.SkinTxt.TabIndex = 0;
             this.buildingtextBox.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.buildingtextBox.SkinTxt.WaterText = "Bldg";
@@ -308,7 +306,7 @@
             this.assettextBox.MinimumSize = new System.Drawing.Size(28, 28);
             this.assettextBox.MouseBack = ((System.Drawing.Bitmap)(resources.GetObject("assettextBox.MouseBack")));
             this.assettextBox.MouseState = CCWin.SkinClass.ControlState.Normal;
-            this.assettextBox.Multiline = true;
+            this.assettextBox.Multiline = false;
             this.assettextBox.Name = "assettextBox";
             this.assettextBox.NormlBack = ((System.Drawing.Bitmap)(resources.GetObject("assettextBox.NormlBack")));
             this.assettextBox.Padding = new System.Windows.Forms.Padding(5, 5, 28, 5);
@@ -320,11 +318,10 @@
             // 
             this.assettextBox.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.assettextBox.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.assettextBox.SkinTxt.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F);
+            this.assettextBox.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
             this.assettextBox.SkinTxt.Location = new System.Drawing.Point(5, 5);
-            this.assettextBox.SkinTxt.Multiline = true;
             this.assettextBox.SkinTxt.Name = "BaseText";
-            this.assettextBox.SkinTxt.Size = new System.Drawing.Size(91, 26);
+            this.assettextBox.SkinTxt.Size = new System.Drawing.Size(91, 18);
             this.assettextBox.SkinTxt.TabIndex = 0;
             this.assettextBox.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.assettextBox.SkinTxt.WaterText = "Asset";
@@ -410,7 +407,7 @@
             this.backupBtn.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.backupBtn.DownBack = global::InventoryApp.Properties.Resources.ic_work_black_24px_pressed;
             this.backupBtn.DrawType = CCWin.SkinControl.DrawStyle.Img;
-            this.backupBtn.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backupBtn.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backupBtn.ForeColor = System.Drawing.Color.White;
             this.backupBtn.Location = new System.Drawing.Point(1338, 13);
             this.backupBtn.Margin = new System.Windows.Forms.Padding(0);
@@ -432,7 +429,7 @@
             this.button1.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.button1.DownBack = global::InventoryApp.Properties.Resources.ic_arrow_forward_black_pressed;
             this.button1.DrawType = CCWin.SkinControl.DrawStyle.Img;
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(1062, 13);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
@@ -454,7 +451,7 @@
             this.button2.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.button2.DownBack = global::InventoryApp.Properties.Resources.ic_arrow_back_black_24px;
             this.button2.DrawType = CCWin.SkinControl.DrawStyle.Img;
-            this.button2.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(930, 13);
             this.button2.Margin = new System.Windows.Forms.Padding(0);
@@ -476,7 +473,7 @@
             this.addBtn.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.addBtn.DownBack = global::InventoryApp.Properties.Resources.ic_add_black_24px_pressed;
             this.addBtn.DrawType = CCWin.SkinControl.DrawStyle.Img;
-            this.addBtn.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addBtn.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addBtn.ForeColor = System.Drawing.Color.White;
             this.addBtn.Location = new System.Drawing.Point(850, 13);
             this.addBtn.Margin = new System.Windows.Forms.Padding(0);
@@ -498,7 +495,7 @@
             this.editBtn.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.editBtn.DownBack = global::InventoryApp.Properties.Resources.ic_create_black_pressed;
             this.editBtn.DrawType = CCWin.SkinControl.DrawStyle.Img;
-            this.editBtn.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editBtn.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editBtn.ForeColor = System.Drawing.Color.White;
             this.editBtn.Location = new System.Drawing.Point(750, 13);
             this.editBtn.Margin = new System.Windows.Forms.Padding(0);
@@ -520,7 +517,7 @@
             this.deleteBtn.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.deleteBtn.DownBack = global::InventoryApp.Properties.Resources.ic_delete_black_pressed;
             this.deleteBtn.DrawType = CCWin.SkinControl.DrawStyle.Img;
-            this.deleteBtn.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteBtn.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteBtn.ForeColor = System.Drawing.Color.White;
             this.deleteBtn.Location = new System.Drawing.Point(800, 13);
             this.deleteBtn.Margin = new System.Windows.Forms.Padding(0);
@@ -542,7 +539,7 @@
             this.searchBtn.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.searchBtn.DownBack = global::InventoryApp.Properties.Resources.ic_search_2x_pressed;
             this.searchBtn.DrawType = CCWin.SkinControl.DrawStyle.Img;
-            this.searchBtn.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchBtn.Font = new System.Drawing.Font("微软雅黑", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchBtn.ForeColor = System.Drawing.Color.White;
             this.searchBtn.Location = new System.Drawing.Point(700, 13);
             this.searchBtn.Margin = new System.Windows.Forms.Padding(0);
@@ -558,9 +555,9 @@
             // 
             this.lablePage.AutoSize = true;
             this.lablePage.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lablePage.Location = new System.Drawing.Point(990, 15);
+            this.lablePage.Location = new System.Drawing.Point(997, 17);
             this.lablePage.Name = "lablePage";
-            this.lablePage.Size = new System.Drawing.Size(73, 44);
+            this.lablePage.Size = new System.Drawing.Size(35, 24);
             this.lablePage.TabIndex = 17;
             this.lablePage.Text = "0/0";
             // 
@@ -569,7 +566,7 @@
             this.staffcomboBox.FormattingEnabled = true;
             this.staffcomboBox.Location = new System.Drawing.Point(521, 15);
             this.staffcomboBox.Name = "staffcomboBox";
-            this.staffcomboBox.Size = new System.Drawing.Size(166, 45);
+            this.staffcomboBox.Size = new System.Drawing.Size(166, 27);
             this.staffcomboBox.TabIndex = 1;
             // 
             // label4
@@ -578,13 +575,14 @@
             this.label4.Font = new System.Drawing.Font("Consolas", 10F);
             this.label4.Location = new System.Drawing.Point(443, 20);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 32);
+            this.label4.Size = new System.Drawing.Size(56, 17);
             this.label4.TabIndex = 10;
             this.label4.Text = "Staff:";
             // 
             // InventoryPage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AcceptButton = this.searchBtn;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;
@@ -595,8 +593,11 @@
             this.CloseMouseBack = global::InventoryApp.Properties.Resources.CloseMouseBack;
             this.CloseNormlBack = global::InventoryApp.Properties.Resources.CloseNormlBack;
             this.Controls.Add(this.splitContainer1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaxDownBack = global::InventoryApp.Properties.Resources.MaxDownBack;
+            this.MaximizeBox = false;
             this.MaxMouseBack = global::InventoryApp.Properties.Resources.MaxMouseBack;
             this.MaxNormlBack = global::InventoryApp.Properties.Resources.MaxNormlBack;
             this.MaxSize = new System.Drawing.Size(27, 22);

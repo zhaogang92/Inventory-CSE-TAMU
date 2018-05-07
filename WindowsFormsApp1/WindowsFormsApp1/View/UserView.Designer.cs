@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserView));
             this.userNametextBox = new System.Windows.Forms.TextBox();
             this.passwordtextBox = new System.Windows.Forms.TextBox();
             this.confirmPasswordtextBox = new System.Windows.Forms.TextBox();
@@ -118,7 +119,7 @@
             this.userNametextBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userNametextBox.Location = new System.Drawing.Point(143, 42);
             this.userNametextBox.Name = "userNametextBox";
-            this.userNametextBox.Size = new System.Drawing.Size(163, 31);
+            this.userNametextBox.Size = new System.Drawing.Size(163, 26);
             this.userNametextBox.TabIndex = 28;
             this.userNametextBox.TextChanged += new System.EventHandler(this.userNametextBox_TextChanged);
             // 
@@ -202,7 +203,7 @@
             this.passwordtextBox.Location = new System.Drawing.Point(143, 110);
             this.passwordtextBox.Name = "passwordtextBox";
             this.passwordtextBox.PasswordChar = '*';
-            this.passwordtextBox.Size = new System.Drawing.Size(163, 31);
+            this.passwordtextBox.Size = new System.Drawing.Size(163, 26);
             this.passwordtextBox.TabIndex = 29;
             this.passwordtextBox.TextChanged += new System.EventHandler(this.passwordtextBox_TextChanged);
             // 
@@ -286,7 +287,7 @@
             this.confirmPasswordtextBox.Location = new System.Drawing.Point(143, 178);
             this.confirmPasswordtextBox.Name = "confirmPasswordtextBox";
             this.confirmPasswordtextBox.PasswordChar = '*';
-            this.confirmPasswordtextBox.Size = new System.Drawing.Size(163, 31);
+            this.confirmPasswordtextBox.Size = new System.Drawing.Size(163, 26);
             this.confirmPasswordtextBox.TabIndex = 30;
             // 
             // AddBtn
@@ -307,7 +308,7 @@
             this.authorizedcheckBox.Font = new System.Drawing.Font("Consolas", 12F);
             this.authorizedcheckBox.Location = new System.Drawing.Point(143, 224);
             this.authorizedcheckBox.Name = "authorizedcheckBox";
-            this.authorizedcheckBox.Size = new System.Drawing.Size(142, 27);
+            this.authorizedcheckBox.Size = new System.Drawing.Size(118, 23);
             this.authorizedcheckBox.TabIndex = 38;
             this.authorizedcheckBox.Text = "Authorized";
             this.authorizedcheckBox.UseVisualStyleBackColor = true;
@@ -330,7 +331,7 @@
             this.label7.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(19, 48);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(109, 23);
+            this.label7.Size = new System.Drawing.Size(90, 19);
             this.label7.TabIndex = 40;
             this.label7.Text = "UserName:";
             // 
@@ -340,7 +341,7 @@
             this.label1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(19, 112);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 23);
+            this.label1.Size = new System.Drawing.Size(90, 19);
             this.label1.TabIndex = 41;
             this.label1.Text = "Password:";
             // 
@@ -350,13 +351,13 @@
             this.label2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(19, 182);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 23);
+            this.label2.Size = new System.Drawing.Size(81, 19);
             this.label2.TabIndex = 42;
             this.label2.Text = "Confirm:";
             // 
             // UserView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::InventoryApp.Properties.Resources.backbar;
@@ -374,7 +375,10 @@
             this.Controls.Add(this.confirmPasswordtextBox);
             this.Controls.Add(this.passwordtextBox);
             this.Controls.Add(this.userNametextBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaxDownBack = global::InventoryApp.Properties.Resources.MaxDownBack;
+            this.MaximizeBox = false;
             this.MaxMouseBack = global::InventoryApp.Properties.Resources.MaxMouseBack;
             this.MaxNormlBack = global::InventoryApp.Properties.Resources.MaxNormlBack;
             this.MaxSize = new System.Drawing.Size(27, 22);

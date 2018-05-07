@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StaffView));
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,7 +51,7 @@
             this.label2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(11, 247);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 23);
+            this.label2.Size = new System.Drawing.Size(90, 19);
             this.label2.TabIndex = 8;
             this.label2.Text = "Location:";
             // 
@@ -60,7 +61,7 @@
             this.label1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(11, 204);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 23);
+            this.label1.Size = new System.Drawing.Size(63, 19);
             this.label1.TabIndex = 9;
             this.label1.Text = "phone:";
             // 
@@ -70,7 +71,7 @@
             this.label3.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(11, 162);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 23);
+            this.label3.Size = new System.Drawing.Size(63, 19);
             this.label3.TabIndex = 10;
             this.label3.Text = "email:";
             // 
@@ -80,7 +81,7 @@
             this.label4.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(11, 123);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 23);
+            this.label4.Size = new System.Drawing.Size(99, 19);
             this.label4.TabIndex = 11;
             this.label4.Text = "GroupCode:";
             // 
@@ -90,7 +91,7 @@
             this.label5.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(11, 81);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 23);
+            this.label5.Size = new System.Drawing.Size(90, 19);
             this.label5.TabIndex = 12;
             this.label5.Text = "LastName:";
             // 
@@ -100,7 +101,7 @@
             this.label6.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(11, 36);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(120, 23);
+            this.label6.Size = new System.Drawing.Size(99, 19);
             this.label6.TabIndex = 13;
             this.label6.Text = "FirstName:";
             // 
@@ -109,7 +110,7 @@
             this.phonetextBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phonetextBox.Location = new System.Drawing.Point(136, 204);
             this.phonetextBox.Name = "phonetextBox";
-            this.phonetextBox.Size = new System.Drawing.Size(236, 31);
+            this.phonetextBox.Size = new System.Drawing.Size(236, 26);
             this.phonetextBox.TabIndex = 21;
             this.phonetextBox.TextChanged += new System.EventHandler(this.phonetextBox_TextChanged);
             // 
@@ -118,7 +119,7 @@
             this.locationtextBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.locationtextBox.Location = new System.Drawing.Point(136, 247);
             this.locationtextBox.Name = "locationtextBox";
-            this.locationtextBox.Size = new System.Drawing.Size(236, 31);
+            this.locationtextBox.Size = new System.Drawing.Size(236, 26);
             this.locationtextBox.TabIndex = 22;
             this.locationtextBox.TextChanged += new System.EventHandler(this.locationtextBox_TextChanged);
             // 
@@ -127,7 +128,7 @@
             this.emailtextBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailtextBox.Location = new System.Drawing.Point(136, 165);
             this.emailtextBox.Name = "emailtextBox";
-            this.emailtextBox.Size = new System.Drawing.Size(236, 31);
+            this.emailtextBox.Size = new System.Drawing.Size(236, 26);
             this.emailtextBox.TabIndex = 24;
             this.emailtextBox.TextChanged += new System.EventHandler(this.emailtextBox_TextChanged);
             // 
@@ -136,7 +137,7 @@
             this.groupCodetextBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupCodetextBox.Location = new System.Drawing.Point(136, 123);
             this.groupCodetextBox.Name = "groupCodetextBox";
-            this.groupCodetextBox.Size = new System.Drawing.Size(236, 31);
+            this.groupCodetextBox.Size = new System.Drawing.Size(236, 26);
             this.groupCodetextBox.TabIndex = 25;
             this.groupCodetextBox.TextChanged += new System.EventHandler(this.groupCodetextBox_TextChanged);
             // 
@@ -218,7 +219,7 @@
             this.lastNametextBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lastNametextBox.Location = new System.Drawing.Point(136, 81);
             this.lastNametextBox.Name = "lastNametextBox";
-            this.lastNametextBox.Size = new System.Drawing.Size(236, 31);
+            this.lastNametextBox.Size = new System.Drawing.Size(236, 26);
             this.lastNametextBox.TabIndex = 26;
             this.lastNametextBox.TextChanged += new System.EventHandler(this.lastNametextBox_TextChanged);
             // 
@@ -301,7 +302,7 @@
             this.firstNametextBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firstNametextBox.Location = new System.Drawing.Point(136, 36);
             this.firstNametextBox.Name = "firstNametextBox";
-            this.firstNametextBox.Size = new System.Drawing.Size(236, 31);
+            this.firstNametextBox.Size = new System.Drawing.Size(236, 26);
             this.firstNametextBox.TabIndex = 27;
             this.firstNametextBox.TextChanged += new System.EventHandler(this.firstNametextBox_TextChanged);
             // 
@@ -331,7 +332,7 @@
             // 
             // StaffView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::InventoryApp.Properties.Resources.backbar;
@@ -354,8 +355,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.MaxDownBack = global::InventoryApp.Properties.Resources.MaxDownBack;
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(385, 356);
             this.MaxMouseBack = global::InventoryApp.Properties.Resources.MaxMouseBack;
             this.MaxNormlBack = global::InventoryApp.Properties.Resources.MaxNormlBack;
